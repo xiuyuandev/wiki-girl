@@ -1,0 +1,1090 @@
+/* ════════════════════════════════════════════════════════════
+   幸福的科学 —— The Science of Well-Being 专栏样式
+   ════════════════════════════════════════════════════════════ */
+
+/* ── 容器 ── */
+.wiki-positive-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 22px 60px;
+  font-family: var(--wiki-font-serif);
+  color: var(--wiki-text);
+}
+
+/* ── 英雄区 ── */
+.wiki-positive-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--wiki-radius-lg);
+  background:
+    radial-gradient(circle at 12% 20%, rgba(47,93,80,.18), transparent 40%),
+    radial-gradient(circle at 88% 10%, rgba(185,128,58,.22), transparent 38%),
+    linear-gradient(135deg, var(--wiki-surface), var(--wiki-bg-2));
+  border: 1px solid var(--wiki-border-lt);
+  box-shadow: var(--wiki-shadow);
+  padding: 48px 40px 40px;
+  margin-bottom: 36px;
+}
+
+.wiki-positive-hero__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.wiki-positive-hero__glow--one {
+  top: -80px; right: -60px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(185,128,58,.18), transparent 70%);
+}
+
+.wiki-positive-hero__glow--two {
+  bottom: -60px; left: -40px;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(47,93,80,.14), transparent 70%);
+}
+
+.wiki-positive-hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.wiki-positive-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: var(--wiki-primary-soft);
+  color: var(--wiki-primary);
+  font-family: var(--wiki-font-ui);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.wiki-positive-hero h1 {
+  font-family: var(--wiki-font-ui);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  line-height: 1.18;
+  color: var(--wiki-text);
+  margin-bottom: 16px;
+}
+
+.wiki-positive-hero__lead {
+  font-size: 17px;
+  line-height: 1.78;
+  color: var(--wiki-text-2);
+  max-width: 860px;
+  margin-bottom: 24px;
+}
+
+/* 英雄区引言 */
+.wiki-positive-hero__quote {
+  position: relative;
+  padding: 20px 24px 20px 48px;
+  margin-bottom: 28px;
+  background: rgba(255,255,255,.55);
+  border-radius: var(--wiki-radius);
+  border-left: 3px solid var(--wiki-accent);
+  backdrop-filter: blur(8px);
+}
+
+.wiki-positive-hero__quote-mark {
+  position: absolute;
+  top: 8px; left: 14px;
+  font-size: 42px;
+  line-height: 1;
+  color: var(--wiki-accent);
+  font-family: Georgia, serif;
+  opacity: .5;
+}
+
+.wiki-positive-hero__quote > p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--wiki-text-2);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.wiki-positive-hero__quote-source {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wiki-positive-hero__quote-source strong {
+  font-family: var(--wiki-font-ui);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--wiki-text);
+}
+
+.wiki-positive-hero__quote-source span {
+  font-size: 12px;
+  color: var(--wiki-text-3);
+}
+
+/* 统计 */
+.wiki-positive-stats {
+  display: flex;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+
+.wiki-positive-stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.wiki-positive-stats strong {
+  font-family: var(--wiki-font-ui);
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--wiki-primary);
+  line-height: 1;
+}
+
+.wiki-positive-stats span {
+  font-family: var(--wiki-font-ui);
+  font-size: 13px;
+  color: var(--wiki-text-3);
+  font-weight: 500;
+}
+
+/* ── 通用区块 ── */
+.wiki-positive-section {
+  margin-bottom: 44px;
+}
+
+.wiki-positive-section--alt {
+  padding: 36px 32px;
+  border-radius: var(--wiki-radius-lg);
+  background: var(--wiki-surface-soft);
+  border: 1px solid var(--wiki-border-lt);
+}
+
+.wiki-positive-section__head {
+  margin-bottom: 28px;
+}
+
+.wiki-positive-section__head h2 {
+  font-family: var(--wiki-font-ui);
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--wiki-text);
+}
+
+.wiki-positive-section__head > p:last-child {
+  color: var(--wiki-text-3);
+  font-size: 15px;
+}
+
+/* ── 直觉陷阱 ── */
+.wiki-positive-intuition {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 18px;
+}
+
+.wiki-positive-intuition-card {
+  border-radius: var(--wiki-radius);
+  background: var(--wiki-surface);
+  border: 1px solid var(--wiki-border-lt);
+  box-shadow: var(--wiki-shadow-sm);
+  overflow: hidden;
+  transition: transform .2s, box-shadow .2s;
+  position: relative;
+}
+
+.wiki-positive-intuition-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--wiki-shadow);
+}
+
+.wiki-positive-intuition-num {
+  position: absolute;
+  top: 16px; right: 16px;
+  font-family: var(--wiki-font-ui);
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--wiki-primary);
+  opacity: .12;
+  line-height: 1;
+}
+
+.wiki-positive-intuition-myth {
+  padding: 20px 22px 16px;
+  background: rgba(184,74,74,.06);
+  border-bottom: 1px solid var(--wiki-border-lt);
+}
+
+.wiki-positive-intuition-myth span {
+  display: inline-block;
+  font-family: var(--wiki-font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 8px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  color: var(--wiki-danger);
+  background: rgba(184,74,74,.10);
+}
+
+.wiki-positive-intuition-myth h3 {
+  font-family: var(--wiki-font-ui);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--wiki-text);
+  line-height: 1.4;
+}
+
+.wiki-positive-intuition-scenario,
+.wiki-positive-intuition-reality,
+.wiki-positive-intuition-study,
+.wiki-positive-intuition-action,
+.wiki-positive-intuition-realtalk {
+  padding: 14px 22px;
+  border-bottom: 1px solid var(--wiki-border-lt);
+}
+
+.wiki-positive-intuition-realtalk {
+  border-bottom: none;
+  background: var(--wiki-accent-soft);
+}
+
+.wiki-positive-intuition-scenario span,
+.wiki-positive-intuition-reality span,
+.wiki-positive-intuition-study span,
+.wiki-positive-intuition-action span,
+.wiki-positive-intuition-realtalk span {
+  display: inline-block;
+  font-family: var(--wiki-font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 6px;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.wiki-positive-intuition-scenario span {
+  color: var(--wiki-warning);
+  background: rgba(185,131,47,.10);
+}
+
+.wiki-positive-intuition-reality span {
+  color: var(--wiki-success);
+  background: rgba(63,125,90,.10);
+}
+
+.wiki-positive-intuition-study span {
+  color: var(--wiki-primary);
+  background: var(--wiki-primary-soft);
+}
+
+.wiki-positive-intuition-action span {
+  color: var(--wiki-accent);
+  background: var(--wiki-accent-soft);
+}
+
+.wiki-positive-intuition-realtalk span {
+  color: var(--wiki-accent);
+  background: rgba(185,128,58,.15);
+}
+
+.wiki-positive-intuition-scenario p,
+.wiki-positive-intuition-reality p,
+.wiki-positive-intuition-action p,
+.wiki-positive-intuition-realtalk p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--wiki-text-2);
+}
+
+.wiki-positive-intuition-study p {
+  font-size: 12px;
+  color: var(--wiki-text-3);
+  line-height: 1.5;
+}
+
+.wiki-positive-intuition-realtalk p {
+  font-weight: 500;
+}
+
+/* ── 核心模块 ── */
+.wiki-positive-dimensions {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 18px;
+}
+
+.wiki-positive-dimension-card {
+  border-radius: var(--wiki-radius);
+  background: var(--wiki-surface);
+  border: 1px solid var(--wiki-border-lt);
+  box-shadow: var(--wiki-shadow-sm);
+  overflow: hidden;
+  transition: transform .2s, box-shadow .2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.wiki-positive-dimension-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--wiki-shadow);
+}
+
+.wiki-positive-dimension-card header {
+  padding: 24px 22px 18px;
+  background:
+    radial-gradient(circle at 90% 0%, rgba(47,93,80,.08), transparent 50%),
+    linear-gradient(180deg, var(--wiki-surface), var(--wiki-bg));
+  border-bottom: 1px solid var(--wiki-border-lt);
+}
+
+.wiki-positive-dim-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: var(--wiki-primary-soft);
+  color: var(--wiki-primary);
+  font-size: 20px;
+  margin-bottom: 12px;
+  transition: transform .2s;
+}
+
+.wiki-positive-dimension-card:hover .wiki-positive-dim-icon {
+  transform: scale(1.1);
+}
+
+.wiki-positive-dimension-card h3 {
+  font-family: var(--wiki-font-ui);
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.wiki-positive-dimension-card header p {
+  font-size: 14px;
+  color: var(--wiki-text-3);
+  line-height: 1.5;
+}
+
+.wiki-positive-dim-detail {
+  padding: 16px 22px;
+  background: var(--wiki-surface-soft);
+  border-bottom: 1px solid var(--wiki-border-lt);
+}
+
+.wiki-positive-dim-detail p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--wiki-text-2);
+}
+
+.wiki-positive-dim-real {
+  padding: 14px 22px;
+  border-bottom: 1px solid var(--wiki-border-lt);
+  background: rgba(185,128,58,.04);
+}
+
+.wiki-positive-dim-real span {
+  display: inline-block;
+  font-family: var(--wiki-font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 6px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: var(--wiki-accent);
+  background: var(--wiki-accent-soft);
+}
+
+.wiki-positive-dim-real p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--wiki-text-2);
+  font-style: italic;
+}
+
+.wiki-positive-dim-topics {
+  padding: 14px 22px;
+  flex: 1;
+}
+
+.wiki-positive-topic {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--wiki-border-lt);
+}
+
+.wiki-positive-topic:last-child {
+  border-bottom: none;
+}
+
+.wiki-positive-topic strong {
+  display: block;
+  font-family: var(--wiki-font-ui);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--wiki-text);
+  margin-bottom: 3px;
+}
+
+.wiki-positive-topic span {
+  font-size: 13px;
+  color: var(--wiki-text-3);
+  line-height: 1.5;
+}
+
+.wiki-positive-dim-action {
+  padding: 14px 22px;
+  background: var(--wiki-primary-soft);
+  border-top: 1px solid var(--wiki-border-lt);
+}
+
+.wiki-positive-dim-action span {
+  display: inline-block;
+  font-family: var(--wiki-font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 6px;
+  padding: 2px 10px;
+  border-radius: 4px;
+  color: #fff;
+  background: var(--wiki-primary);
+}
+
+.wiki-positive-dim-action p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--wiki-text-2);
+  font-weight: 500;
+}
+
+/* ── 生活场景实战 ── */
+.wiki-positive-scenarios {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 18px;
+}
+
+.wiki-positive-scenario-card {
+  border-radius: var(--wiki-radius);
+  background: var(--wiki-surface);
+  border: 1px solid var(--wiki-border-lt);
+  box-shadow: var(--wiki-shadow-sm);
+  overflow: hidden;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.wiki-positive-scenario-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--wiki-shadow);
+}
+
+.wiki-positive-scenario-card header {
+  padding: 18px 22px;
+  background:
+    radial-gradient(circle at 90% 0%, rgba(47,93,80,.08), transparent 50%),
+    linear-gradient(180deg, var(--wiki-surface), var(--wiki-bg));
+  border-bottom: 1px solid var(--wiki-border-lt);
+}
+
+.wiki-positive-scenario-card header span {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--wiki-accent-soft);
+  color: var(--wiki-accent);
+  font-family: var(--wiki-font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.wiki-positive-scenario-card h3 {
+  font-family: var(--wiki-font-ui);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.wiki-positive-scenario-before,
+.wiki-positive-scenario-after {
+  padding: 14px 22px;
+}
+
+.wiki-positive-scenario-before {
+  background: rgba(184,74,74,.04);
+}
+
+.wiki-positive-scenario-after {
+  background: rgba(63,125,90,.04);
+}
+
+.wiki-positive-scenario-before span,
+.wiki-positive-scenario-after span {
+  display: inline-block;
+  font-family: var(--wiki-font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 6px;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.wiki-positive-scenario-before span {
+  color: var(--wiki-danger);
+  background: rgba(184,74,74,.10);
+}
+
+.wiki-positive-scenario-after span {
+  color: var(--wiki-success);
+  background: rgba(63,125,90,.10);
+}
+
+.wiki-positive-scenario-before p,
+.wiki-positive-scenario-after p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--wiki-text-2);
+}
+
+.wiki-positive-scenario-arrow {
+  text-align: center;
+  padding: 8px;
+  font-family: var(--wiki-font-ui);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--wiki-primary);
+  background: var(--wiki-surface-soft);
+  border-top: 1px dashed var(--wiki-border-lt);
+  border-bottom: 1px dashed var(--wiki-border-lt);
+}
+
+.wiki-positive-scenario-tool {
+  padding: 14px 22px;
+  background: var(--wiki-primary-soft);
+}
+
+.wiki-positive-scenario-tool span {
+  display: inline-block;
+  font-family: var(--wiki-font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 6px;
+  padding: 2px 10px;
+  border-radius: 4px;
+  color: #fff;
+  background: var(--wiki-primary);
+}
+
+.wiki-positive-scenario-tool p {
+  font-size: 13px;
+  color: var(--wiki-text-2);
+  font-weight: 500;
+}
+
+/* ── 12周计划 ── */
+.wiki-positive-weeks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.wiki-positive-week-card {
+  border-radius: var(--wiki-radius);
+  background: var(--wiki-surface);
+  border: 1px solid var(--wiki-border-lt);
+  box-shadow: var(--wiki-shadow-sm);
+  padding: 22px;
+  transition: transform .2s, box-shadow .2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.wiki-positive-week-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--wiki-shadow);
+}
+
+.wiki-positive-week-card header {
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--wiki-border-lt);
+}
+
+.wiki-positive-week-card header span {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--wiki-accent-soft);
+  color: var(--wiki-accent);
+  font-family: var(--wiki-font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.wiki-positive-week-card h3 {
+  font-family: var(--wiki-font-ui);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.wiki-positive-week-card header p {
+  font-size: 13px;
+  color: var(--wiki-text-3);
+}
+
+.wiki-positive-week-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+  flex: 1;
+}
+
+.wiki-positive-week-card li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 14px;
+  color: var(--wiki-text-2);
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+
+.wiki-positive-week-card li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--wiki-accent);
+  font-weight: 700;
+}
+
+.wiki-positive-week-insight {
+  padding-top: 14px;
+  border-top: 1px solid var(--wiki-border-lt);
+}
+
+.wiki-positive-week-insight span {
+  display: inline-block;
+  font-family: var(--wiki-font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 6px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: var(--wiki-primary);
+  background: var(--wiki-primary-soft);
+}
+
+.wiki-positive-week-insight p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--wiki-text-3);
+  font-style: italic;
+}
+
+/* ── 科学工具 ── */
+.wiki-positive-tools {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px;
+}
+
+.wiki-positive-tool-card {
+  border-radius: var(--wiki-radius);
+  background: var(--wiki-surface);
+  border: 1px solid var(--wiki-border-lt);
+  box-shadow: var(--wiki-shadow-sm);
+  padding: 22px;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.wiki-positive-tool-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--wiki-shadow);
+}
+
+.wiki-positive-tool-card header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.wiki-positive-tool-card h3 {
+  font-family: var(--wiki-font-ui);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.wiki-positive-tool-time {
+  font-family: var(--wiki-font-ui);
+  font-size: 12px;
+  color: var(--wiki-text-3);
+  background: var(--wiki-bg-2);
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.wiki-positive-tool-desc {
+  font-size: 14px;
+  color: var(--wiki-text-2);
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+
+.wiki-positive-tool-example,
+.wiki-positive-tool-when,
+.wiki-positive-tool-how {
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.wiki-positive-tool-example {
+  background: rgba(185,128,58,.06);
+}
+
+.wiki-positive-tool-when {
+  background: rgba(47,93,80,.06);
+}
+
+.wiki-positive-tool-how {
+  background: var(--wiki-surface-soft);
+}
+
+.wiki-positive-tool-example span,
+.wiki-positive-tool-when span,
+.wiki-positive-tool-how span {
+  display: inline-block;
+  font-family: var(--wiki-font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  margin-bottom: 4px;
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+.wiki-positive-tool-example span {
+  color: var(--wiki-accent);
+  background: var(--wiki-accent-soft);
+}
+
+.wiki-positive-tool-when span {
+  color: var(--wiki-primary);
+  background: var(--wiki-primary-soft);
+}
+
+.wiki-positive-tool-how span {
+  color: var(--wiki-text-3);
+  background: var(--wiki-bg-2);
+}
+
+.wiki-positive-tool-example p,
+.wiki-positive-tool-when p,
+.wiki-positive-tool-how p {
+  font-size: 13px;
+  color: var(--wiki-text-2);
+  line-height: 1.6;
+}
+
+.wiki-positive-tool-meta {
+  padding-top: 12px;
+  border-top: 1px solid var(--wiki-border-lt);
+}
+
+.wiki-positive-tool-meta div {
+  font-size: 13px;
+  color: var(--wiki-text-3);
+  line-height: 1.6;
+}
+
+.wiki-positive-tool-meta strong {
+  color: var(--wiki-text-2);
+  font-weight: 600;
+}
+
+/* ── 误区澄清 ── */
+.wiki-positive-myths {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+.wiki-positive-myth-card {
+  border-radius: var(--wiki-radius);
+  background: var(--wiki-surface);
+  border: 1px solid var(--wiki-border-lt);
+  box-shadow: var(--wiki-shadow-sm);
+  overflow: hidden;
+  transition: transform .2s;
+}
+
+.wiki-positive-myth-card:hover {
+  transform: translateY(-3px);
+}
+
+.wiki-positive-myth,
+.wiki-positive-truth,
+.wiki-positive-action,
+.wiki-positive-source {
+  padding: 14px 20px;
+}
+
+.wiki-positive-myth {
+  background: rgba(184,74,74,.06);
+  border-bottom: 1px solid var(--wiki-border-lt);
+}
+
+.wiki-positive-myth span,
+.wiki-positive-truth span,
+.wiki-positive-action span,
+.wiki-positive-source span {
+  display: inline-block;
+  font-family: var(--wiki-font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 6px;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.wiki-positive-myth span {
+  color: var(--wiki-danger);
+  background: rgba(184,74,74,.10);
+}
+
+.wiki-positive-truth span {
+  color: var(--wiki-success);
+  background: rgba(63,125,90,.10);
+}
+
+.wiki-positive-action span {
+  color: var(--wiki-accent);
+  background: var(--wiki-accent-soft);
+}
+
+.wiki-positive-source span {
+  color: var(--wiki-primary);
+  background: var(--wiki-primary-soft);
+}
+
+.wiki-positive-myth p,
+.wiki-positive-truth p,
+.wiki-positive-action p,
+.wiki-positive-source p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--wiki-text-2);
+}
+
+.wiki-positive-source p {
+  font-size: 12px;
+  color: var(--wiki-text-3);
+}
+
+.wiki-positive-truth,
+.wiki-positive-action {
+  border-bottom: 1px solid var(--wiki-border-lt);
+}
+
+/* ── 资源链接 ── */
+.wiki-positive-resources {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.wiki-positive-resource-card {
+  display: block;
+  border-radius: var(--wiki-radius);
+  background: var(--wiki-surface);
+  border: 1px solid var(--wiki-border-lt);
+  box-shadow: var(--wiki-shadow-sm);
+  padding: 22px;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+  text-decoration: none;
+  color: var(--wiki-text);
+}
+
+.wiki-positive-resource-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--wiki-shadow);
+  border-color: var(--wiki-primary);
+  text-decoration: none;
+  color: var(--wiki-text);
+}
+
+.wiki-positive-resource-card h3 {
+  font-family: var(--wiki-font-ui);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--wiki-primary);
+}
+
+.wiki-positive-resource-card p {
+  font-size: 13px;
+  color: var(--wiki-text-3);
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.wiki-positive-resource-card > span {
+  font-family: var(--wiki-font-ui);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--wiki-accent);
+}
+
+/* ── CTA 区 ── */
+.wiki-positive-cta {
+  text-align: center;
+  padding: 52px 32px;
+  border-radius: var(--wiki-radius-lg);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(47,93,80,.12), transparent 50%),
+    linear-gradient(180deg, var(--wiki-surface-soft), var(--wiki-bg));
+  border: 1px solid var(--wiki-border-lt);
+  margin-top: 20px;
+}
+
+.wiki-positive-cta h2 {
+  font-family: var(--wiki-font-ui);
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.wiki-positive-cta > p {
+  color: var(--wiki-text-3);
+  font-size: 15px;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.wiki-positive-cta-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.wiki-positive-cta-buttons .wiki-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-family: var(--wiki-font-ui);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .16s, box-shadow .16s;
+}
+
+.wiki-positive-cta-buttons .wiki-btn:hover {
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.wiki-positive-cta-buttons .wiki-btn--primary {
+  background: var(--wiki-primary);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(47,93,80,.24);
+}
+
+.wiki-positive-cta-buttons .wiki-btn--primary:hover {
+  background: var(--wiki-primary-hover);
+}
+
+.wiki-positive-cta-buttons .wiki-btn:not(.wiki-btn--primary) {
+  background: var(--wiki-surface);
+  color: var(--wiki-text-2);
+  border: 1px solid var(--wiki-border);
+}
+
+.wiki-positive-cta-buttons .wiki-btn:not(.wiki-btn--primary):hover {
+  background: var(--wiki-bg-2);
+}
+
+/* ── 移动端适配 ── */
+@media (max-width: 768px) {
+  .wiki-positive-shell {
+    padding: 16px 14px 40px;
+  }
+
+  .wiki-positive-hero {
+    padding: 32px 22px 28px;
+  }
+
+  .wiki-positive-hero__quote {
+    padding: 16px 16px 16px 40px;
+  }
+
+  .wiki-positive-stats {
+    gap: 20px;
+  }
+
+  .wiki-positive-stats strong {
+    font-size: 26px;
+  }
+
+  .wiki-positive-section--alt {
+    padding: 24px 18px;
+  }
+
+  .wiki-positive-intuition,
+  .wiki-positive-dimensions,
+  .wiki-positive-scenarios,
+  .wiki-positive-weeks,
+  .wiki-positive-tools,
+  .wiki-positive-myths,
+  .wiki-positive-resources {
+    grid-template-columns: 1fr;
+  }
+
+  .wiki-positive-cta {
+    padding: 32px 20px;
+  }
+
+  .wiki-positive-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .wiki-positive-cta-buttons .wiki-btn {
+    justify-content: center;
+  }
+}

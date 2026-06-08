@@ -1,0 +1,356 @@
+:root {
+  --ch19-primary: #0f766e;
+  --ch19-primary-dark: #115e59;
+  --ch19-accent: #f59e0b;
+  --ch19-soft: #ecfdf5;
+  --ch19-soft-2: #f8fafc;
+  --ch19-line: #ccfbf1;
+  --ch19-text: #134e4a;
+  --ch19-muted: #64748b;
+}
+
+.wiki-article__body .ch19-article {
+  color: #1f2937;
+}
+
+.wiki-article__body .ch19-article section {
+  margin: 28px 0;
+}
+
+.wiki-article__body .ch19-hero {
+  padding: 30px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #ecfdf5 0%, #f0fdfa 48%, #fffbeb 100%);
+  border: 1px solid var(--ch19-line);
+  box-shadow: 0 20px 45px rgba(15, 118, 110, 0.12);
+}
+
+.wiki-article__body .ch19-kicker {
+  margin: 0 0 8px;
+  color: var(--ch19-primary);
+  font-family: var(--wiki-font-ui);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.wiki-article__body .ch19-hero h2 {
+  margin-top: 0 !important;
+  color: var(--ch19-primary-dark) !important;
+  font-size: clamp(28px, 5vw, 44px) !important;
+}
+
+.wiki-article__body .ch19-hero p {
+  max-width: 860px;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.wiki-article__body .ch19-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(170px, 100%), 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.wiki-article__body .ch19-hero-stats div,
+.wiki-article__body .ch19-principle-grid div,
+.wiki-article__body .ch19-flow div,
+.wiki-article__body .ch19-day-grid div,
+.wiki-article__body .ch19-review-grid div {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .78);
+  border: 1px solid rgba(15, 118, 110, .14);
+}
+
+.wiki-article__body .ch19-hero-stats strong {
+  display: block;
+  color: var(--ch19-primary-dark);
+  font-size: 28px;
+  font-family: var(--wiki-font-ui);
+}
+
+.wiki-article__body .ch19-hero-stats span {
+  color: var(--ch19-muted);
+  font-size: 13px;
+}
+
+.wiki-article__body .ch19-compare-grid,
+.wiki-article__body .ch19-boundary-grid,
+.wiki-article__body .ch19-script-grid,
+.wiki-article__body .ch19-principle-grid,
+.wiki-article__body .ch19-flow,
+.wiki-article__body .ch19-day-grid,
+.wiki-article__body .ch19-review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr));
+  gap: 16px;
+  margin: 18px 0;
+}
+
+.wiki-article__body .ch19-boundary-grid,
+.wiki-article__body .ch19-script-grid,
+.wiki-article__body .ch19-day-grid,
+.wiki-article__body .ch19-review-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+}
+
+.wiki-article__body .ch19-compare-card,
+.wiki-article__body .ch19-boundary-card,
+.wiki-article__body .ch19-script-box,
+.wiki-article__body .ch19-example-box,
+.wiki-article__body .ch19-review-table {
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, .06);
+}
+
+.wiki-article__body .ch19-compare-card.good { border-top: 4px solid #10b981; }
+.wiki-article__body .ch19-compare-card.bad { border-top: 4px solid #ef4444; }
+.wiki-article__body .ch19-compare-card.fake { border-top: 4px solid #f59e0b; }
+
+.wiki-article__body .ch19-compare-card h3,
+.wiki-article__body .ch19-boundary-card h3,
+.wiki-article__body .ch19-script-box h3,
+.wiki-article__body .ch19-review-grid h3,
+.wiki-article__body .ch19-review-table h3 {
+  margin-top: 0 !important;
+  color: var(--ch19-primary-dark) !important;
+}
+
+.wiki-article__body .ch19-mistake-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: 10px;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.wiki-article__body .ch19-mistake-list li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 13px 14px;
+  border-radius: 16px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+}
+
+.wiki-article__body .ch19-mistake-list span,
+.wiki-article__body .ch19-flow span {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--ch19-primary);
+  color: white;
+  font-family: var(--wiki-font-ui);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.wiki-article__body .ch19-boundary-card ul,
+.wiki-article__body .ch19-script-box ol,
+.wiki-article__body .ch19-reply-list ol,
+.wiki-article__body .ch19-review-table ol {
+  margin-bottom: 0;
+}
+
+.wiki-article__body .ch19-formula {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.wiki-article__body .ch19-formula span {
+  position: relative;
+  padding: 12px 18px;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--ch19-primary), #14b8a6);
+  font-family: var(--wiki-font-ui);
+  font-weight: 800;
+  box-shadow: 0 10px 22px rgba(15, 118, 110, .18);
+}
+
+.wiki-article__body .ch19-scene-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.wiki-article__body .ch19-scene-card {
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr);
+  gap: 16px;
+  padding: 18px;
+  border-radius: 24px;
+  background: #fff;
+  border: 1px solid #dbeafe;
+  box-shadow: 0 16px 34px rgba(15, 23, 42, .07);
+}
+
+.wiki-article__body .ch19-scene-index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  color: white;
+  background: linear-gradient(135deg, var(--ch19-primary-dark), var(--ch19-primary));
+  font-family: var(--wiki-font-ui);
+  font-weight: 900;
+  box-shadow: 0 10px 20px rgba(15, 118, 110, .2);
+}
+
+.wiki-article__body .ch19-scene-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.wiki-article__body .ch19-scene-head h3 {
+  margin: 0 !important;
+  color: #0f172a !important;
+}
+
+.wiki-article__body .ch19-scene-head span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--ch19-soft);
+  color: var(--ch19-primary-dark);
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.wiki-article__body .ch19-trigger,
+.wiki-article__body .ch19-reply-list,
+.wiki-article__body .ch19-next,
+.wiki-article__body .ch19-boundary {
+  margin-top: 10px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: var(--ch19-soft-2);
+  border: 1px solid #e2e8f0;
+}
+
+.wiki-article__body .ch19-trigger b,
+.wiki-article__body .ch19-reply-list b,
+.wiki-article__body .ch19-next b,
+.wiki-article__body .ch19-boundary b,
+.wiki-article__body .ch19-do-dont b {
+  color: var(--ch19-primary-dark);
+  font-family: var(--wiki-font-ui);
+}
+
+.wiki-article__body .ch19-trigger p,
+.wiki-article__body .ch19-do-dont p {
+  margin: 4px 0 0;
+}
+
+.wiki-article__body .ch19-do-dont {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.wiki-article__body .ch19-do-dont div {
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+}
+
+.wiki-article__body .ch19-do-dont div:first-child {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.wiki-article__body .ch19-do-dont div:last-child {
+  background: #f0fdfa;
+  border-color: #99f6e4;
+}
+
+.wiki-article__body .ch19-training-plan {
+  padding: 24px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, #f0fdfa 0%, #ecfeff 100%);
+  border: 1px solid var(--ch19-line);
+}
+
+.wiki-article__body .ch19-day-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(120px, 100%), 1fr));
+}
+
+.wiki-article__body .ch19-day-grid div {
+  padding: 14px;
+}
+
+.wiki-article__body .ch19-day-grid b,
+.wiki-article__body .ch19-review-grid h3 {
+  color: var(--ch19-primary-dark);
+}
+
+@media (max-width: 980px) {
+  .wiki-article__body .ch19-hero-stats,
+  .wiki-article__body .ch19-compare-grid,
+  .wiki-article__body .ch19-boundary-grid,
+  .wiki-article__body .ch19-script-grid,
+  .wiki-article__body .ch19-principle-grid,
+  .wiki-article__body .ch19-flow,
+  .wiki-article__body .ch19-day-grid,
+  .wiki-article__body .ch19-review-grid,
+  .wiki-article__body .ch19-mistake-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .wiki-article__body .ch19-hero {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .wiki-article__body .ch19-scene-card {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .wiki-article__body .ch19-scene-index {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+  }
+
+  .wiki-article__body .ch19-scene-head,
+  .wiki-article__body .ch19-do-dont {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .wiki-article__body .ch19-scene-head span {
+    width: fit-content;
+  }
+}
+
+
+/* Layout safety for wider wiki article cards */
+.wiki-article__body .ch19-article,
+.wiki-article__body .ch19-article *,
+.wiki-article__body .ch19-scene-card > * {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}

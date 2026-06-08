@@ -1,0 +1,421 @@
+/* ════════════════════════════════════════════════════════════
+   第一章：蜕变心法
+   自卑诊断、底层认知、稳定自信与行动训练
+   ════════════════════════════════════════════════════════════ */
+
+.wiki-article__body .ch1-article {
+  --ch1-ink: #122033;
+  --ch1-muted: #5b6b80;
+  --ch1-blue: #1d4ed8;
+  --ch1-navy: #0f2a4f;
+  --ch1-teal: #0f9f8f;
+  --ch1-gold: #d49a35;
+  --ch1-orange: #f59e0b;
+  --ch1-soft: #f4f8fb;
+  --ch1-paper: #fffdf8;
+  --ch1-line: rgba(29, 78, 216, .14);
+  --ch1-shadow: 0 24px 60px rgba(15, 42, 79, .10);
+  position: relative;
+  color: var(--ch1-ink);
+}
+
+.wiki-article__body .ch1-article::before {
+  content: '';
+  position: absolute;
+  inset: -24px -18px auto;
+  height: 460px;
+  z-index: -1;
+  border-radius: 44px;
+  background:
+    radial-gradient(circle at 10% 8%, rgba(15, 159, 143, .22), transparent 34%),
+    radial-gradient(circle at 88% 0%, rgba(212, 154, 53, .24), transparent 35%),
+    radial-gradient(circle at 55% 20%, rgba(29, 78, 216, .10), transparent 32%),
+    linear-gradient(135deg, rgba(244, 248, 251, .98), rgba(255, 253, 248, .36));
+  pointer-events: none;
+}
+
+.wiki-article__body .ch1-article section { scroll-margin-top: 96px; }
+
+.wiki-article__body .ch1-mobile-nav {
+  display: none;
+  position: sticky;
+  top: 64px;
+  z-index: 28;
+  gap: 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin: -4px 0 18px;
+  padding: 10px 2px 14px;
+  scrollbar-width: none;
+}
+
+.wiki-article__body .ch1-mobile-nav::-webkit-scrollbar { display: none; }
+
+.wiki-article__body .ch1-mobile-nav a {
+  display: inline-flex;
+  margin-right: 8px;
+  padding: 8px 14px;
+  border: 1px solid rgba(29, 78, 216, .18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .90);
+  color: #1e4e86;
+  font-size: 13px;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 10px 22px rgba(15, 42, 79, .08);
+  backdrop-filter: blur(14px);
+}
+
+.wiki-article__body .ch1-hero,
+.wiki-article__body .ch1-section {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 30px;
+  border: 1px solid var(--ch1-line);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 94% 0%, rgba(15, 159, 143, .10), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f7fbfd 100%);
+  box-shadow: var(--ch1-shadow);
+}
+
+.wiki-article__body .ch1-hero {
+  padding: 42px 36px 34px;
+  border-color: rgba(15, 159, 143, .18);
+  background:
+    radial-gradient(circle at 88% 2%, rgba(212, 154, 53, .26), transparent 28%),
+    radial-gradient(circle at 8% 12%, rgba(15, 159, 143, .18), transparent 30%),
+    linear-gradient(135deg, #ffffff 0%, #f3fbfb 52%, #fffaf0 100%);
+}
+.wiki-article__body .ch1-section { padding: 30px; }
+
+.wiki-article__body .ch1-hero::after {
+  content: '';
+  position: absolute;
+  right: -92px;
+  top: -92px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 154, 53, .28), transparent 68%);
+}
+
+.wiki-article__body .ch1-hero::before {
+  content: '';
+  position: absolute;
+  left: 34px;
+  bottom: -70px;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(29, 78, 216, .12), transparent 68%);
+}
+
+.wiki-article__body .ch1-kicker,
+.wiki-article__body .ch1-pill {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin: 0 0 14px;
+  padding: 7px 13px;
+  border: 1px solid rgba(15, 159, 143, .25);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .80);
+  color: var(--ch1-teal);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.wiki-article__body .ch1-kicker::before,
+.wiki-article__body .ch1-pill::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 0 5px rgba(15, 159, 143, .12);
+}
+
+.wiki-article__body .ch1-hero h2 {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 0 18px;
+  color: #0f2444;
+  font-size: clamp(31px, 5vw, 56px);
+  line-height: 1.06;
+  letter-spacing: -.06em;
+}
+
+.wiki-article__body .ch1-section h2 {
+  margin: 0 0 16px;
+  color: #10233f;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.22;
+  letter-spacing: -.04em;
+}
+
+.wiki-article__body .ch1-section h3 { color: #152944; }
+.wiki-article__body .ch1-article p,
+.wiki-article__body .ch1-article li { color: var(--ch1-muted); line-height: 1.78; }
+
+.wiki-article__body .ch1-lead {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  color: #314862;
+  font-size: 18px;
+  line-height: 1.88;
+}
+
+.wiki-article__body .ch1-hero-note,
+.wiki-article__body .ch1-quote-card,
+.wiki-article__body .ch1-summary-card,
+.wiki-article__body .ch1-next,
+.wiki-article__body .ch1-review-card,
+.wiki-article__body .ch1-route-card {
+  border: 1px solid rgba(212, 154, 53, .24);
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(255, 250, 235, .94), rgba(255, 255, 255, .84));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .86);
+}
+
+.wiki-article__body .ch1-hero-note {
+  position: relative;
+  z-index: 1;
+  margin: 20px 0;
+  padding: 16px 18px;
+  color: #6b4b16;
+}
+
+.wiki-article__body .ch1-dashboard,
+.wiki-article__body .ch1-hero-grid,
+.wiki-article__body .ch1-diagnosis-grid,
+.wiki-article__body .ch1-confidence-grid,
+.wiki-article__body .ch1-routine-grid,
+.wiki-article__body .ch1-comm-grid,
+.wiki-article__body .ch1-mistake-grid,
+.wiki-article__body .ch1-plan-grid,
+.wiki-article__body .ch1-belief-grid,
+.wiki-article__body .ch1-boundary-panel,
+.wiki-article__body .ch1-kickstart-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.wiki-article__body .ch1-dashboard {
+  position: relative;
+  z-index: 1;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 24px 0;
+}
+
+.wiki-article__body .ch1-dashboard div,
+.wiki-article__body .ch1-hero-grid div,
+.wiki-article__body .ch1-diagnosis-card,
+.wiki-article__body .ch1-action-card,
+.wiki-article__body .ch1-routine-grid div,
+.wiki-article__body .ch1-comm-grid div,
+.wiki-article__body .ch1-mistake-grid div,
+.wiki-article__body .ch1-week-card,
+.wiki-article__body .ch1-belief-grid div,
+.wiki-article__body .ch1-kickstart-grid div {
+  border: 1px solid rgba(29, 78, 216, .12);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, .80);
+  box-shadow: 0 14px 32px rgba(15, 42, 79, .065);
+}
+
+.wiki-article__body .ch1-dashboard div {
+  padding: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,.90), rgba(244,248,251,.82));
+}
+.wiki-article__body .ch1-dashboard strong { display: block; color: var(--ch1-blue); font-size: 34px; line-height: 1; }
+.wiki-article__body .ch1-dashboard span { color: var(--ch1-muted); font-size: 13px; font-weight: 800; }
+
+.wiki-article__body .ch1-hero-grid { grid-template-columns: repeat(3, 1fr); position: relative; z-index: 1; }
+.wiki-article__body .ch1-hero-grid div { padding: 18px; }
+.wiki-article__body .ch1-hero-grid b { display: block; margin-bottom: 8px; color: #0f766e; }
+.wiki-article__body .ch1-hero-grid span { color: #53677d; font-size: 14px; line-height: 1.65; }
+
+.wiki-article__body .ch1-route-card {
+  position: relative;
+  z-index: 1;
+  margin-top: 18px;
+  padding: 16px 18px;
+}
+.wiki-article__body .ch1-route-card span { display: block; color: #9a5f12; font-size: 12px; font-weight: 900; letter-spacing: .12em; }
+.wiki-article__body .ch1-route-card p { margin: 8px 0 0; color: #263f5c; font-weight: 800; }
+
+.wiki-article__body .ch1-diagnosis-grid,
+.wiki-article__body .ch1-confidence-grid,
+.wiki-article__body .ch1-plan-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.wiki-article__body .ch1-diagnosis-card,
+.wiki-article__body .ch1-action-card,
+.wiki-article__body .ch1-week-card,
+.wiki-article__body .ch1-kickstart-grid div {
+  position: relative;
+  padding: 22px;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.wiki-article__body .ch1-diagnosis-card:hover,
+.wiki-article__body .ch1-action-card:hover,
+.wiki-article__body .ch1-week-card:hover,
+.wiki-article__body .ch1-kickstart-grid div:hover {
+  transform: translateY(-3px);
+  border-color: rgba(15, 159, 143, .28);
+  box-shadow: 0 18px 40px rgba(15, 42, 79, .10);
+}
+.wiki-article__body .ch1-diagnosis-card > span,
+.wiki-article__body .ch1-action-card > span,
+.wiki-article__body .ch1-week-card > span,
+.wiki-article__body .ch1-kickstart-grid span {
+  display: inline-flex;
+  margin-bottom: 10px;
+  color: var(--ch1-gold);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+.wiki-article__body .ch1-diagnosis-wide { grid-column: 1 / -1; }
+.wiki-article__body .ch1-fix {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-left: 4px solid var(--ch1-teal);
+  border-radius: 14px;
+  background: rgba(15, 159, 143, .08);
+  color: #214b4a;
+}
+
+.wiki-article__body .ch1-system-map {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin: 22px 0;
+}
+.wiki-article__body .ch1-system-map div {
+  position: relative;
+  padding: 18px 16px;
+  border: 1px solid rgba(15, 159, 143, .18);
+  border-radius: 20px;
+  background: linear-gradient(180deg, #ffffff, #f2fbf9);
+}
+.wiki-article__body .ch1-system-map div:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  right: -12px;
+  top: 36px;
+  z-index: 2;
+  color: var(--ch1-teal);
+  font-weight: 900;
+}
+.wiki-article__body .ch1-system-map span { color: var(--ch1-gold); font-size: 12px; font-weight: 900; }
+.wiki-article__body .ch1-system-map b { display: block; margin: 8px 0; color: #0f2a4f; }
+.wiki-article__body .ch1-system-map p { margin: 0; font-size: 13px; }
+
+.wiki-article__body .ch1-belief-panel,
+.wiki-article__body .ch1-communication-box {
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid rgba(15, 159, 143, .16);
+  border-radius: 26px;
+  background: linear-gradient(135deg, rgba(244, 251, 249, .95), rgba(255, 255, 255, .85));
+}
+.wiki-article__body .ch1-belief-grid { grid-template-columns: repeat(2, 1fr); }
+.wiki-article__body .ch1-belief-grid div { padding: 18px; }
+.wiki-article__body .ch1-belief-grid em { color: #9a5f12; font-style: normal; font-weight: 900; }
+.wiki-article__body .ch1-belief-grid strong { color: #0f766e; }
+
+.wiki-article__body .ch1-action-card ul,
+.wiki-article__body .ch1-week-card ul { padding-left: 20px; }
+.wiki-article__body .ch1-quote-card { margin-top: 20px; padding: 18px 20px; color: #6b4b16; }
+
+.wiki-article__body .ch1-routine-grid { grid-template-columns: repeat(4, 1fr); margin: 22px 0; }
+.wiki-article__body .ch1-routine-grid div,
+.wiki-article__body .ch1-comm-grid div,
+.wiki-article__body .ch1-mistake-grid div { padding: 18px; }
+.wiki-article__body .ch1-routine-grid b,
+.wiki-article__body .ch1-comm-grid span,
+.wiki-article__body .ch1-mistake-grid b { display: block; margin-bottom: 8px; color: #0f2a4f; font-weight: 900; }
+.wiki-article__body .ch1-comm-grid { grid-template-columns: repeat(2, 1fr); }
+
+.wiki-article__body .ch1-boundary-section,
+.wiki-article__body .ch1-kickstart-section {
+  background:
+    radial-gradient(circle at 94% 0%, rgba(212, 154, 53, .16), transparent 34%),
+    linear-gradient(180deg, #fffdf8 0%, #f7fbfd 100%);
+}
+.wiki-article__body .ch1-boundary-panel { grid-template-columns: 1fr 1fr; margin: 22px 0; }
+.wiki-article__body .ch1-boundary-good,
+.wiki-article__body .ch1-boundary-bad {
+  padding: 22px;
+  border-radius: 24px;
+}
+.wiki-article__body .ch1-boundary-good { border: 1px solid rgba(15, 159, 143, .22); background: rgba(240, 253, 250, .86); }
+.wiki-article__body .ch1-boundary-bad { border: 1px solid rgba(212, 154, 53, .25); background: rgba(255, 250, 235, .86); }
+.wiki-article__body .ch1-script-card {
+  padding: 20px;
+  border: 1px dashed rgba(29, 78, 216, .28);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, .80);
+}
+.wiki-article__body .ch1-script-card p { color: #0f2a4f; font-size: 18px; font-weight: 900; }
+.wiki-article__body .ch1-script-card span { color: #6b7280; }
+
+.wiki-article__body .ch1-mistake-grid { grid-template-columns: repeat(5, 1fr); }
+.wiki-article__body .ch1-summary-card { margin-top: 20px; padding: 22px; }
+.wiki-article__body .ch1-summary-card ol { margin-bottom: 0; }
+
+.wiki-article__body .ch1-kickstart-grid { grid-template-columns: repeat(7, minmax(150px, 1fr)); margin: 22px 0; overflow-x: auto; padding-bottom: 4px; }
+.wiki-article__body .ch1-kickstart-grid div { min-width: 150px; background: linear-gradient(180deg, #ffffff, #fffaf0); }
+.wiki-article__body .ch1-kickstart-grid b { display: block; margin-bottom: 8px; color: #0f2a4f; }
+.wiki-article__body .ch1-kickstart-grid p { margin: 0; font-size: 13px; }
+.wiki-article__body .ch1-review-card { margin-top: 20px; padding: 22px; }
+.wiki-article__body .ch1-review-card h3 { margin-top: 0; }
+
+.wiki-article__body .ch1-next {
+  margin: 32px 0 8px;
+  padding: 26px;
+  text-align: center;
+}
+.wiki-article__body .ch1-next p { margin: 0 auto 16px; max-width: 680px; }
+
+@media (max-width: 1180px) {
+  .wiki-article__body .ch1-kickstart-grid { grid-template-columns: repeat(4, minmax(180px, 1fr)); }
+}
+
+@media (max-width: 1024px) {
+  .wiki-article__body .ch1-mobile-nav { display: flex; }
+  .wiki-article__body .ch1-dashboard,
+  .wiki-article__body .ch1-system-map,
+  .wiki-article__body .ch1-routine-grid,
+  .wiki-article__body .ch1-mistake-grid { grid-template-columns: repeat(2, 1fr); }
+  .wiki-article__body .ch1-system-map div:not(:last-child)::after { display: none; }
+}
+
+@media (max-width: 720px) {
+  .wiki-article__body .ch1-hero,
+  .wiki-article__body .ch1-section { padding: 22px 18px; border-radius: 24px; }
+  .wiki-article__body .ch1-hero h2 { font-size: clamp(29px, 10vw, 40px); }
+  .wiki-article__body .ch1-dashboard,
+  .wiki-article__body .ch1-hero-grid,
+  .wiki-article__body .ch1-diagnosis-grid,
+  .wiki-article__body .ch1-confidence-grid,
+  .wiki-article__body .ch1-plan-grid,
+  .wiki-article__body .ch1-belief-grid,
+  .wiki-article__body .ch1-boundary-panel,
+  .wiki-article__body .ch1-comm-grid,
+  .wiki-article__body .ch1-system-map,
+  .wiki-article__body .ch1-routine-grid,
+  .wiki-article__body .ch1-mistake-grid,
+  .wiki-article__body .ch1-kickstart-grid { grid-template-columns: 1fr; }
+  .wiki-article__body .ch1-kickstart-grid { overflow-x: visible; }
+  .wiki-article__body .ch1-kickstart-grid div { min-width: 0; }
+  .wiki-article__body .ch1-diagnosis-wide { grid-column: auto; }
+  .wiki-article__body .ch1-lead { font-size: 16px; }
+  .wiki-article__body .ch1-dashboard strong { font-size: 28px; }
+}

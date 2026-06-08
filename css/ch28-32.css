@@ -1,0 +1,526 @@
+/* ch28-ch32：脱单实战场景系列专题视觉 */
+.wiki-article__body .practice-article {
+  --practice-ink: #102033;
+  --practice-muted: #5f6f7f;
+  --practice-line: rgba(31, 65, 93, 0.12);
+  --practice-blue: #173a63;
+  --practice-teal: #0f9b8e;
+  --practice-gold: #f0a33a;
+  --practice-cream: #fff8ec;
+  color: var(--practice-ink);
+}
+
+.wiki-article__body .practice-mobile-nav {
+  position: sticky;
+  top: 72px;
+  z-index: 5;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 10px 0 14px;
+  margin: -4px 0 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.82));
+  backdrop-filter: blur(10px);
+}
+
+.wiki-article__body .practice-mobile-nav a {
+  flex: 0 0 auto;
+  padding: 8px 12px;
+  border: 1px solid rgba(15, 155, 142, 0.22);
+  border-radius: 999px;
+  background: #fff;
+  color: #16615c;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(16, 32, 51, 0.06);
+}
+
+.wiki-article__body .practice-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 22px;
+  align-items: stretch;
+  padding: 34px;
+  margin: 6px 0 24px;
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 14% 18%, rgba(240, 163, 58, 0.30), transparent 28%),
+    radial-gradient(circle at 88% 20%, rgba(15, 155, 142, 0.28), transparent 30%),
+    linear-gradient(135deg, #102033 0%, #173a63 52%, #0e6f72 100%);
+  color: #fff;
+  box-shadow: 0 24px 60px rgba(16, 32, 51, 0.22);
+  overflow: hidden;
+  position: relative;
+}
+
+.wiki-article__body .practice-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -80px -120px auto;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 44px solid rgba(255, 255, 255, 0.08);
+}
+
+.wiki-article__body .practice-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #f7d99b;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.wiki-article__body .practice-hero h2 {
+  margin: 16px 0 12px;
+  color: #fff;
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.08;
+  border: 0;
+  padding: 0;
+}
+
+.wiki-article__body .practice-hero p {
+  max-width: 720px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.wiki-article__body .practice-hero-card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 180px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.16);
+}
+
+.wiki-article__body .practice-hero-card strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.wiki-article__body .practice-hero-card span {
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.7;
+}
+
+.wiki-article__body .practice-dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0 0 28px;
+}
+
+.wiki-article__body .practice-dashboard > div,
+.wiki-article__body .practice-plan-grid > div {
+  padding: 18px;
+  border: 1px solid var(--practice-line);
+  border-radius: 20px;
+  background: linear-gradient(180deg, #fff, #fffaf2);
+  box-shadow: 0 12px 30px rgba(16, 32, 51, 0.06);
+}
+
+.wiki-article__body .practice-dashboard b {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--practice-blue);
+  font-size: 26px;
+  line-height: 1;
+}
+
+.wiki-article__body .practice-dashboard span,
+.wiki-article__body .practice-plan-grid span {
+  color: var(--practice-muted);
+  font-size: 14px;
+}
+
+.wiki-article__body .practice-section {
+  margin: 28px 0;
+  padding: 28px;
+  border: 1px solid var(--practice-line);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 18px 45px rgba(16, 32, 51, 0.07);
+}
+
+.wiki-article__body .practice-section h2 {
+  margin-top: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(15, 155, 142, 0.18);
+  color: var(--practice-blue);
+}
+
+.wiki-article__body .practice-section h3 {
+  color: #16425f;
+}
+
+.wiki-article__body .practice-lead {
+  padding: 14px 16px;
+  border-left: 4px solid var(--practice-teal);
+  border-radius: 14px;
+  background: #f1fbf9;
+  color: #305464;
+}
+
+.wiki-article__body .practice-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.wiki-article__body .practice-wide-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.wiki-article__body .practice-card,
+.wiki-article__body .practice-case-card,
+.wiki-article__body .practice-template,
+.wiki-article__body .practice-warning {
+  border: 1px solid var(--practice-line);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(16, 32, 51, 0.05);
+}
+
+.wiki-article__body .practice-card {
+  padding: 18px;
+}
+
+.wiki-article__body .practice-card h3 {
+  margin-top: 0;
+}
+
+.wiki-article__body .practice-card p:last-child,
+.wiki-article__body .practice-card ul:last-child,
+.wiki-article__body .practice-template p:last-child {
+  margin-bottom: 0;
+}
+
+.wiki-article__body .practice-flow {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.wiki-article__body .practice-flow > div {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+  padding: 16px;
+  border: 1px solid rgba(23, 58, 99, 0.10);
+  border-radius: 18px;
+  background: linear-gradient(90deg, #f7fbff, #fff);
+}
+
+.wiki-article__body .practice-flow b {
+  color: var(--practice-teal);
+}
+
+.wiki-article__body .practice-flow span {
+  color: #455c70;
+  line-height: 1.8;
+}
+
+.wiki-article__body .practice-compare {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.wiki-article__body .practice-compare > div {
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid var(--practice-line);
+}
+
+.wiki-article__body .practice-compare .bad {
+  background: #fff5f1;
+  border-color: rgba(220, 92, 52, 0.20);
+}
+
+.wiki-article__body .practice-compare .good {
+  background: #f0fbf6;
+  border-color: rgba(18, 150, 99, 0.20);
+}
+
+.wiki-article__body .practice-compare h3,
+.wiki-article__body .practice-compare h4 {
+  margin-top: 0;
+}
+
+.wiki-article__body .practice-template {
+  margin-top: 18px;
+  padding: 20px;
+  background: linear-gradient(180deg, #fff, var(--practice-cream));
+}
+
+.wiki-article__body .practice-template h3:first-child {
+  margin-top: 0;
+}
+
+.wiki-article__body .practice-warning {
+  margin-top: 22px;
+  padding: 18px 20px;
+  background: #fff7e6;
+  border-color: rgba(240, 163, 58, 0.35);
+  color: #6b4a18;
+}
+
+.wiki-article__body .practice-plan-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.wiki-article__body .practice-plan-grid b {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--practice-teal);
+}
+
+.wiki-article__body .practice-case-card {
+  padding: 20px;
+  margin-top: 18px;
+  background: linear-gradient(180deg, #fff, #fbfdff);
+}
+
+.wiki-article__body .practice-case-card h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .wiki-article__body .practice-hero {
+    grid-template-columns: 1fr;
+    padding: 26px;
+  }
+
+  .wiki-article__body .practice-hero-card {
+    min-height: auto;
+  }
+
+  .wiki-article__body .practice-dashboard,
+  .wiki-article__body .practice-card-grid,
+  .wiki-article__body .practice-wide-grid,
+  .wiki-article__body .practice-plan-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .wiki-article__body .practice-mobile-nav {
+    top: 58px;
+    margin-left: -4px;
+    margin-right: -4px;
+    padding-left: 4px;
+  }
+
+  .wiki-article__body .practice-hero,
+  .wiki-article__body .practice-section {
+    border-radius: 22px;
+    padding: 20px;
+  }
+
+  .wiki-article__body .practice-dashboard,
+  .wiki-article__body .practice-card-grid,
+  .wiki-article__body .practice-wide-grid,
+  .wiki-article__body .practice-plan-grid,
+  .wiki-article__body .practice-compare {
+    grid-template-columns: 1fr;
+  }
+
+  .wiki-article__body .practice-flow > div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
+
+.wiki-article__body .practice-script-grid,
+.wiki-article__body .practice-scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.wiki-article__body .practice-scenario-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.wiki-article__body .practice-script-card,
+.wiki-article__body .practice-checklist,
+.wiki-article__body .practice-mini-table {
+  padding: 18px;
+  border: 1px solid var(--practice-line);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(16, 32, 51, 0.05);
+}
+
+.wiki-article__body .practice-script-card h3,
+.wiki-article__body .practice-checklist h3 {
+  margin-top: 0;
+}
+
+.wiki-article__body .practice-script-card p {
+  margin: 10px 0 0;
+  padding: 10px 12px;
+  border-left: 3px solid rgba(15, 155, 142, 0.35);
+  border-radius: 12px;
+  background: #f7fcfb;
+  color: #315568;
+}
+
+.wiki-article__body .practice-checklist {
+  margin-top: 18px;
+  background: linear-gradient(180deg, #fff, #f7fcfb);
+}
+
+.wiki-article__body .practice-mini-table {
+  overflow-x: auto;
+}
+
+.wiki-article__body .practice-mini-table table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.wiki-article__body .practice-mini-table th,
+.wiki-article__body .practice-mini-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(31, 65, 93, 0.10);
+  text-align: left;
+  vertical-align: top;
+}
+
+.wiki-article__body .practice-mini-table th {
+  color: var(--practice-blue);
+  background: #f4faf9;
+}
+
+.wiki-article__body .ch21-article {
+  color: #102033;
+}
+
+.wiki-article__body .ch21-article .article-section {
+  margin: 24px 0;
+}
+
+.wiki-article__body .ch21-atlas-cta {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border: 1px solid rgba(15, 155, 142, 0.22);
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f1fbf9, #fff8ec);
+}
+
+.wiki-article__body .ch21-atlas-cta a {
+  flex: 0 0 auto;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: #173a63;
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.wiki-article__body .ch21-atlas-cta.strong {
+  border-color: rgba(240, 163, 58, 0.35);
+  background: #fff8ec;
+}
+
+.wiki-article__body .ch21-type-grid,
+.wiki-article__body .ch21-light-grid,
+.wiki-article__body .ch21-mistake-grid,
+.wiki-article__body .ch21-script-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.wiki-article__body .ch21-type-grid > div,
+.wiki-article__body .ch21-light-grid > div,
+.wiki-article__body .ch21-mistake-grid > div,
+.wiki-article__body .ch21-script-list > div {
+  padding: 16px;
+  border: 1px solid rgba(31, 65, 93, 0.12);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(16, 32, 51, 0.05);
+}
+
+.wiki-article__body .ch21-type-grid b,
+.wiki-article__body .ch21-script-list b {
+  display: block;
+  margin-bottom: 6px;
+  color: #173a63;
+}
+
+.wiki-article__body .ch21-type-grid span {
+  color: #5f6f7f;
+}
+
+.wiki-article__body .ch21-light-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.wiki-article__body .ch21-light-grid h3,
+.wiki-article__body .ch21-mistake-grid h3 {
+  margin-top: 0;
+}
+
+.wiki-article__body .ch21-light-grid .green { background: #f0fbf6; }
+.wiki-article__body .ch21-light-grid .yellow { background: #fff8ec; }
+.wiki-article__body .ch21-light-grid .red { background: #fff5f1; }
+
+@media (max-width: 900px) {
+  .wiki-article__body .practice-script-grid,
+  .wiki-article__body .practice-scenario-grid,
+  .wiki-article__body .ch21-type-grid,
+  .wiki-article__body .ch21-mistake-grid,
+  .wiki-article__body .ch21-script-list,
+  .wiki-article__body .ch21-light-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .wiki-article__body .practice-script-grid,
+  .wiki-article__body .practice-scenario-grid,
+  .wiki-article__body .ch21-type-grid,
+  .wiki-article__body .ch21-mistake-grid,
+  .wiki-article__body .ch21-script-list,
+  .wiki-article__body .ch21-light-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wiki-article__body .ch21-atlas-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,487 @@
+/* CH33 亲密边界与尊重实战系统 */
+.wiki-article__body .ch33-article {
+  --ch33-ink: #1f2933;
+  --ch33-muted: #667085;
+  --ch33-sage: #2f7d6d;
+  --ch33-teal: #0f766e;
+  --ch33-deep: #155e57;
+  --ch33-rose: #c06b7a;
+  --ch33-amber: #d69a3a;
+  --ch33-red: #b42318;
+  --ch33-soft-rose: #fff7f3;
+  --ch33-soft-sage: #f2fbf7;
+  --ch33-soft-teal: #eefaf8;
+  --ch33-soft-amber: #fff8e8;
+  --ch33-line: rgba(47, 125, 109, 0.16);
+  --ch33-shadow: 0 18px 50px rgba(31, 41, 51, 0.08);
+  color: var(--ch33-ink);
+}
+
+.wiki-article__body .ch33-mobile-nav {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  margin: 0 0 18px;
+  padding: 10px 2px 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.78));
+  backdrop-filter: blur(10px);
+}
+
+.wiki-article__body .ch33-mobile-nav a {
+  flex: 0 0 auto;
+  padding: 8px 12px;
+  border: 1px solid var(--ch33-line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ch33-deep);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(31, 41, 51, 0.06);
+}
+
+.wiki-article__body .ch33-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+  gap: 22px;
+  align-items: stretch;
+  margin-bottom: 20px;
+  padding: 30px;
+  border: 1px solid var(--ch33-line);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(192, 107, 122, 0.18), transparent 34%),
+    radial-gradient(circle at 92% 12%, rgba(47, 125, 109, 0.18), transparent 34%),
+    linear-gradient(135deg, #fff8f4 0%, #f2fbf7 58%, #eefaf8 100%);
+  box-shadow: var(--ch33-shadow);
+}
+
+.wiki-article__body .ch33-kicker {
+  display: inline-flex;
+  margin-bottom: 12px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(47, 125, 109, 0.1);
+  color: var(--ch33-deep);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.wiki-article__body .ch33-hero h2 {
+  margin: 0 0 14px;
+  color: var(--ch33-ink);
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.04;
+  letter-spacing: -0.05em;
+}
+
+.wiki-article__body .ch33-hero p {
+  margin: 0;
+  color: #475467;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.wiki-article__body .ch33-hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.wiki-article__body .ch33-hero__tags span {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--ch33-deep);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.wiki-article__body .ch33-hero__card {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  padding: 22px;
+  border: 1px solid rgba(47, 125, 109, 0.16);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 16px 36px rgba(47, 125, 109, 0.08);
+}
+
+.wiki-article__body .ch33-hero__card strong {
+  color: var(--ch33-rose);
+  font-size: 14px;
+}
+
+.wiki-article__body .ch33-hero__card span {
+  color: var(--ch33-deep);
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.55;
+}
+
+.wiki-article__body .ch33-dashboard,
+.wiki-article__body .ch33-principle-grid,
+.wiki-article__body .ch33-consent-grid,
+.wiki-article__body .ch33-signal-grid,
+.wiki-article__body .ch33-refusal-grid,
+.wiki-article__body .ch33-control-grid,
+.wiki-article__body .ch33-scenario-grid,
+.wiki-article__body .ch33-script-grid,
+.wiki-article__body .ch33-plan-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.wiki-article__body .ch33-dashboard {
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 22px;
+}
+
+.wiki-article__body .ch33-dashboard div,
+.wiki-article__body .ch33-principle-card,
+.wiki-article__body .ch33-consent-card,
+.wiki-article__body .ch33-refusal-card,
+.wiki-article__body .ch33-control-card,
+.wiki-article__body .ch33-scenario-card,
+.wiki-article__body .ch33-script-card,
+.wiki-article__body .ch33-plan-grid div {
+  border: 1px solid var(--ch33-line);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 12px 34px rgba(31, 41, 51, 0.06);
+}
+
+.wiki-article__body .ch33-dashboard div {
+  padding: 18px;
+}
+
+.wiki-article__body .ch33-dashboard b {
+  display: block;
+  color: var(--ch33-deep);
+  font-size: 27px;
+  line-height: 1;
+}
+
+.wiki-article__body .ch33-dashboard span,
+.wiki-article__body .ch33-plan-grid span {
+  display: block;
+  margin-top: 8px;
+  color: var(--ch33-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.wiki-article__body .ch33-section {
+  margin: 24px 0;
+  padding: 26px;
+  border: 1px solid var(--ch33-line);
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(242,251,247,0.5));
+  box-shadow: 0 16px 44px rgba(31, 41, 51, 0.055);
+  scroll-margin-top: 78px;
+}
+
+.wiki-article__body .ch33-section-banner {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.wiki-article__body .ch33-section-banner > span {
+  display: inline-flex;
+  min-width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: var(--ch33-deep);
+  color: #fff;
+  font-weight: 900;
+}
+
+.wiki-article__body .ch33-section h2 {
+  margin: 0 0 8px;
+  color: var(--ch33-ink);
+  font-size: 26px;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+}
+
+.wiki-article__body .ch33-section p {
+  color: #566273;
+  line-height: 1.8;
+}
+
+.wiki-article__body .ch33-section-banner p {
+  margin: 0;
+}
+
+.wiki-article__body .ch33-principle-grid,
+.wiki-article__body .ch33-consent-grid,
+.wiki-article__body .ch33-refusal-grid,
+.wiki-article__body .ch33-control-grid,
+.wiki-article__body .ch33-plan-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.wiki-article__body .ch33-signal-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.wiki-article__body .ch33-scenario-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.wiki-article__body .ch33-script-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.wiki-article__body .ch33-principle-card,
+.wiki-article__body .ch33-consent-card,
+.wiki-article__body .ch33-refusal-card,
+.wiki-article__body .ch33-control-card,
+.wiki-article__body .ch33-scenario-card,
+.wiki-article__body .ch33-script-card,
+.wiki-article__body .ch33-plan-grid div {
+  padding: 20px;
+}
+
+.wiki-article__body .ch33-principle-card span,
+.wiki-article__body .ch33-scenario-index {
+  display: inline-flex;
+  margin-bottom: 10px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: var(--ch33-soft-teal);
+  color: var(--ch33-deep);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.wiki-article__body .ch33-principle-card h3,
+.wiki-article__body .ch33-consent-card h3,
+.wiki-article__body .ch33-signal-card h3,
+.wiki-article__body .ch33-refusal-card h3,
+.wiki-article__body .ch33-control-card h3,
+.wiki-article__body .ch33-scenario-card h3,
+.wiki-article__body .ch33-script-card h3,
+.wiki-article__body .ch33-template h3 {
+  margin: 0 0 10px;
+  color: var(--ch33-ink);
+  font-size: 18px;
+}
+
+.wiki-article__body .ch33-principle-card p,
+.wiki-article__body .ch33-consent-card p,
+.wiki-article__body .ch33-refusal-card p,
+.wiki-article__body .ch33-control-card p,
+.wiki-article__body .ch33-scenario-card p,
+.wiki-article__body .ch33-script-card p {
+  margin: 0 0 8px;
+  font-size: 14.5px;
+}
+
+.wiki-article__body .ch33-summary,
+.wiki-article__body .ch33-consent-map,
+.wiki-article__body .ch33-final-note {
+  margin-top: 16px;
+  padding: 18px 20px;
+  border: 1px solid rgba(15, 118, 110, 0.18);
+  border-radius: 22px;
+  background: linear-gradient(135deg, var(--ch33-soft-teal), #fff);
+  color: var(--ch33-deep);
+  line-height: 1.8;
+}
+
+.wiki-article__body .ch33-consent-map span {
+  display: block;
+  margin-top: 4px;
+}
+
+.wiki-article__body .ch33-signal-card {
+  padding: 20px;
+  border: 1px solid var(--ch33-line);
+  border-radius: 22px;
+  background: #fff;
+}
+
+.wiki-article__body .ch33-signal-card ul,
+.wiki-article__body .ch33-warning ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.wiki-article__body .ch33-signal-card li,
+.wiki-article__body .ch33-warning li,
+.wiki-article__body .ch33-template li {
+  margin: 8px 0;
+  color: #566273;
+  line-height: 1.65;
+}
+
+.wiki-article__body .ch33-signal-card.is-green { background: linear-gradient(180deg, #f0fbf5, #fff); border-color: rgba(22, 163, 74, 0.22); }
+.wiki-article__body .ch33-signal-card.is-yellow { background: linear-gradient(180deg, #fffbeb, #fff); border-color: rgba(214, 154, 58, 0.28); }
+.wiki-article__body .ch33-signal-card.is-red { background: linear-gradient(180deg, #fff1f2, #fff); border-color: rgba(192, 107, 122, 0.28); }
+.wiki-article__body .ch33-signal-card.is-gray { background: linear-gradient(180deg, #f8fafc, #fff); border-color: rgba(102, 112, 133, 0.22); }
+
+.wiki-article__body .ch33-control-card b,
+.wiki-article__body .ch33-scenario-card b {
+  color: var(--ch33-deep);
+}
+
+.wiki-article__body .ch33-card-note {
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: var(--ch33-soft-sage);
+}
+
+.wiki-article__body .ch33-map {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.wiki-article__body .ch33-map div {
+  position: relative;
+  padding: 18px 16px 18px 18px;
+  border: 1px solid var(--ch33-line);
+  border-radius: 20px;
+  background: #fff;
+}
+
+.wiki-article__body .ch33-map div::after {
+  content: "→";
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ch33-sage);
+  font-weight: 900;
+}
+
+.wiki-article__body .ch33-map div:last-child::after {
+  display: none;
+}
+
+.wiki-article__body .ch33-map b,
+.wiki-article__body .ch33-plan-grid b {
+  display: block;
+  color: var(--ch33-deep);
+  font-size: 16px;
+}
+
+.wiki-article__body .ch33-map span {
+  display: block;
+  margin-top: 8px;
+  color: var(--ch33-muted);
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+
+.wiki-article__body .ch33-script-card {
+  background: linear-gradient(180deg, #fff, var(--ch33-soft-rose));
+}
+
+.wiki-article__body .ch33-script-card p {
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #475467;
+}
+
+.wiki-article__body .ch33-warning {
+  padding: 22px;
+  border: 1px solid rgba(180, 35, 24, 0.18);
+  border-radius: 24px;
+  background: linear-gradient(135deg, #fff1f2, #fff8f3);
+}
+
+.wiki-article__body .ch33-warning li::marker {
+  color: var(--ch33-red);
+}
+
+.wiki-article__body .ch33-template {
+  margin-top: 16px;
+  padding: 22px;
+  border: 1px dashed rgba(47, 125, 109, 0.35);
+  border-radius: 24px;
+  background: #fff;
+}
+
+.wiki-article__body .ch33-template ol {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.wiki-article__body .ch33-final-note {
+  margin: 26px 0 4px;
+  border-color: rgba(192, 107, 122, 0.18);
+  background: linear-gradient(135deg, var(--ch33-soft-rose), var(--ch33-soft-teal));
+  color: var(--ch33-ink);
+  font-size: 17px;
+}
+
+@media (max-width: 1020px) {
+  .wiki-article__body .ch33-signal-grid,
+  .wiki-article__body .ch33-script-grid,
+  .wiki-article__body .ch33-map {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wiki-article__body .ch33-map div::after {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .wiki-article__body .ch33-hero,
+  .wiki-article__body .ch33-dashboard,
+  .wiki-article__body .ch33-principle-grid,
+  .wiki-article__body .ch33-consent-grid,
+  .wiki-article__body .ch33-signal-grid,
+  .wiki-article__body .ch33-refusal-grid,
+  .wiki-article__body .ch33-control-grid,
+  .wiki-article__body .ch33-scenario-grid,
+  .wiki-article__body .ch33-script-grid,
+  .wiki-article__body .ch33-plan-grid,
+  .wiki-article__body .ch33-map {
+    grid-template-columns: 1fr;
+  }
+
+  .wiki-article__body .ch33-section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .wiki-article__body .ch33-mobile-nav {
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+
+  .wiki-article__body .ch33-hero {
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .wiki-article__body .ch33-hero h2 {
+    font-size: 32px;
+  }
+
+  .wiki-article__body .ch33-section h2 {
+    font-size: 22px;
+  }
+
+  .wiki-article__body .ch33-section-banner {
+    flex-direction: column;
+  }
+}

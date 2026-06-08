@@ -1,0 +1,49 @@
+/* ════════════════════════════════════════════════════════════
+   第四章 独有组件样式
+   三级标题卡片、步骤列表
+   ════════════════════════════════════════════════════════════ */
+
+/* 三级标题卡片 */
+.subsection-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin: 20px 0;
+}
+.subsection-card h4 {
+  margin-top: 0;
+  color: var(--text);
+  font-size: 17px;
+}
+
+/* 步骤列表 */
+.step-list {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+.step-list li {
+  position: relative;
+  padding-left: 36px;
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+.step-list li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background: var(--gradient-primary);
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

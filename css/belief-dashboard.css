@@ -1,0 +1,392 @@
+/* ════════════════════════════════════════════════════════════
+   信念改写训练仪表盘 · 温暖治愈风格
+   ════════════════════════════════════════════════════════════ */
+
+.belief-dashboard {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px 20px 80px;
+}
+
+/* ── Hero ── */
+.belief-dashboard__hero {
+  border-radius: 28px;
+  padding: 40px 34px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255,255,255,.28), transparent 28%),
+    linear-gradient(135deg, #254c42 0%, #2f5d50 52%, #9f7b32 100%);
+  box-shadow: 0 24px 60px rgba(22, 48, 40, .24);
+}
+
+.belief-dashboard__hero span {
+  display: inline-flex;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: .86;
+}
+
+.belief-dashboard__hero h1 {
+  margin: 12px 0 14px;
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.05;
+}
+
+.belief-dashboard__hero p {
+  max-width: 680px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
+  opacity: .92;
+}
+
+.belief-dashboard__hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* ── 统计 ── */
+.belief-dashboard__stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.belief-dashboard__stats div {
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #fffdf8, #f5efe2);
+  border: 1px solid rgba(47, 93, 80, .12);
+  box-shadow: 0 14px 34px rgba(36, 60, 50, .08);
+  text-align: center;
+}
+
+.belief-dashboard__stats b {
+  display: block;
+  font-size: 32px;
+  color: #2f5d50;
+  line-height: 1;
+}
+
+.belief-dashboard__stats span {
+  display: block;
+  margin-top: 8px;
+  color: #637067;
+  font-size: 13px;
+}
+
+/* ── 进度条 ── */
+.belief-dashboard__progress {
+  margin: 18px 0;
+}
+
+.belief-dashboard__progress-bar {
+  height: 12px;
+  border-radius: 999px;
+  background: #e8e4dc;
+  overflow: hidden;
+}
+
+.belief-dashboard__progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #2f5d50, #d4a84f);
+  transition: width .6s ease;
+}
+
+.belief-dashboard__progress > p {
+  margin: 8px 0 0;
+  color: #637067;
+  font-size: 14px;
+}
+
+/* ── 今日任务 ── */
+.belief-dashboard__today {
+  padding: 28px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #fffdf8, #f8f2e6);
+  border: 1px solid rgba(47, 93, 80, .14);
+  box-shadow: 0 14px 36px rgba(36, 60, 50, .08);
+  margin: 20px 0;
+}
+
+.belief-dashboard__today-header {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.belief-dashboard__day-badge {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2f5d50, #3f7d6a);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.belief-dashboard__theme {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(212, 168, 79, .14);
+  color: #8a6825;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.belief-dashboard__today h3 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  color: #1c2420;
+}
+
+.belief-dashboard__action {
+  margin: 0 0 8px;
+  color: #3a5a50;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.belief-dashboard__hint {
+  margin: 0 0 20px;
+  color: #7a8a80;
+  font-size: 14px;
+}
+
+.belief-dashboard__today-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.belief-dashboard__today--done {
+  text-align: center;
+}
+
+.belief-dashboard__today--done h3 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+/* ── 复盘 ── */
+.belief-dashboard__review {
+  padding: 24px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid rgba(47, 93, 80, .1);
+  margin: 16px 0;
+}
+
+.belief-dashboard__review h3 {
+  margin: 0 0 12px;
+}
+
+.belief-dashboard__review-summary {
+  padding: 16px;
+  border-radius: 14px;
+  background: #f5f0e8;
+  margin: 12px 0;
+}
+
+.belief-dashboard__review-summary p {
+  margin: 6px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.belief-dashboard__review-form {
+  padding: 24px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid rgba(47, 93, 80, .1);
+  margin: 16px 0;
+}
+
+.belief-dashboard__review-field {
+  margin-bottom: 16px;
+}
+
+.belief-dashboard__review-field label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #2f5d50;
+}
+
+.belief-dashboard__review-field textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(47, 93, 80, .15);
+  border-radius: 12px;
+  font-size: 14px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.belief-dashboard__review-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* ── 日历 ── */
+.belief-dashboard__calendar {
+  margin: 24px 0;
+}
+
+.belief-dashboard__calendar h3 {
+  margin: 0 0 16px;
+}
+
+.belief-dashboard__calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.belief-dashboard__calendar-day {
+  padding: 14px 8px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid rgba(47, 93, 80, .1);
+  text-align: center;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.belief-dashboard__calendar-day:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(36, 60, 50, .1);
+}
+
+.belief-dashboard__calendar-day span {
+  display: block;
+  font-size: 18px;
+  font-weight: 800;
+  color: #1c2420;
+}
+
+.belief-dashboard__calendar-day small {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: #888;
+}
+
+.belief-dashboard__calendar-day--done {
+  background: linear-gradient(135deg, #e8f5e9, #d4edda);
+  border-color: #2f5d50;
+}
+
+.belief-dashboard__calendar-day--done span {
+  color: #2f5d50;
+}
+
+.belief-dashboard__calendar-day--current {
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+  border-color: #d4a84f;
+  box-shadow: 0 4px 12px rgba(212, 168, 79, .2);
+}
+
+.belief-dashboard__calendar-day--current span {
+  color: #8a6825;
+}
+
+/* ── 弹窗 ── */
+.belief-dashboard__modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.belief-dashboard__modal-box {
+  background: #fff;
+  border-radius: 24px;
+  padding: 32px;
+  max-width: 520px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 60px rgba(0,0,0,.2);
+}
+
+.belief-dashboard__modal-box h3 {
+  margin: 0 0 20px;
+  font-size: 22px;
+}
+
+.belief-dashboard__modal-box h4 {
+  margin: 20px 0 12px;
+  color: #2f5d50;
+}
+
+.belief-dashboard__modal-box p {
+  margin: 8px 0;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.belief-dashboard__rewrite-step {
+  margin-bottom: 16px;
+}
+
+.belief-dashboard__rewrite-step label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #2f5d50;
+}
+
+.belief-dashboard__rewrite-step textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(47, 93, 80, .15);
+  border-radius: 12px;
+  font-size: 14px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.belief-dashboard__rewrite-result {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #f5f0e8, #fff);
+  border: 1px solid rgba(212, 168, 79, .3);
+}
+
+.belief-dashboard__modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* ── 响应式 ── */
+@media (max-width: 760px) {
+  .belief-dashboard__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .belief-dashboard__calendar-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .belief-dashboard__today-actions,
+  .belief-dashboard__modal-actions {
+    flex-direction: column;
+  }
+
+  .belief-dashboard__modal-box {
+    padding: 24px;
+  }
+}

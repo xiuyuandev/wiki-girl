@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wiki</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/cases.css">
+  <link rel="stylesheet" href="css/ch1.css">
+  <link rel="stylesheet" href="css/ch10.css">
+  <link rel="stylesheet" href="css/ch12.css">
+  <link rel="stylesheet" href="css/ch16.css">
+  <link rel="stylesheet" href="css/ch17.css">
+  <link rel="stylesheet" href="css/ch19.css">
+  <link rel="stylesheet" href="css/ch28-32.css">
+  <link rel="stylesheet" href="css/ch3.css">
+  <link rel="stylesheet" href="css/ch33.css">
+  <link rel="stylesheet" href="css/ch38.css">
+  <link rel="stylesheet" href="css/ch8-list.css">
+  <link rel="stylesheet" href="css/ch10.css">
+  <link rel="stylesheet" href="css/wiki.css?v=20260608-navmap1">
+  <link rel="stylesheet" href="css/female-types.css?v=20260608-atlas2">
+  <link rel="stylesheet" href="css/ch1.css?v=20260608-ch1-polish">
+  <link rel="stylesheet" href="css/ch3.css">
+  <link rel="stylesheet" href="css/ch17.css">
+  <link rel="stylesheet" href="css/ch12.css">
+  <link rel="stylesheet" href="css/ch16.css">
+  <link rel="stylesheet" href="css/wechat-training.css?v=20260608-wechat200">
+  <link rel="stylesheet" href="css/ch19.css">
+  <link rel="stylesheet" href="css/ch28-32.css?v=20260608-practice-rich">
+  <link rel="stylesheet" href="css/ch33.css?v=20260608-ch33v2">
+  <link rel="stylesheet" href="css/extra-columns.css?v=20260608-ch41">
+  <link rel="stylesheet" href="css/rich-columns-legacy.css?v=20260608-legacy-rich">
+  <link rel="stylesheet" href="css/layout-fixes.css?v=20260608-layout1">
+  <link rel="stylesheet" href="css/positive-psychology.css?v=20260608-psy1">
+  <link rel="stylesheet" href="css/married-woman.css?v=20260608-mw2">
+  <link rel="stylesheet" href="css/universal-scripts.css?v=20260608-us1">
+  <link rel="stylesheet" href="css/self-fulfilling-belief.css?v=20260608-belief1">
+  <link rel="stylesheet" href="css/emergency.css?v=20260608-emergency1">
+  <link rel="stylesheet" href="css/wechat-simulator.css?v=20260608-wechat3">
+  <link rel="stylesheet" href="css/belief-dashboard.css?v=20260608-belief2">
+  <link rel="stylesheet" href="css/expression.css?v=20260608-expression1">
+  <link rel="stylesheet" href="css/premium-redesign.css?v=20260608-premium1">
+</head>
+<body>
+
+  <div id="app">
+    <div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:system-ui;color:#72777d;">
+      加载中...
+    </div>
+  </div>
+
+  <!-- Vue 3 + Vue Router（CDN，零构建） -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-router@4/dist/vue-router.global.js"></script>
+
+  <!-- 数据 -->
+  <script src="data/wiki.js?v=20260608-navmap1"></script>
+  <script src="data/user-state.js?v=20260608-site10"></script>
+  <script src="data/relationship-scenarios.js"></script>
+  <script src="data/female-types.js?v=20260608-atlas3"></script>
+  <script src="data/female-types-quiz.js?v=20260608-atlas3"></script>
+  <script src="data/appearance-upgrade.js"></script>
+  <script src="data/case-library.js?v=20260608-site10"></script>
+  <script src="data/emergency-toolkit.js?v=20260608-site10"></script>
+  <script src="data/site-principles.js?v=20260608-site10"></script>
+  <script src="data/content.js?v=20260608-ch1-polish"></script>
+  <script src="data/ch10-upgrade.js?v=20260608-ch10v2"></script>
+  <script src="data/ch43-upgrade.js?v=20260608-ch43v2"></script>
+  <script src="data/case-upgrade.js?v=20260608-case200"></script>
+  <script src="data/wechat-training-upgrade.js?v=20260608-wechat200"></script>
+  <script src="data/wechat-simulator.js?v=20260608-wechat3"></script>
+  <script src="data/female-types-article.js?v=20260608-atlas-rich"></script>
+  <script src="data/extra-columns.js?v=20260608-ch41"></script>
+  <script src="data/rich-columns-23-27.js?v=20260608-rich23v2"></script>
+  <script src="data/rich-columns-legacy.js?v=20260608-legacy-rich"></script>
+  <script src="data/self-fulfilling-belief.js?v=20260608-belief1"></script>
+  <script src="data/belief-training.js?v=20260608-belief2"></script>
+  <script src="data/site-search.js?v=20260608-atlas1"></script>
+  <script src="data/positive-psychology.js?v=20260608-psy1"></script>
+  <script src="data/married-woman.js?v=20260608-mw2"></script>
+  <script src="data/universal-scripts.js?v=20260608-us1"></script>
+  <script src="data/expression-upgrade.js?v=20260608-expression1"></script>
+
+  <!-- 组件 -->
+  <script src="components/topnav.js?v=20260608-premium1"></script>
+  <script src="components/sidebar.js?v=20260608-extra16"></script>
+  <script src="components/chrome.js"></script>
+  <script src="components/mobile-quicknav.js?v=20260608-site10"></script>
+
+  <!-- 视图 -->
+  <script src="views/home.js?v=20260608-premium1"></script>
+  <script src="views/article.js?v=20260608-site10"></script>
+  <script src="views/relationship.js"></script>
+  <script src="views/female-types.js?v=20260608-atlas3"></script>
+  <script src="views/appearance.js"></script>
+  <script src="views/cases.js?v=20260608-case200"></script>
+  <script src="views/emergency.js?v=20260608-site10"></script>
+  <script src="views/principles.js?v=20260608-site10"></script>
+  <script src="views/search.js?v=20260608-search"></script>
+  <script src="views/wechat-training.js?v=20260608-wechat3"></script>
+  <script src="views/positive-psychology.js?v=20260608-psy1"></script>
+  <script src="views/married-woman.js?v=20260608-mw2"></script>
+  <script src="views/universal-scripts.js?v=20260608-us1"></script>
+  <script src="views/belief-training.js?v=20260608-belief2"></script>
+  <script src="views/expression.js?v=20260608-expression1"></script>
+
+  <!-- 路由 + 应用 -->
+  <script src="router.js?v=20260608-site10"></script>
+  <script src="app.js?v=20260608-premium1"></script>
+</body>
+</html>

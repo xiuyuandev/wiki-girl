@@ -1,0 +1,460 @@
+/* ════════════════════════════════════════════════════════════
+   第三章：魅力磁场
+   社交雷达、渠道地图、展示面与30天行动挑战
+   ════════════════════════════════════════════════════════════ */
+
+.wiki-article__body .ch3-article {
+  --ch3-ink: #2a241d;
+  --ch3-muted: #675b4d;
+  --ch3-soft: #fff8ed;
+  --ch3-paper: #fffdf8;
+  --ch3-green: #2f6f5f;
+  --ch3-gold: #b9803a;
+  --ch3-orange: #d98a35;
+  --ch3-blue: #4f7f9d;
+  position: relative;
+}
+
+.wiki-article__body .ch3-article::before {
+  content: '';
+  position: absolute;
+  inset: -20px -16px auto;
+  height: 330px;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 38px;
+  background:
+    radial-gradient(circle at 16% 18%, rgba(185,128,58,.22), transparent 32%),
+    radial-gradient(circle at 78% 8%, rgba(47,111,95,.20), transparent 34%),
+    linear-gradient(135deg, rgba(255,248,237,.94), rgba(255,253,248,.28));
+}
+
+.wiki-article__body .ch3-article section { scroll-margin-top: 96px; }
+
+.ch3-mobile-nav {
+  display: none;
+  position: sticky;
+  top: 64px;
+  z-index: 28;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(185,128,58,.22);
+  background: rgba(255,253,248,.9);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 12px 28px rgba(73,55,33,.08);
+}
+
+.ch3-mobile-nav a {
+  display: inline-flex;
+  margin-right: 8px;
+  padding: 7px 14px;
+  border: 1px solid rgba(185,128,58,.28);
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(255,255,255,.88), rgba(255,248,237,.82));
+  color: #6b5b47;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(94,70,38,.06);
+}
+
+.ch3-mobile-nav a:hover { color: var(--ch3-green); border-color: rgba(47,111,95,.38); }
+
+.wiki-article__body .ch3-hero {
+  position: relative;
+  overflow: hidden;
+  margin: 8px 0 34px;
+  padding: 36px 34px 30px;
+  border: 1px solid rgba(185,128,58,.28);
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at 88% 0%, rgba(185,128,58,.22), transparent 32%),
+    linear-gradient(135deg, rgba(255,253,248,.97) 0%, rgba(255,248,237,.92) 54%, rgba(238,247,242,.92) 100%);
+  box-shadow: 0 26px 62px rgba(78,56,31,.13), inset 0 1px 0 rgba(255,255,255,.92);
+}
+
+.wiki-article__body .ch3-hero::after {
+  content: '';
+  position: absolute;
+  right: -84px;
+  top: -84px;
+  width: 240px;
+  height: 240px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(47,111,95,.26), rgba(47,111,95,0) 68%);
+}
+
+.wiki-article__body .ch3-kicker,
+.wiki-article__body .ch3-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 7px 13px;
+  border: 1px solid rgba(185,128,58,.34);
+  border-radius: 999px;
+  background: rgba(255,255,255,.7);
+  color: var(--ch3-gold);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.wiki-article__body .ch3-kicker::before,
+.wiki-article__body .ch3-pill::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 0 5px rgba(185,128,58,.12);
+}
+
+.wiki-article__body .ch3-hero h2 {
+  max-width: 820px;
+  margin: 16px 0 16px;
+  color: var(--ch3-ink);
+  font-size: clamp(30px, 5vw, 52px);
+  line-height: 1.08;
+  letter-spacing: -.045em;
+}
+.wiki-article__body .ch3-hero h2::before { display: none; }
+
+.wiki-article__body .ch3-lead {
+  max-width: 840px;
+  color: #5e5145;
+  font-size: 19px;
+  line-height: 1.92;
+}
+
+.wiki-article__body .ch3-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.wiki-article__body .ch3-hero-actions span {
+  padding: 8px 13px;
+  border: 1px solid rgba(47,111,95,.18);
+  border-radius: 999px;
+  background: rgba(255,255,255,.7);
+  color: var(--ch3-green);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.wiki-article__body .ch3-dashboard,
+.wiki-article__body .ch3-magnet-map,
+.wiki-article__body .ch3-channel-grid,
+.wiki-article__body .ch3-template-grid,
+.wiki-article__body .ch3-challenge-grid {
+  display: grid;
+  gap: 14px;
+  margin: 24px 0;
+}
+
+.wiki-article__body .ch3-dashboard { grid-template-columns: repeat(auto-fit, minmax(min(170px, 100%), 1fr)); }
+.wiki-article__body .ch3-magnet-map { grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); }
+.wiki-article__body .ch3-channel-grid { grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); }
+.wiki-article__body .ch3-template-grid { grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); }
+.wiki-article__body .ch3-challenge-grid { grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr)); }
+
+.wiki-article__body .ch3-dashboard div {
+  padding: 18px 16px;
+  border: 1px solid rgba(185,128,58,.22);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(255,255,255,.9), rgba(255,247,232,.84));
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(78,56,31,.08);
+}
+
+.wiki-article__body .ch3-dashboard strong {
+  display: block;
+  color: var(--ch3-green);
+  font-size: 32px;
+  line-height: 1;
+}
+
+.wiki-article__body .ch3-dashboard span {
+  display: block;
+  margin-top: 8px;
+  color: #75685a;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.wiki-article__body .ch3-section-title {
+  margin: 42px 0 20px;
+  padding: 26px 28px;
+  border: 1px solid rgba(47,111,95,.2);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(47,111,95,.16), transparent 34%),
+    linear-gradient(135deg, rgba(239,246,241,.92), rgba(255,248,237,.88));
+  box-shadow: 0 18px 42px rgba(69,52,31,.1);
+}
+
+.wiki-article__body .ch3-section-title span {
+  display: inline-flex;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: rgba(47,111,95,.1);
+  color: var(--ch3-green);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.wiki-article__body .ch3-section-title h2 {
+  margin: 14px 0 10px;
+  padding-top: 0;
+}
+.wiki-article__body .ch3-section-title h2::before { display: none; }
+.wiki-article__body .ch3-section-title p { max-width: 820px; margin-bottom: 0; color: var(--ch3-muted); }
+
+.wiki-article__body .ch3-card,
+.wiki-article__body .ch3-scene-card,
+.wiki-article__body .ch3-template,
+.wiki-article__body .ch3-challenge-card {
+  position: relative;
+  overflow: hidden;
+  padding: 22px;
+  border: 1px solid rgba(185,128,58,.19);
+  border-radius: 24px;
+  background: linear-gradient(150deg, rgba(255,253,248,.96), rgba(255,248,237,.78));
+  box-shadow: 0 14px 34px rgba(73,52,28,.08);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.wiki-article__body .ch3-card:hover,
+.wiki-article__body .ch3-scene-card:hover,
+.wiki-article__body .ch3-template:hover,
+.wiki-article__body .ch3-challenge-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(47,111,95,.3);
+  box-shadow: 0 22px 48px rgba(64,47,28,.13);
+}
+
+.wiki-article__body .ch3-card::after,
+.wiki-article__body .ch3-template::after,
+.wiki-article__body .ch3-challenge-card::after {
+  content: '';
+  position: absolute;
+  right: -32px;
+  top: -32px;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: rgba(185,128,58,.11);
+}
+
+.wiki-article__body .ch3-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 14px;
+  border-radius: 16px;
+  background: rgba(47,111,95,.1);
+  color: var(--ch3-green);
+  font-size: 22px;
+}
+
+.wiki-article__body .ch3-card h3,
+.wiki-article__body .ch3-scene-card h3,
+.wiki-article__body .ch3-template h3,
+.wiki-article__body .ch3-challenge-card h3 {
+  margin: 0 0 8px;
+  color: var(--ch3-ink);
+  font-size: 21px;
+}
+
+.wiki-article__body .ch3-card p,
+.wiki-article__body .ch3-scene-card p,
+.wiki-article__body .ch3-template p,
+.wiki-article__body .ch3-challenge-card p {
+  color: var(--ch3-muted);
+  line-height: 1.78;
+}
+
+.wiki-article__body .ch3-radar-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: 12px;
+  margin: 18px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wiki-article__body .ch3-radar-list li {
+  position: relative;
+  margin: 0;
+  padding: 14px 16px 14px 42px;
+  border: 1px solid rgba(47,111,95,.16);
+  border-radius: 16px;
+  background: rgba(239,246,241,.62);
+  color: #574d43;
+}
+
+.wiki-article__body .ch3-radar-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ch3-green);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.wiki-article__body .ch3-flow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(170px, 100%), 1fr));
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.wiki-article__body .ch3-flow div {
+  position: relative;
+  padding: 18px;
+  border: 1px solid rgba(47,111,95,.18);
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(239,246,241,.82), rgba(255,253,248,.92));
+}
+
+.wiki-article__body .ch3-flow div:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ch3-green);
+  color: #fff;
+  font-weight: 900;
+  box-shadow: 0 8px 18px rgba(47,111,95,.22);
+}
+
+.wiki-article__body .ch3-flow span {
+  display: inline-flex;
+  margin-bottom: 8px;
+  color: var(--ch3-gold);
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: .08em;
+}
+.wiki-article__body .ch3-flow b { display: block; color: var(--ch3-ink); }
+.wiki-article__body .ch3-flow p { margin: 6px 0 0; color: var(--ch3-muted); font-size: 14px; line-height: 1.62; }
+
+.wiki-article__body .ch3-scene-card .ch3-tag {
+  display: inline-flex;
+  margin-bottom: 12px;
+  padding: 5px 10px;
+  border: 1px solid rgba(47,111,95,.16);
+  border-radius: 999px;
+  background: rgba(239,246,241,.82);
+  color: var(--ch3-green);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.wiki-article__body .ch3-note {
+  margin: 22px 0;
+  padding: 18px 20px;
+  border: 1px solid rgba(201,138,36,.26);
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(255,249,232,.94), rgba(255,253,248,.86));
+  color: var(--ch3-muted);
+  line-height: 1.8;
+  box-shadow: 0 12px 32px rgba(77,57,32,.07);
+}
+
+.wiki-article__body .ch3-article .chat-block,
+.wiki-article__body .ch3-article .compare-grid,
+.wiki-article__body .ch3-article .box-success {
+  border-radius: 24px;
+  box-shadow: 0 16px 38px rgba(73,52,28,.08);
+}
+
+.wiki-article__body .ch3-article .compare-card.bad,
+.wiki-article__body .ch3-article .compare-card.good {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.wiki-article__body .ch3-article .compare-card.bad { border-color: rgba(199,82,63,.24); background: linear-gradient(135deg, rgba(255,242,239,.95), rgba(255,253,248,.86)); }
+.wiki-article__body .ch3-article .compare-card.good { border-color: rgba(47,111,95,.24); background: linear-gradient(135deg, rgba(239,248,243,.96), rgba(255,253,248,.88)); }
+
+.wiki-article__body .ch3-challenge {
+  margin: 32px 0;
+  padding: 28px;
+  border: 1px solid rgba(47,111,95,.22);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 88% 10%, rgba(185,128,58,.18), transparent 30%),
+    linear-gradient(135deg, rgba(239,246,241,.96), rgba(255,248,237,.9));
+  box-shadow: 0 24px 58px rgba(73,52,28,.13);
+}
+
+.wiki-article__body .ch3-challenge h2 { margin-top: 0; padding-top: 0; }
+.wiki-article__body .ch3-challenge h2::before { display: none; }
+
+.wiki-article__body .ch3-progress {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr));
+  gap: 8px;
+  margin: 16px 0 0;
+}
+
+.wiki-article__body .ch3-progress span {
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--ch3-green), var(--ch3-gold));
+  opacity: .9;
+}
+
+@media (max-width: 1024px) {
+  .ch3-mobile-nav { display: block; }
+  .wiki-article__body .ch3-dashboard,
+  .wiki-article__body .ch3-magnet-map,
+  .wiki-article__body .ch3-flow { grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); }
+  .wiki-article__body .ch3-flow div:nth-child(2)::after { display: none; }
+}
+
+@media (max-width: 720px) {
+  .wiki-article__body .ch3-hero { padding: 24px 20px; border-radius: 24px; }
+  .wiki-article__body .ch3-dashboard,
+  .wiki-article__body .ch3-magnet-map,
+  .wiki-article__body .ch3-channel-grid,
+  .wiki-article__body .ch3-template-grid,
+  .wiki-article__body .ch3-challenge-grid,
+  .wiki-article__body .ch3-radar-list,
+  .wiki-article__body .ch3-flow,
+  .wiki-article__body .ch3-progress { grid-template-columns: 1fr; }
+  .wiki-article__body .ch3-flow div::after { display: none !important; }
+  .wiki-article__body .ch3-section-title,
+  .wiki-article__body .ch3-challenge { padding: 22px; border-radius: 24px; }
+}
+
+
+/* Layout safety for wider wiki article cards */
+.wiki-article__body .ch3-article,
+.wiki-article__body .ch3-article *,
+.wiki-article__body .ch3-scene-card > * {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}

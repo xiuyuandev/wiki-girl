@@ -1,0 +1,959 @@
+/* ════════════════════════════════════════════════════════════
+   案例详情页共享样式（ch8-1 ~ ch8-10）
+   统一暗色主题，使用 CSS 变量
+   ════════════════════════════════════════════════════════════ */
+
+/* 案例详情容器 */
+.case-detail {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.case-detail::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(99,102,241,0.4), transparent);
+}
+
+/* 案例编号徽章 */
+.case-num-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: var(--gradient-primary);
+  border-radius: 14px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* 案例元信息栏 */
+.case-meta-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.case-meta-bar .label {
+  font-size: 12px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* 女主画像 */
+.case-profile {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 20px 0;
+  border-left: 3px solid var(--accent);
+}
+.case-profile h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.case-profile p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+.case-profile p strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* 对话块 */
+.chat-block {
+  margin: 24px 0;
+  padding: 20px;
+  background: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+/* 关键动作分析 */
+.case-analysis {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 20px 0;
+  border-left: 3px solid var(--info);
+}
+.case-analysis h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--info);
+  margin-bottom: 12px;
+}
+.case-analysis p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+.case-analysis p strong {
+  color: var(--text);
+}
+
+/* 可复制要点 */
+.case-takeaway {
+  background: rgba(16,185,129,0.06);
+  border: 1px solid rgba(16,185,129,0.15);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 20px 0;
+}
+.case-takeaway h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--success);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.case-takeaway ol,
+.case-takeaway ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.case-takeaway li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  line-height: 1.7;
+}
+.case-takeaway li strong {
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .case-detail { padding: 20px; }
+  .case-num-badge { width: 48px; height: 48px; font-size: 18px; }
+}
+
+/* ════════════════════════════════════════════════════════════
+   真实案例库升级：控制台 + 增强案例正文
+   ════════════════════════════════════════════════════════════ */
+.case-console { max-width: 1180px; margin: 0 auto; padding: 28px 20px 80px; }
+.case-console-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(185,128,58,.22), transparent 32%),
+    radial-gradient(circle at 8% 90%, rgba(47,93,80,.18), transparent 36%),
+    linear-gradient(135deg, rgba(255,253,248,.98), rgba(246,234,216,.86));
+  border: 1px solid rgba(47,93,80,.14);
+  box-shadow: 0 24px 70px rgba(47,93,80,.12);
+}
+.case-console-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+.case-console-stats div,
+.case-console-panel,
+.case-learning-paths button,
+.case-console-card,
+.case-upgrade-intro,
+.case-anchor-grid {
+  background: rgba(255,253,248,.92);
+  border: 1px solid rgba(47,93,80,.13);
+  border-radius: 22px;
+  box-shadow: 0 14px 34px rgba(47,93,80,.08);
+}
+.case-console-stats div { padding: 18px; }
+.case-console-stats b { display: block; font-size: 28px; color: #2f5d50; }
+.case-console-stats span { color: #6f665c; font-size: 13px; }
+.case-learning-paths { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin: 18px 0; }
+.case-learning-paths button { text-align: left; padding: 16px; cursor: pointer; color: #2d2721; transition: .2s ease; }
+.case-learning-paths button:hover { transform: translateY(-2px); border-color: rgba(185,128,58,.35); }
+.case-learning-paths b { display: block; margin-bottom: 6px; color: #2f5d50; }
+.case-learning-paths span { font-size: 12px; color: #6f665c; line-height: 1.5; }
+.case-console-panel { padding: 18px; margin: 18px 0 22px; }
+.case-filter-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.case-filter-row label { width: 48px; font-weight: 700; color: #2f5d50; }
+.case-filter-row button,
+.case-search-line button {
+  border: 1px solid rgba(47,93,80,.15);
+  background: #fffdf8;
+  color: #4c463f;
+  border-radius: 999px;
+  padding: 8px 13px;
+  cursor: pointer;
+}
+.case-filter-row button.active { background: #2f5d50; color: #fffdf8; border-color: #2f5d50; }
+.case-search-line { display: flex; gap: 10px; margin-top: 14px; }
+.case-search-line input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid rgba(47,93,80,.16);
+  border-radius: 16px;
+  padding: 12px 14px;
+  background: #fffdf8;
+}
+.case-group-grid { margin-top: 18px; }
+.case-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 22px; }
+.case-console-card { padding: 18px; display: flex; flex-direction: column; gap: 12px; }
+.case-console-card__top { display: flex; justify-content: space-between; align-items: center; }
+.case-console-card__top b { color: #b9803a; }
+.case-result { border-radius: 999px; padding: 4px 10px; font-size: 12px; background: rgba(47,93,80,.10); color: #2f5d50; }
+.case-result--失败 { background: rgba(190,75,75,.12); color: #a23b3b; }
+.case-result--体面退出 { background: rgba(90,101,120,.13); color: #4f5b6d; }
+.case-result--待定 { background: rgba(185,128,58,.15); color: #9a6424; }
+.case-console-card h3 { margin: 0; font-size: 18px; line-height: 1.35; color: #2d2721; }
+.case-console-card__profile { color: #6f665c; font-size: 13px; line-height: 1.6; margin: 0; }
+.case-console-card dl { margin: 0; display: grid; gap: 10px; }
+.case-console-card dt { font-weight: 700; color: #2f5d50; font-size: 13px; }
+.case-console-card dd { margin: 4px 0 0; color: #5f574f; font-size: 13px; line-height: 1.55; }
+.case-load-more { text-align: center; margin: 26px 0; }
+.case-empty { padding: 32px; text-align: center; color: #6f665c; }
+.case-upgrade-intro { padding: 24px; margin: 18px 0 24px; }
+.case-upgrade-intro h2 { margin-top: 0; }
+.case-upgrade-note { color: #6f665c; }
+.case-mini-chip { display: inline-flex; padding: 6px 10px; border-radius: 999px; background: rgba(47,93,80,.10); color: #2f5d50; font-size: 12px; margin: 0 6px 6px 0; }
+.case-anchor-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; padding: 16px; margin: 16px 0 26px; }
+.case-anchor-grid a { color: #2f5d50; text-decoration: none; font-size: 13px; padding: 8px 10px; border-radius: 12px; background: rgba(47,93,80,.06); }
+.case-upgraded h3 { font-size: 24px; margin: 6px 0 16px; }
+.case-compare { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 20px 0; }
+.case-compare div { border-radius: 14px; padding: 18px; background: var(--bg-card); border: 1px solid var(--border); }
+.case-compare div:first-child { border-left: 3px solid #ef4444; }
+.case-compare div:last-child { border-left: 3px solid var(--success); }
+.case-compare b { display: block; margin-bottom: 8px; }
+.case-compare p { color: var(--text-secondary); line-height: 1.7; margin: 0; }
+.chat-block h4 { margin: 0 0 12px; color: var(--accent); }
+@media (max-width: 980px) {
+  .case-console-stats, .case-learning-paths { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .case-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .case-anchor-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* ════════════════════════════════════════════════════════════
+   wiki-case-* 升级样式（与 cases.js 升级视图配合）
+   ════════════════════════════════════════════════════════════ */
+
+/* 学习进度 */
+.wiki-case-progress { background: rgba(255,253,248,.92); border: 1px solid rgba(47,93,80,.13); border-radius: 22px; padding: 20px 24px; margin: 18px 0; box-shadow: 0 14px 34px rgba(47,93,80,.08); }
+.wiki-case-progress__header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; flex-wrap: wrap; gap: 8px; }
+.wiki-case-progress__header h3 { margin: 0; font-size: 17px; color: #2f5d50; }
+.wiki-case-progress__summary { font-size: 13px; color: #6f665c; }
+.wiki-case-progress__groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.wiki-case-progress__bar { display: flex; flex-direction: column; gap: 6px; }
+.wiki-case-progress__label { display: flex; justify-content: space-between; font-size: 12px; color: #4c463f; }
+.wiki-case-progress__track { height: 6px; background: rgba(47,93,80,.10); border-radius: 999px; overflow: hidden; }
+.wiki-case-progress__fill { height: 100%; background: linear-gradient(90deg, #2f5d50, #b9803a); border-radius: 999px; transition: width .4s ease; }
+
+/* 搜索增强 */
+.case-search-box { position: relative; flex: 1; display: flex; align-items: center; }
+.case-search-box input { width: 100%; padding-right: 36px; }
+.case-search-clear { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: transparent; border: none; color: #6f665c; font-size: 18px; cursor: pointer; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%; }
+.case-search-clear:hover { background: rgba(47,93,80,.08); }
+.case-search-dropdown { margin-top: 10px; padding: 14px; background: #fffdf8; border: 1px solid rgba(47,93,80,.14); border-radius: 16px; }
+.case-search-section { margin-bottom: 12px; }
+.case-search-section:last-child { margin-bottom: 0; }
+.case-search-section h4 { margin: 0 0 8px; font-size: 12px; color: #6f665c; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
+.case-search-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.case-search-tags span { display: inline-flex; padding: 6px 12px; border-radius: 999px; background: rgba(47,93,80,.08); color: #2f5d50; font-size: 13px; cursor: pointer; transition: .15s; }
+.case-search-tags span:hover { background: #2f5d50; color: #fffdf8; }
+
+/* 搜索高亮 */
+.wiki-case-highlight { background: rgba(185,128,58,.25); color: #2d2721; border-radius: 3px; padding: 0 2px; }
+
+/* 案例卡片升级 */
+.case-console-card { cursor: pointer; transition: transform .18s ease, box-shadow .18s ease; position: relative; }
+.case-console-card:hover { transform: translateY(-3px); box-shadow: 0 20px 46px rgba(47,93,80,.14); }
+.case-console-card__scene { display: flex; align-items: center; gap: 8px; }
+.wiki-case-scene-icon { font-size: 18px; line-height: 1; }
+.case-console-card__scene-name { font-size: 13px; color: #6f665c; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.case-console-card__profile { display: flex; align-items: center; gap: 10px; }
+.wiki-case-avatar { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #2f5d50, #b9803a); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; flex-shrink: 0; }
+.wiki-case-profile-text { font-size: 13px; color: #6f665c; line-height: 1.5; }
+
+/* 误区 vs 更好动作 */
+.case-console-card__compare { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.case-console-card__wrong, .case-console-card__right { border-radius: 12px; padding: 12px; font-size: 13px; line-height: 1.55; }
+.case-console-card__wrong { background: rgba(190,75,75,.06); border-left: 3px solid #ef4444; }
+.case-console-card__wrong dt { color: #a23b3b; font-weight: 700; font-size: 12px; margin-bottom: 4px; }
+.case-console-card__wrong dd { margin: 0; color: #5f574f; }
+.case-console-card__right { background: rgba(16,185,129,.06); border-left: 3px solid #10b981; }
+.case-console-card__right dt { color: #0d8a5e; font-weight: 700; font-size: 12px; margin-bottom: 4px; }
+.case-console-card__right dd { margin: 0; color: #5f574f; }
+
+/* 可复制话术预览 */
+.case-console-card__scripts { background: rgba(99,102,241,.05); border: 1px dashed rgba(99,102,241,.18); border-radius: 12px; padding: 12px; }
+.case-console-card__scripts-label { font-size: 11px; font-weight: 700; color: #6366f1; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 6px; }
+.case-console-card__scripts ul { margin: 0; padding-left: 16px; }
+.case-console-card__scripts li { font-size: 12px; color: #5f574f; line-height: 1.6; margin-bottom: 4px; }
+.case-console-card__scripts li:last-child { margin-bottom: 0; }
+
+/* 卡片操作 */
+.case-console-card__actions { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+.wiki-case-btn-fav { border: 1px solid rgba(47,93,80,.15); background: #fffdf8; color: #6f665c; border-radius: 999px; padding: 6px 12px; font-size: 12px; cursor: pointer; transition: .15s; }
+.wiki-case-btn-fav:hover { border-color: rgba(185,128,58,.4); color: #b9803a; }
+.wiki-case-btn-fav.active { background: rgba(185,128,58,.12); color: #9a6424; border-color: rgba(185,128,58,.35); }
+.wiki-case-read-badge { font-size: 11px; padding: 3px 8px; border-radius: 999px; background: rgba(47,93,80,.10); color: #2f5d50; }
+
+/* 推荐区域 */
+.wiki-case-recommend { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(47,93,80,.12); }
+.wiki-case-recommend h3 { margin: 0 0 16px; font-size: 18px; color: #2f5d50; }
+.case-card-grid--compact { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.case-card-grid--compact .case-console-card { gap: 8px; padding: 14px; }
+.case-card-grid--compact .case-console-card h3 { font-size: 15px; }
+.case-card-grid--compact .case-console-card__profile { font-size: 12px; }
+
+/* 详情弹窗 */
+.wiki-case-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.55); backdrop-filter: blur(4px); z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.wiki-case-modal { background: var(--bg-elevated, #fffdf8); border-radius: 20px; width: 100%; max-width: 800px; max-height: 90vh; overflow-y: auto; padding: 28px 32px 24px; position: relative; box-shadow: 0 40px 100px rgba(0,0,0,.25); }
+.wiki-case-modal__close { position: absolute; top: 14px; right: 16px; width: 36px; height: 36px; border-radius: 50%; border: none; background: rgba(47,93,80,.08); color: #4c463f; font-size: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center; line-height: 1; }
+.wiki-case-modal__close:hover { background: rgba(47,93,80,.16); }
+.wiki-case-modal__header { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 20px; }
+.wiki-case-modal__meta h2 { margin: 0 0 8px; font-size: 22px; color: #2d2721; }
+.wiki-case-modal__meta .case-meta-bar { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.label-result--成功 { background: rgba(16,185,129,.12); color: #0d8a5e; }
+.label-result--待定 { background: rgba(185,128,58,.15); color: #9a6424; }
+.label-result--失败 { background: rgba(190,75,75,.12); color: #a23b3b; }
+.label-result--体面退出 { background: rgba(90,101,120,.13); color: #4f5b6d; }
+
+/* 弹窗内信号 */
+.wiki-case-signal { padding: 8px 12px; border-radius: 10px; margin-bottom: 8px; font-size: 14px; }
+.wiki-case-signal--green { background: rgba(16,185,129,.08); border-left: 3px solid #10b981; }
+.wiki-case-signal--yellow { background: rgba(234,179,8,.08); border-left: 3px solid #eab308; }
+.wiki-case-signal--red { background: rgba(190,75,75,.08); border-left: 3px solid #ef4444; }
+
+/* 对话气泡 */
+.chat-male, .chat-female { padding: 8px 12px; border-radius: 12px; margin-bottom: 8px; font-size: 14px; line-height: 1.6; }
+.chat-male { background: rgba(47,93,80,.08); margin-right: 20%; }
+.chat-female { background: rgba(185,128,58,.08); margin-left: 20%; }
+
+/* 一键复制 */
+.wiki-case-copy-btn { margin-left: auto; font-size: 12px; padding: 5px 12px; border-radius: 999px; border: 1px solid rgba(16,185,129,.3); background: rgba(16,185,129,.08); color: #0d8a5e; cursor: pointer; }
+.wiki-case-copy-btn:hover { background: rgba(16,185,129,.16); }
+
+/* 弹窗底部 */
+.wiki-case-modal__footer { display: flex; justify-content: flex-end; gap: 10px; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border, rgba(47,93,80,.12)); }
+
+/* 复盘问题特殊背景 */
+.case-takeaway--review { background: rgba(99,102,241,.05); border-color: rgba(99,102,241,.15); }
+.case-takeaway--review h4 { color: #6366f1; }
+
+@media (max-width: 980px) {
+  .wiki-case-progress__groups { grid-template-columns: 1fr; }
+  .case-card-grid--compact { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .wiki-case-modal { padding: 22px 20px 20px; }
+}
+@media (max-width: 640px) {
+  .case-console { padding: 18px 12px 60px; }
+  .case-console-stats, .case-learning-paths, .case-card-grid, .case-compare, .case-anchor-grid { grid-template-columns: 1fr; }
+  .case-search-line { flex-direction: column; }
+  .case-filter-row label { width: 100%; }
+  .case-console-card__compare { grid-template-columns: 1fr; }
+  .case-card-grid--compact { grid-template-columns: 1fr; }
+  .wiki-case-modal__header { flex-direction: column; align-items: flex-start; }
+  .chat-male, .chat-female { margin-right: 5%; margin-left: 5%; }
+}
+
+/* ════════════════════════════════════════════════════════════
+   案例库视觉样式升级 v2
+   设计系统 + 卡片 + 弹窗 + 移动端
+   ════════════════════════════════════════════════════════════ */
+
+/* ── 设计系统变量（局部兜底） ── */
+:root {
+  --wiki-primary: #2f5d50;
+  --wiki-primary-soft: rgba(47,93,80,.08);
+  --wiki-accent: #b9803a;
+  --wiki-danger: #b84a4a;
+  --wiki-success: #3f7d5a;
+  --wiki-warning: #b8832f;
+  --wiki-text: #2c2c2c;
+  --wiki-surface: #fffdf8;
+  --wiki-bg: #f5f2ec;
+  --wiki-border: #e0dbd1;
+  --wiki-radius: 10px;
+}
+
+/* ── Hero 区 ── */
+.case-hero {
+  background: linear-gradient(135deg, #1a3c32 0%, #2f5d50 60%, #3a7a66 100%);
+  border-radius: var(--wiki-radius);
+  padding: 40px 32px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.case-hero::after {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -10%;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(185,128,58,.25), transparent 70%);
+  pointer-events: none;
+}
+.case-hero__title {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 8px;
+  position: relative;
+  z-index: 1;
+}
+.case-hero__subtitle {
+  font-size: 14px;
+  opacity: .85;
+  margin: 0 0 24px;
+  position: relative;
+  z-index: 1;
+}
+.case-hero__stats {
+  display: flex;
+  gap: 32px;
+  position: relative;
+  z-index: 1;
+}
+.case-hero__stat b {
+  display: block;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1;
+}
+.case-hero__stat span {
+  font-size: 12px;
+  opacity: .75;
+  margin-top: 4px;
+  display: block;
+}
+.case-hero__paths {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+  position: relative;
+  z-index: 1;
+}
+.case-hero__paths a,
+.case-hero__paths button {
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.25);
+  color: #fff;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: .2s ease;
+}
+.case-hero__paths a:hover,
+.case-hero__paths button:hover {
+  background: rgba(255,255,255,.22);
+  transform: translateY(-1px);
+}
+
+/* ── 筛选栏 ── */
+.case-filter-bar {
+  background: var(--wiki-surface);
+  border: 1px solid var(--wiki-border);
+  border-radius: var(--wiki-radius);
+  padding: 16px 18px;
+  margin-bottom: 20px;
+}
+.case-filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.case-filter-pills button {
+  border: 1px solid var(--wiki-border);
+  background: var(--wiki-bg);
+  color: #5f574f;
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: .15s ease;
+}
+.case-filter-pills button:hover {
+  border-color: var(--wiki-primary);
+  color: var(--wiki-primary);
+}
+.case-filter-pills button.active {
+  background: var(--wiki-primary);
+  color: #fff;
+  border-color: var(--wiki-primary);
+}
+.case-filter-search {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+.case-filter-search input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid var(--wiki-border);
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: var(--wiki-surface);
+  font-size: 14px;
+  outline: none;
+  transition: border-color .2s;
+}
+.case-filter-search input:focus {
+  border-color: var(--wiki-primary);
+}
+.case-filter-search button {
+  background: var(--wiki-primary);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* ── 案例卡片 ── */
+.case-card {
+  background: var(--wiki-surface);
+  border: 1px solid var(--wiki-border);
+  border-radius: var(--wiki-radius);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  transition: transform .2s ease, box-shadow .2s ease;
+  position: relative;
+}
+.case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(47,93,80,.12);
+}
+.case-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.case-card__num {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--wiki-accent);
+  background: rgba(185,128,58,.10);
+  border-radius: 6px;
+  padding: 3px 8px;
+}
+.case-card__result {
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.case-card__result--成功 {
+  background: rgba(63,125,90,.12);
+  color: var(--wiki-success);
+}
+.case-card__result--待定 {
+  background: rgba(184,131,47,.12);
+  color: var(--wiki-warning);
+}
+.case-card__result--失败 {
+  background: rgba(184,74,74,.12);
+  color: var(--wiki-danger);
+}
+.case-card__result--退出 {
+  background: rgba(120,120,120,.12);
+  color: #777;
+}
+.case-card__title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--wiki-text);
+  margin: 0;
+  line-height: 1.35;
+}
+.case-card__profile {
+  font-size: 13px;
+  color: #6f665c;
+  line-height: 1.6;
+  margin: 0;
+}
+.case-card__compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 2px;
+}
+.case-card__compare-col {
+  background: var(--wiki-bg);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.case-card__compare-col--wrong {
+  border-left: 3px solid var(--wiki-danger);
+}
+.case-card__compare-col--right {
+  border-left: 3px solid var(--wiki-success);
+}
+.case-card__compare-col b {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+}
+.case-card__compare-col--wrong b { color: var(--wiki-danger); }
+.case-card__compare-col--right b { color: var(--wiki-success); }
+.case-card__script {
+  background: var(--wiki-primary-soft);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #4c463f;
+  line-height: 1.55;
+  position: relative;
+}
+.case-card__script::before {
+  content: '💬';
+  margin-right: 6px;
+  opacity: .7;
+}
+.case-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2px;
+}
+.case-card__tag {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--wiki-primary-soft);
+  color: var(--wiki-primary);
+}
+.case-card__fav {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--wiki-border);
+  transition: color .2s;
+  padding: 2px 4px;
+}
+.case-card__fav:hover,
+.case-card__fav.active {
+  color: var(--wiki-danger);
+}
+
+/* ── 详情弹窗 ── */
+.case-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+}
+.case-modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.case-modal {
+  background: var(--wiki-surface);
+  border-radius: var(--wiki-radius);
+  width: 100%;
+  max-width: 720px;
+  max-height: 88vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 60px rgba(0,0,0,.2);
+  transform: translateY(16px);
+  transition: transform .25s ease;
+}
+.case-modal-overlay.open .case-modal {
+  transform: translateY(0);
+}
+.case-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--wiki-border);
+  background: linear-gradient(135deg, #f5f2ec 0%, #fffdf8 100%);
+}
+.case-modal__header-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--wiki-text);
+  margin: 0;
+  line-height: 1.3;
+}
+.case-modal__close {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #8a8279;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+  border-radius: 6px;
+  transition: background .15s;
+}
+.case-modal__close:hover {
+  background: var(--wiki-primary-soft);
+}
+.case-modal__body {
+  overflow-y: auto;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 聊天气泡 */
+.case-chat {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.case-chat__row {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+.case-chat__row--man { justify-content: flex-start; }
+.case-chat__row--woman { justify-content: flex-end; }
+.case-chat__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  flex-shrink: 0;
+  background: var(--wiki-bg);
+}
+.case-chat__row--man .case-chat__avatar { background: var(--wiki-primary-soft); }
+.case-chat__row--woman .case-chat__avatar { background: rgba(185,128,58,.12); }
+.case-chat__bubble {
+  max-width: 78%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--wiki-text);
+}
+.case-chat__row--man .case-chat__bubble {
+  background: var(--wiki-bg);
+  border-bottom-left-radius: 4px;
+}
+.case-chat__row--woman .case-chat__bubble {
+  background: rgba(47,93,80,.10);
+  border-bottom-right-radius: 4px;
+}
+
+/* 信号区 */
+.case-signals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.case-signal {
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+  font-size: 13px;
+}
+.case-signal--green {
+  background: rgba(63,125,90,.10);
+  border: 1px solid rgba(63,125,90,.18);
+  color: var(--wiki-success);
+}
+.case-signal--yellow {
+  background: rgba(184,131,47,.10);
+  border: 1px solid rgba(184,131,47,.18);
+  color: var(--wiki-warning);
+}
+.case-signal--red {
+  background: rgba(184,74,74,.10);
+  border: 1px solid rgba(184,74,74,.18);
+  color: var(--wiki-danger);
+}
+.case-signal__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.case-signal--green .case-signal__dot { background: var(--wiki-success); box-shadow: 0 0 6px rgba(63,125,90,.4); }
+.case-signal--yellow .case-signal__dot { background: var(--wiki-warning); box-shadow: 0 0 6px rgba(184,131,47,.4); }
+.case-signal--red .case-signal__dot { background: var(--wiki-danger); box-shadow: 0 0 6px rgba(184,74,74,.4); }
+
+/* 话术区 */
+.case-scripts {
+  background: var(--wiki-primary-soft);
+  border-radius: 10px;
+  padding: 16px;
+}
+.case-scripts__title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--wiki-primary);
+  margin: 0 0 10px;
+}
+.case-script-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--wiki-surface);
+  border: 1px solid var(--wiki-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: border-color .2s;
+}
+.case-script-item:last-child { margin-bottom: 0; }
+.case-script-item:hover { border-color: var(--wiki-primary); }
+.case-script-item__text { flex: 1; color: var(--wiki-text); }
+.case-script-item__copy {
+  background: none;
+  border: none;
+  color: var(--wiki-primary);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.case-script-item__copy:hover { background: var(--wiki-primary-soft); }
+
+/* 复盘区 */
+.case-review {
+  border: 1px solid var(--wiki-border);
+  border-radius: 10px;
+  padding: 16px;
+}
+.case-review__title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--wiki-text);
+  margin: 0 0 10px;
+}
+.case-review__list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  color: #5f574f;
+  line-height: 1.8;
+}
+
+/* ── 学习进度 ── */
+.case-progress {
+  background: var(--wiki-surface);
+  border: 1px solid var(--wiki-border);
+  border-radius: var(--wiki-radius);
+  padding: 18px;
+  margin-bottom: 20px;
+}
+.case-progress__bar-wrap {
+  height: 8px;
+  background: var(--wiki-bg);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.case-progress__bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--wiki-primary), var(--wiki-accent));
+  border-radius: 999px;
+  transition: width .4s ease;
+}
+.case-progress__groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 14px;
+}
+.case-progress__group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.case-progress__ring {
+  width: 40px;
+  height: 40px;
+}
+.case-progress__ring circle {
+  fill: none;
+  stroke-width: 4;
+}
+.case-progress__ring-bg { stroke: var(--wiki-bg); }
+.case-progress__ring-fill { stroke: var(--wiki-primary); stroke-linecap: round; transition: stroke-dashoffset .5s ease; }
+.case-progress__label { font-size: 12px; color: #6f665c; }
+.case-progress__label b { color: var(--wiki-text); }
+
+/* ── 移动端适配 ── */
+@media (max-width: 980px) {
+  .case-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .case-hero__stats { gap: 20px; }
+  .case-hero__stat b { font-size: 28px; }
+}
+
+@media (max-width: 640px) {
+  .case-console { padding: 14px 12px 60px; }
+  .case-hero { padding: 28px 20px; }
+  .case-hero__title { font-size: 22px; }
+  .case-hero__stats { gap: 16px; flex-wrap: wrap; }
+  .case-hero__stat b { font-size: 28px; }
+  .case-card-grid { grid-template-columns: 1fr; gap: 14px; }
+  .case-card__compare { grid-template-columns: 1fr; }
+  .case-filter-pills {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+  }
+  .case-filter-pills button { white-space: nowrap; flex-shrink: 0; }
+  .case-filter-search { flex-direction: column; }
+  .case-modal-overlay { padding: 0; align-items: flex-end; }
+  .case-modal {
+    max-height: 92vh;
+    border-radius: var(--wiki-radius) var(--wiki-radius) 0 0;
+    transform: translateY(100%);
+  }
+  .case-modal-overlay.open .case-modal { transform: translateY(0); }
+  .case-signals { grid-template-columns: 1fr; }
+  .case-chat__bubble { max-width: 88%; }
+}

@@ -1,0 +1,559 @@
+/* 微表情与动作管理 —— 独立样式 */
+
+/* Hero区 —— 使用暖琥珀+深绿渐变，区别于外在蜕变的配色 */
+.wiki-expression-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr);
+  gap: 24px;
+  align-items: stretch;
+  padding: 34px;
+  border: 1px solid var(--wiki-border-lt);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 16% 10%, rgba(185, 128, 58, .18), transparent 34%),
+    radial-gradient(circle at 86% 18%, rgba(47, 93, 80, .14), transparent 30%),
+    linear-gradient(135deg, #fffdf8 0%, #f8f0e3 100%);
+  box-shadow: var(--wiki-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.wiki-expression-hero__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.wiki-expression-hero__glow--one {
+  width: 280px;
+  height: 280px;
+  top: -80px;
+  right: -60px;
+  background: rgba(185, 128, 58, .12);
+}
+
+.wiki-expression-hero__glow--two {
+  width: 200px;
+  height: 200px;
+  bottom: -60px;
+  left: 10%;
+  background: rgba(47, 93, 80, .10);
+}
+
+.wiki-expression-hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.wiki-expression-kicker {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: var(--wiki-accent);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.wiki-expression-hero h1 {
+  margin: 0 0 14px;
+  color: var(--wiki-text);
+  font-family: var(--wiki-font-serif);
+  font-size: clamp(36px, 6vw, 66px);
+  line-height: 1.03;
+  letter-spacing: -.05em;
+}
+
+.wiki-expression-hero p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--wiki-text-2);
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.wiki-expression-stats {
+  display: flex;
+  gap: 28px;
+  margin-top: 22px;
+}
+
+.wiki-expression-stats > div {
+  text-align: center;
+}
+
+.wiki-expression-stats strong {
+  display: block;
+  color: var(--wiki-primary);
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.wiki-expression-stats span {
+  display: block;
+  margin-top: 6px;
+  color: var(--wiki-text-3);
+  font-size: 13px;
+}
+
+.wiki-expression-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.wiki-expression-hero__card {
+  padding: 24px;
+  border: 1px solid rgba(185, 128, 58, .20);
+  border-radius: 24px;
+  background: rgba(255, 253, 248, .76);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.84);
+  position: relative;
+  z-index: 1;
+}
+
+.wiki-expression-hero__card strong {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--wiki-accent);
+  font-size: 18px;
+}
+
+.wiki-expression-hero__card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--wiki-text-2);
+  line-height: 1.8;
+}
+
+/* 核心原则 */
+.wiki-expression-principles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 18px 0;
+}
+
+.wiki-expression-principles div {
+  padding: 18px;
+  border: 1px solid var(--wiki-border-lt);
+  border-radius: 20px;
+  background: var(--wiki-surface);
+}
+
+.wiki-expression-principles b,
+.wiki-expression-principles span {
+  display: block;
+}
+
+.wiki-expression-principles b {
+  margin-bottom: 6px;
+  color: var(--wiki-accent);
+}
+
+.wiki-expression-principles span {
+  color: var(--wiki-text-2);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* 筛选区 */
+.wiki-expression-filter {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(min(180px, 100%), .9fr) minmax(0, 1fr);
+  gap: 14px;
+  margin: 22px 0;
+  padding: 18px;
+  border: 1px solid var(--wiki-border-lt);
+  border-radius: 24px;
+  background: rgba(255, 253, 248, .76);
+}
+
+.wiki-expression-filter label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--wiki-text-3);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.wiki-expression-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.wiki-expression-chips button {
+  border: 1px solid var(--wiki-border);
+  border-radius: 999px;
+  background: var(--wiki-surface);
+  color: var(--wiki-text-2);
+  cursor: pointer;
+  font: 800 13px/1 var(--wiki-font-ui);
+  padding: 9px 12px;
+  transition: .18s ease;
+}
+
+.wiki-expression-chips button:hover,
+.wiki-expression-chips button.active {
+  border-color: var(--wiki-accent);
+  background: var(--wiki-accent);
+  color: #fff;
+}
+
+/* 主布局 */
+.wiki-expression-layout {
+  display: grid;
+  grid-template-columns: minmax(min(300px, 100%), 400px) minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.wiki-expression-grid {
+  display: grid;
+  gap: 12px;
+  position: sticky;
+  top: calc(var(--wiki-header-h) + 18px);
+}
+
+/* 卡片 */
+.wiki-expression-card {
+  width: 100%;
+  padding: 18px;
+  border: 1px solid var(--wiki-border-lt);
+  border-radius: 22px;
+  background: var(--wiki-surface);
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: .18s ease;
+}
+
+.wiki-expression-card:hover,
+.wiki-expression-card.active {
+  transform: translateY(-2px);
+  border-color: rgba(185, 128, 58, .40);
+  box-shadow: 0 18px 34px rgba(39, 34, 28, .08);
+}
+
+.wiki-expression-card.active {
+  background: linear-gradient(135deg, #fffdf8, #f8f0e3);
+}
+
+.wiki-expression-card__head,
+.wiki-expression-detail__head {
+  display: flex;
+  gap: 12px;
+}
+
+.wiki-expression-card__head > span,
+.wiki-expression-detail__head > span {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  background: rgba(185, 128, 58, .12);
+  font-size: 23px;
+}
+
+.wiki-expression-card h3 {
+  margin: 0 0 5px;
+  color: var(--wiki-text);
+  font-size: 17px;
+}
+
+.wiki-expression-card p {
+  margin: 0;
+  color: var(--wiki-text-3);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.wiki-expression-card__summary {
+  margin-top: 12px !important;
+}
+
+.wiki-expression-card dl {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 14px 0 0;
+}
+
+.wiki-expression-card dl div {
+  padding: 9px 10px;
+  border-radius: 14px;
+  background: var(--wiki-surface-soft);
+}
+
+.wiki-expression-card dt {
+  color: var(--wiki-text-3);
+  font-size: 11px;
+}
+
+.wiki-expression-card dd {
+  margin: 3px 0 0;
+  color: var(--wiki-text);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+/* 详情面板 */
+.wiki-expression-detail {
+  padding: 26px;
+  border: 1px solid var(--wiki-border-lt);
+  border-radius: 28px;
+  background: var(--wiki-surface);
+  box-shadow: var(--wiki-shadow-sm);
+}
+
+.wiki-expression-detail__head {
+  align-items: center;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--wiki-border-lt);
+}
+
+.wiki-expression-detail__head p {
+  margin: 0 0 4px;
+  color: var(--wiki-accent);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.wiki-expression-detail__head h2 {
+  margin: 0 0 4px;
+  color: var(--wiki-text);
+  font-family: var(--wiki-font-serif);
+  font-size: 32px;
+}
+
+.wiki-expression-detail__head small {
+  color: var(--wiki-text-3);
+  font-size: 14px;
+}
+
+.wiki-expression-note {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding: 15px 16px;
+  border: 1px solid rgba(185, 128, 58, .20);
+  border-radius: 18px;
+  background: #fff8ed;
+  color: var(--wiki-text-2);
+  line-height: 1.75;
+}
+
+.wiki-expression-note strong {
+  color: var(--wiki-accent);
+  white-space: nowrap;
+}
+
+.wiki-expression-panels,
+.wiki-expression-split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.wiki-expression-panel,
+.wiki-expression-kit,
+.wiki-expression-routine,
+.wiki-expression-examples,
+.wiki-expression-related {
+  padding: 18px;
+  border: 1px solid var(--wiki-border-lt);
+  border-radius: 20px;
+  background: var(--wiki-surface-soft);
+}
+
+.wiki-expression-panel--check { background: #f2f7ee; }
+.wiki-expression-panel--action { background: #eef7f3; }
+.wiki-expression-panel--warn { background: #fff8ed; }
+
+.wiki-expression-detail h3 {
+  margin: 0 0 10px;
+  color: var(--wiki-accent);
+  font-size: 16px;
+}
+
+.wiki-expression-split,
+.wiki-expression-examples,
+.wiki-expression-related {
+  margin-top: 14px;
+}
+
+.wiki-expression-kit div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.wiki-expression-kit span {
+  border-radius: 999px;
+  background: rgba(185, 128, 58, .12);
+  color: var(--wiki-accent);
+  font-size: 13px;
+  font-weight: 800;
+  padding: 8px 10px;
+}
+
+.wiki-expression-routine p {
+  margin: 10px 0 0;
+  padding: 12px 14px;
+  border-left: 4px solid var(--wiki-accent);
+  border-radius: 12px;
+  background: rgba(255,255,255,.72);
+  color: var(--wiki-text-2);
+  line-height: 1.75;
+}
+
+.wiki-expression-examples > div {
+  display: grid;
+  gap: 10px;
+}
+
+.wiki-expression-examples article {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.72);
+}
+
+.wiki-expression-examples article p {
+  margin: 0;
+  color: var(--wiki-text-2);
+  line-height: 1.75;
+}
+
+.wiki-expression-related {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.wiki-expression-related h3 {
+  flex-basis: 100%;
+  margin-bottom: 0;
+}
+
+.wiki-expression-related a {
+  border: 1px solid var(--wiki-border);
+  border-radius: 999px;
+  color: var(--wiki-accent);
+  font-weight: 900;
+  padding: 8px 12px;
+  text-decoration: none;
+  transition: .18s ease;
+}
+
+.wiki-expression-related a:hover {
+  background: var(--wiki-accent);
+  color: #fff;
+  border-color: var(--wiki-accent);
+}
+
+/* CTA区 */
+.wiki-expression-cta {
+  margin-top: 40px;
+  padding: 40px;
+  border: 1px solid var(--wiki-border-lt);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(47, 93, 80, .10), transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(185, 128, 58, .12), transparent 40%),
+    linear-gradient(135deg, #fffdf8, #f3eadc);
+  text-align: center;
+}
+
+.wiki-expression-cta h2 {
+  margin: 0 0 12px;
+  color: var(--wiki-text);
+  font-family: var(--wiki-font-serif);
+  font-size: 28px;
+}
+
+.wiki-expression-cta p {
+  margin: 0 0 22px;
+  color: var(--wiki-text-2);
+  line-height: 1.8;
+}
+
+.wiki-expression-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Shell */
+.wiki-expression-shell {
+  width: 100%;
+  max-width: 1180px;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 36px 0 84px;
+}
+
+/* Responsive */
+@media (max-width: 1080px) {
+  .wiki-expression-hero,
+  .wiki-expression-filter,
+  .wiki-expression-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .wiki-expression-grid {
+    position: static;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .wiki-expression-shell {
+    width: min(100% - 24px, 1180px);
+    padding-top: 18px;
+  }
+
+  .wiki-expression-hero,
+  .wiki-expression-detail {
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .wiki-expression-principles,
+  .wiki-expression-grid,
+  .wiki-expression-panels,
+  .wiki-expression-split {
+    grid-template-columns: 1fr;
+  }
+
+  .wiki-expression-detail__head {
+    align-items: flex-start;
+  }
+
+  .wiki-expression-card dl {
+    grid-template-columns: 1fr;
+  }
+
+  .wiki-expression-note {
+    display: block;
+  }
+
+  .wiki-expression-stats {
+    gap: 18px;
+  }
+
+  .wiki-expression-stats strong {
+    font-size: 24px;
+  }
+}

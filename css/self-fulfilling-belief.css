@@ -1,0 +1,304 @@
+.wiki-article__body .belief-article {
+  --belief-ink: #1c2420;
+  --belief-muted: #637067;
+  --belief-green: #2f5d50;
+  --belief-gold: #d4a84f;
+  --belief-soft: #f5efe2;
+  --belief-line: rgba(47, 93, 80, 0.18);
+  color: var(--belief-ink);
+}
+
+.wiki-article__body .belief-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(28px, 5vw, 54px);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 14% 12%, rgba(255, 255, 255, 0.38), transparent 30%),
+    linear-gradient(135deg, #254c42 0%, #2f5d50 52%, #9f7b32 100%);
+  color: #fffdf6;
+  box-shadow: 0 28px 70px rgba(22, 48, 40, 0.24);
+  margin-bottom: 28px;
+}
+
+.wiki-article__body .belief-hero::after {
+  content: '';
+  position: absolute;
+  right: -70px;
+  bottom: -90px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.wiki-article__body .belief-eyebrow {
+  margin: 0 0 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.wiki-article__body .belief-hero h1 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1.05;
+  color: #fffdf6;
+}
+
+.wiki-article__body .belief-hero p:not(.belief-eyebrow) {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.wiki-article__body .belief-hero__meta {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.wiki-article__body .belief-hero__meta span,
+.wiki-article__body .belief-card span,
+.wiki-article__body .belief-rewrite span {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.wiki-article__body .belief-hero__meta span {
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff7da;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.wiki-article__body .belief-note,
+.wiki-article__body .belief-scene,
+.wiki-article__body .belief-plan,
+.wiki-article__body .belief-review {
+  border: 1px solid var(--belief-line);
+  background: linear-gradient(180deg, rgba(245, 239, 226, 0.72), rgba(255, 255, 255, 0.92));
+  border-radius: 22px;
+  padding: 20px;
+  margin: 18px 0;
+  box-shadow: 0 14px 36px rgba(36, 60, 50, 0.08);
+}
+
+.wiki-article__body .belief-note strong,
+.wiki-article__body .belief-review strong {
+  color: var(--belief-green);
+}
+
+.wiki-article__body .belief-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin: 18px 0 26px;
+}
+
+.wiki-article__body .belief-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 176px;
+  padding: 20px;
+  border-radius: 22px;
+  border: 1px solid var(--belief-line);
+  background: #fffdf8;
+  color: var(--belief-ink);
+  text-decoration: none;
+  box-shadow: 0 14px 34px rgba(36, 60, 50, 0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.wiki-article__body .belief-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 168, 79, 0.55);
+  box-shadow: 0 20px 42px rgba(36, 60, 50, 0.14);
+}
+
+.wiki-article__body .belief-card span {
+  padding: 6px 10px;
+  background: rgba(47, 93, 80, 0.1);
+  color: var(--belief-green);
+}
+
+.wiki-article__body .belief-card strong {
+  font-size: 1.08rem;
+  color: var(--belief-ink);
+}
+
+.wiki-article__body .belief-card p {
+  margin: 0;
+  color: var(--belief-muted);
+  line-height: 1.7;
+}
+
+.wiki-article__body .belief-rewrite {
+  display: grid;
+  gap: 14px;
+  margin: 18px 0 26px;
+}
+
+.wiki-article__body .belief-rewrite article {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--belief-line);
+  border-radius: 20px;
+  background: var(--belief-line);
+}
+
+.wiki-article__body .belief-rewrite div {
+  padding: 18px;
+  background: #fffdf8;
+}
+
+.wiki-article__body .belief-rewrite span {
+  padding: 5px 9px;
+  margin-bottom: 10px;
+  background: rgba(212, 168, 79, 0.14);
+  color: #8a6825;
+}
+
+.wiki-article__body .belief-rewrite strong {
+  display: block;
+  line-height: 1.65;
+  color: var(--belief-ink);
+}
+
+.wiki-article__body .belief-steps {
+  counter-reset: beliefStep;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+  margin: 18px 0 26px;
+}
+
+.wiki-article__body .belief-steps div {
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #fffdf8, #f8f2e6);
+  border: 1px solid var(--belief-line);
+}
+
+.wiki-article__body .belief-steps span {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  background: var(--belief-green);
+  color: #fffdf8;
+  font-weight: 900;
+}
+
+.wiki-article__body .belief-steps strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--belief-ink);
+}
+
+.wiki-article__body .belief-steps p,
+.wiki-article__body .belief-scene p {
+  margin: 0;
+  color: var(--belief-muted);
+  line-height: 1.75;
+}
+
+.wiki-article__body .belief-plan ul,
+.wiki-article__body .belief-plan ol,
+.wiki-article__body .belief-review ul {
+  margin-bottom: 0;
+}
+
+.wiki-article__body .belief-scenes,
+.wiki-article__body .belief-scripts,
+.wiki-article__body .belief-two-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin: 18px 0 26px;
+}
+
+.wiki-article__body .belief-scenes article,
+.wiki-article__body .belief-scripts article,
+.wiki-article__body .belief-two-col section {
+  border: 1px solid var(--belief-line);
+  border-radius: 20px;
+  padding: 20px;
+  background: #fffdf8;
+  box-shadow: 0 12px 30px rgba(36, 60, 50, 0.07);
+}
+
+.wiki-article__body .belief-scenes h3,
+.wiki-article__body .belief-two-col h3 {
+  margin-top: 0;
+  color: var(--belief-green);
+}
+
+.wiki-article__body .belief-scenes p {
+  margin: 10px 0 0;
+  color: var(--belief-muted);
+  line-height: 1.75;
+}
+
+.wiki-article__body .belief-scenes p strong {
+  color: var(--belief-ink);
+}
+
+.wiki-article__body .belief-scripts span {
+  display: inline-flex;
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+  background: rgba(47, 93, 80, 0.1);
+  color: var(--belief-green);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.wiki-article__body .belief-scripts p {
+  margin: 0;
+  color: var(--belief-ink);
+  line-height: 1.8;
+  font-weight: 700;
+}
+
+.wiki-article__body .belief-two-col ul {
+  margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .wiki-article__body .belief-hero {
+    border-radius: 22px;
+    padding: 26px 20px;
+  }
+
+  .wiki-article__body .belief-rewrite article {
+    grid-template-columns: 1fr;
+  }
+
+  .wiki-article__body .belief-grid,
+  .wiki-article__body .belief-steps {
+    grid-template-columns: 1fr;
+  }
+}

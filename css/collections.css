@@ -1,0 +1,203 @@
+/* 通用专栏分类页样式 */
+.collection-page {
+  display: grid;
+  gap: 28px;
+}
+
+.collection-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(28px, 5vw, 52px);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top right, rgba(255, 107, 107, 0.22), transparent 34%),
+    linear-gradient(135deg, rgba(32, 36, 45, 0.96), rgba(79, 58, 71, 0.92));
+  color: #fff;
+  box-shadow: 0 22px 60px rgba(24, 30, 40, 0.16);
+}
+
+.collection-kicker {
+  margin: 0 0 12px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.collection-hero h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  line-height: 1.08;
+}
+
+.collection-hero > p:not(.collection-kicker) {
+  max-width: 760px;
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.06rem;
+  line-height: 1.9;
+}
+
+.collection-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.collection-stats div {
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.collection-stats strong {
+  display: block;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.collection-stats span {
+  display: block;
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.92rem;
+}
+
+.collection-note,
+.collection-path {
+  padding: clamp(22px, 4vw, 34px);
+  border: 1px solid rgba(125, 96, 72, 0.12);
+  border-radius: 24px;
+  background: var(--wiki-surface, #fff);
+  box-shadow: 0 14px 34px rgba(30, 36, 48, 0.07);
+}
+
+.collection-note h3,
+.collection-path h2,
+.collection-page section > h2 {
+  margin-top: 0;
+}
+
+.collection-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.collection-steps div {
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(245, 238, 228, 0.74);
+}
+
+.collection-steps span,
+.collection-card span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: var(--wiki-primary, #8f5f3d);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.86rem;
+}
+
+.collection-steps b {
+  display: block;
+  margin-top: 12px;
+  color: #2d2420;
+}
+
+.collection-steps p {
+  margin: 8px 0 0;
+  color: #6f625b;
+  line-height: 1.7;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.collection-card {
+  display: block;
+  min-height: 210px;
+  padding: 24px;
+  border: 1px solid rgba(125, 96, 72, 0.13);
+  border-radius: 24px;
+  background: linear-gradient(180deg, #fff, rgba(250, 246, 239, 0.92));
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 14px 34px rgba(30, 36, 48, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.collection-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(143, 95, 61, 0.28);
+  box-shadow: 0 20px 44px rgba(30, 36, 48, 0.12);
+}
+
+.collection-card h3 {
+  margin: 18px 0 10px;
+  color: #2d2420;
+  font-size: 1.22rem;
+}
+
+.collection-card p {
+  margin: 0;
+  color: #6f625b;
+  line-height: 1.75;
+}
+
+.collection-card em {
+  display: inline-flex;
+  margin-top: 18px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(143, 95, 61, 0.1);
+  color: var(--wiki-primary, #8f5f3d);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+.collection-page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 42px 0 10px;
+}
+
+@media (max-width: 900px) {
+  .collection-stats,
+  .collection-steps,
+  .collection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .collection-hero {
+    border-radius: 22px;
+  }
+
+  .collection-stats,
+  .collection-steps,
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-card {
+    min-height: auto;
+  }
+}

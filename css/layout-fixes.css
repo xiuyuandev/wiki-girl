@@ -1,0 +1,119 @@
+/* Final layout hardening for the wiki shell.
+   Loaded last so page-specific visual CSS cannot force the SPA layout wider than its content column. */
+
+html,
+body,
+#app {
+  max-width: 100%;
+}
+
+.wiki-layout,
+.wiki-main,
+.wiki-footer,
+.wiki-home,
+.wiki-search-page,
+.wiki-rel-shell,
+.wiki-type-shell,
+.wiki-appearance-shell,
+.wiki-cases,
+.wiki-emergency,
+.wiki-principles,
+.wiki-article-shell,
+.wiki-article,
+.wiki-article__body {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.wiki-rel-shell,
+.wiki-type-shell,
+.wiki-appearance-shell {
+  width: 100%;
+}
+
+.wiki-type-hero,
+.wiki-type-layout,
+.wiki-type-dashboard,
+.wiki-type-filter,
+.wiki-type-filter--sticky,
+.wiki-type-grid,
+.wiki-appearance-hero,
+.wiki-appearance-modules,
+.wiki-appearance-routine,
+.wiki-appearance-grid,
+.wiki-appearance-stage,
+.wiki-appearance-closet,
+.wiki-appearance-examples,
+.wiki-rel-hero,
+.wiki-rel-grid,
+.wiki-case-grid,
+.wiki-emergency-grid,
+.wiki-recommend-grid {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.wiki-type-hero > *,
+.wiki-type-layout > *,
+.wiki-type-dashboard > *,
+.wiki-type-filter > *,
+.wiki-type-filter--sticky > *,
+.wiki-appearance-hero > *,
+.wiki-appearance-modules > *,
+.wiki-appearance-routine > *,
+.wiki-appearance-grid > *,
+.wiki-appearance-stage > *,
+.wiki-appearance-closet > *,
+.wiki-appearance-examples > *,
+.wiki-rel-hero > *,
+.wiki-rel-grid > *,
+.wiki-case-grid > *,
+.wiki-emergency-grid > *,
+.wiki-recommend-grid > * {
+  min-width: 0;
+}
+
+.wiki-article__body pre,
+.wiki-article__body code,
+.wiki-article__body table,
+.wiki-article__body .extra-rich-table,
+.wiki-article__body .extra-rich-panel,
+.wiki-article__body .extra-rich-grid,
+.wiki-article__body .ch23-stage,
+.wiki-article__body .ch23-grid,
+.wiki-article__body .ch33-grid {
+  max-width: 100%;
+}
+
+.wiki-article__body pre,
+.wiki-article__body table,
+.wiki-article__body .extra-rich-table {
+  overflow-x: auto;
+}
+
+.wiki-article__body p,
+.wiki-article__body li,
+.wiki-article__body dd,
+.wiki-article__body blockquote,
+.wiki-type-shell,
+.wiki-appearance-shell,
+.wiki-rel-shell {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 900px) {
+  .wiki-header {
+    min-width: 0;
+  }
+
+  .wiki-header__brand,
+  .wiki-header__search {
+    min-width: 0;
+  }
+
+  .wiki-search-panel {
+    max-width: calc(100vw - 24px);
+  }
+}
