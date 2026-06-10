@@ -1,0 +1,362 @@
+/* ════════════════════════════════════════════════════════════
+   生活妙招 —— 专栏样式（5倍扩充版）
+   ════════════════════════════════════════════════════════════ */
+
+.lifehacks-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 22px 60px;
+  font-family: var(--font-body);
+  color: var(--text);
+}
+
+/* ── 英雄区 ── */
+.lifehacks-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 12% 20%, rgba(14,165,233,.15), transparent 40%),
+    radial-gradient(circle at 88% 10%, rgba(99,102,241,.20), transparent 38%),
+    linear-gradient(135deg, var(--bg-elevated), var(--bg));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  padding: 48px 40px 40px;
+  margin-bottom: 36px;
+}
+
+.lifehacks-hero__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.lifehacks-hero__glow--one {
+  top: -80px; right: -60px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(14,165,233,.16), transparent 70%);
+}
+
+.lifehacks-hero__glow--two {
+  bottom: -60px; left: -40px;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(99,102,241,.13), transparent 70%);
+}
+
+.lifehacks-hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.lifehacks-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: rgba(14,165,233,.15);
+  color: #7dd3fc;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.lifehacks-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.lifehacks-hero__lead {
+  font-size: 17px;
+  line-height: 1.78;
+  color: var(--text-secondary);
+  max-width: 860px;
+  margin-bottom: 24px;
+  white-space: pre-line;
+}
+
+.lifehacks-hero__quote {
+  position: relative;
+  padding: 20px 24px 20px 48px;
+  margin-bottom: 28px;
+  background: rgba(255,255,255,.04);
+  border-radius: var(--radius);
+  border-left: 3px solid #0ea5e9;
+}
+
+.lifehacks-hero__quote-mark {
+  position: absolute;
+  top: 8px; left: 14px;
+  font-size: 42px;
+  line-height: 1;
+  color: #0ea5e9;
+  font-family: Georgia, serif;
+}
+
+.lifehacks-hero__quote p {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.lifehacks-stats {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.lifehacks-stats > div {
+  text-align: center;
+}
+
+.lifehacks-stats strong {
+  display: block;
+  font-size: 36px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.lifehacks-stats span {
+  display: block;
+  margin-top: 6px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* ── Tab 导航 ── */
+.lifehacks-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  padding: 4px;
+  background: var(--bg-elevated);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.lifehacks-tab {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+
+.lifehacks-tab:hover {
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+}
+
+.lifehacks-tab.active {
+  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(14,165,233,.3);
+}
+
+/* ── 通用区块 ── */
+.lifehacks-section {
+  margin-bottom: 40px;
+}
+
+.lifehacks-section__head {
+  margin-bottom: 28px;
+}
+
+.lifehacks-section__head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.lifehacks-section__head p {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.lifehacks-intro {
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 28px;
+  font-size: 15px;
+  line-height: 1.74;
+  color: var(--text-secondary);
+  white-space: pre-line;
+}
+
+/* ── 妙招分类 ── */
+.lifehacks-category {
+  margin-bottom: 32px;
+}
+
+.lifehacks-category h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(14,165,233,.3);
+}
+
+/* ── 妙招条目 ── */
+.lifehacks-item {
+  display: flex;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  transition: all .2s ease;
+}
+
+.lifehacks-item:hover {
+  border-color: rgba(14,165,233,.3);
+  background: rgba(14,165,233,.04);
+}
+
+.lifehacks-item__num {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0ea5e9;
+  line-height: 1.4;
+  min-width: 28px;
+  text-align: center;
+}
+
+.lifehacks-item__text {
+  font-size: 15px;
+  line-height: 1.74;
+  color: var(--text-secondary);
+}
+
+.lifehacks-item__text strong {
+  color: var(--text);
+}
+
+/* ── 90天计划阶段 ── */
+.lifehacks-phase {
+  margin-bottom: 40px;
+  padding: 28px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.lifehacks-phase__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(14,165,233,.3);
+}
+
+.lifehacks-phase__desc {
+  font-size: 15px;
+  line-height: 1.74;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+/* ── 天数条目 ── */
+.lifehacks-day {
+  display: flex;
+  gap: 16px;
+  padding: 14px 18px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  transition: all .2s ease;
+}
+
+.lifehacks-day:hover {
+  border-color: rgba(14,165,233,.3);
+  background: rgba(14,165,233,.04);
+}
+
+.lifehacks-day-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0ea5e9;
+  white-space: nowrap;
+  min-width: 50px;
+}
+
+.lifehacks-day-task {
+  font-size: 15px;
+  line-height: 1.74;
+  color: var(--text-secondary);
+}
+
+/* ── 响应式 ── */
+@media (max-width: 768px) {
+  .lifehacks-shell {
+    padding: 16px 12px 40px;
+  }
+
+  .lifehacks-hero {
+    padding: 32px 20px 28px;
+  }
+
+  .lifehacks-stats {
+    gap: 20px;
+  }
+
+  .lifehacks-stats strong {
+    font-size: 28px;
+  }
+
+  .lifehacks-tabs {
+    gap: 4px;
+    padding: 3px;
+  }
+
+  .lifehacks-tab {
+    padding: 8px 12px;
+    font-size: 12px;
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .lifehacks-item {
+    padding: 12px 14px;
+  }
+
+  .lifehacks-item__num {
+    font-size: 18px;
+    min-width: 24px;
+  }
+
+  .lifehacks-phase {
+    padding: 18px 14px;
+  }
+
+  .lifehacks-phase__title {
+    font-size: 18px;
+  }
+
+  .lifehacks-day {
+    padding: 12px 14px;
+  }
+}

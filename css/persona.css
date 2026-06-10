@@ -1,0 +1,415 @@
+/* ════════════════════════════════════════════════════════════
+   人设叙事 —— 专栏样式
+   ════════════════════════════════════════════════════════════ */
+
+.persona-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 22px 60px;
+  font-family: var(--font-body);
+  color: var(--text);
+}
+
+/* ── 英雄区 ── */
+.persona-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 12% 20%, rgba(245,158,11,.14), transparent 40%),
+    radial-gradient(circle at 88% 10%, rgba(217,70,239,.18), transparent 38%),
+    linear-gradient(135deg, var(--bg-elevated), var(--bg));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  padding: 48px 40px 40px;
+  margin-bottom: 36px;
+}
+
+.persona-hero__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.persona-hero__glow--one {
+  top: -80px; right: -60px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(245,158,11,.15), transparent 70%);
+}
+
+.persona-hero__glow--two {
+  bottom: -60px; left: -40px;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(217,70,239,.12), transparent 70%);
+}
+
+.persona-hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.persona-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: rgba(245,158,11,.15);
+  color: #fcd34d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.persona-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.persona-hero__lead {
+  font-size: 17px;
+  line-height: 1.78;
+  color: var(--text-secondary);
+  max-width: 860px;
+  margin-bottom: 24px;
+  white-space: pre-line;
+}
+
+.persona-hero__quote {
+  position: relative;
+  padding: 20px 24px 20px 48px;
+  margin-bottom: 28px;
+  background: rgba(255,255,255,.04);
+  border-radius: var(--radius);
+  border-left: 3px solid #f59e0b;
+}
+
+.persona-hero__quote-mark {
+  position: absolute;
+  top: 8px; left: 14px;
+  font-size: 42px;
+  line-height: 1;
+  color: #f59e0b;
+  font-family: Georgia, serif;
+}
+
+.persona-hero__quote p {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.persona-stats {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.persona-stats > div {
+  text-align: center;
+}
+
+.persona-stats strong {
+  display: block;
+  font-size: 36px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f59e0b, #d946ef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.persona-stats span {
+  display: block;
+  margin-top: 6px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* ── Tab 导航 ── */
+.persona-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  padding: 4px;
+  background: var(--bg-elevated);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.persona-tab {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+
+.persona-tab:hover {
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+}
+
+.persona-tab.active {
+  background: linear-gradient(135deg, #f59e0b, #d946ef);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(245,158,11,.3);
+}
+
+/* ── 通用区块 ── */
+.persona-section {
+  margin-bottom: 40px;
+}
+
+.persona-section__head {
+  margin-bottom: 28px;
+}
+
+.persona-section__head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.persona-section__head p {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.persona-intro {
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 28px;
+  font-size: 15px;
+  line-height: 1.74;
+  color: var(--text-secondary);
+  white-space: pre-line;
+}
+
+/* ── 妙招分类 ── */
+.persona-category {
+  margin-bottom: 32px;
+}
+
+.persona-category h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(245,158,11,.3);
+}
+
+/* ── 妙招条目 ── */
+.persona-item {
+  display: flex;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  transition: all .2s ease;
+}
+
+.persona-item:hover {
+  border-color: rgba(245,158,11,.3);
+  background: rgba(245,158,11,.04);
+}
+
+.persona-item__num {
+  font-size: 20px;
+  font-weight: 800;
+  color: #f59e0b;
+  line-height: 1.4;
+  min-width: 28px;
+  text-align: center;
+}
+
+.persona-item__text {
+  font-size: 15px;
+  line-height: 1.74;
+  color: var(--text-secondary);
+}
+
+/* ── 案例对比 ── */
+.persona-case {
+  margin-bottom: 32px;
+  padding: 24px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.persona-case h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(245,158,11,.3);
+}
+
+.persona-case__scene {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.persona-case__bad {
+  padding: 12px 16px;
+  background: rgba(239,68,68,.06);
+  border-left: 3px solid #ef4444;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.74;
+  color: var(--text-secondary);
+}
+
+.persona-case__analysis {
+  padding: 12px 16px;
+  background: rgba(245,158,11,.06);
+  border-left: 3px solid #f59e0b;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.74;
+  color: var(--text-secondary);
+}
+
+.persona-case__good {
+  padding: 12px 16px;
+  background: rgba(34,197,94,.06);
+  border-left: 3px solid #22c55e;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.74;
+  color: var(--text-secondary);
+}
+
+.persona-case__insight {
+  padding: 10px 16px;
+  background: rgba(168,85,247,.06);
+  border-left: 3px solid #a855f7;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: 14px;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* ── 训练条目 ── */
+.persona-training {
+  display: flex;
+  gap: 16px;
+  padding: 14px 18px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  transition: all .2s ease;
+}
+
+.persona-training:hover {
+  border-color: rgba(245,158,11,.3);
+  background: rgba(245,158,11,.04);
+}
+
+.persona-training__day {
+  font-size: 13px;
+  font-weight: 700;
+  color: #f59e0b;
+  white-space: nowrap;
+  min-width: 60px;
+}
+
+.persona-training__task {
+  font-size: 15px;
+  line-height: 1.74;
+  color: var(--text-secondary);
+}
+
+/* ── 故事模板 ── */
+.persona-template {
+  padding: 16px 20px;
+  background: rgba(168,85,247,.04);
+  border: 1px solid rgba(168,85,247,.2);
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.74;
+  color: var(--text-secondary);
+}
+
+.persona-template strong {
+  color: #a855f7;
+  font-weight: 700;
+}
+
+/* ── 响应式 ── */
+@media (max-width: 768px) {
+  .persona-shell {
+    padding: 16px 12px 40px;
+  }
+
+  .persona-hero {
+    padding: 32px 20px 28px;
+  }
+
+  .persona-stats {
+    gap: 20px;
+  }
+
+  .persona-stats strong {
+    font-size: 28px;
+  }
+
+  .persona-tabs {
+    gap: 4px;
+    padding: 3px;
+  }
+
+  .persona-tab {
+    padding: 8px 12px;
+    font-size: 12px;
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .persona-item {
+    padding: 12px 14px;
+  }
+
+  .persona-item__num {
+    font-size: 18px;
+    min-width: 24px;
+  }
+
+  .persona-case {
+    padding: 18px 14px;
+  }
+
+  .persona-training {
+    padding: 12px 14px;
+  }
+}

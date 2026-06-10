@@ -20,6 +20,14 @@ window.WIKI = {
         { type: 'article', name: '01. 蜕变心法', id: 'ch1', desc: '自卑诊断、稳定自信与行动系统' },
         { type: 'route', name: '02. 外在蜕变', to: '/appearance', articleId: 'ch2', badge: '升级', desc: '发型、穿搭、体态、护肤与形象方案' },
         { type: 'route', name: '02-1. 微表情与动作管理', to: '/expression', articleId: 'ch2', badge: '进化', desc: '笑容、眼神、手势、体态、声音与社交存在感训练' },
+        { type: 'route', name: '02-2. 故事叙述与幽默能力', to: '/storytelling', articleId: 'ch4', badge: '表达', desc: '故事架构模板、幽默技术与实战训练系统' },
+        { type: 'route', name: '02-3. 生活方式探索', to: '/lifestyle', articleId: 'ch35', badge: '生活', desc: '打破两点一线、低成本有趣生活方案与30天激活计划' },
+        { type: 'route', name: '02-4. 主导力与松弛感', to: '/attraction', articleId: 'ch36', badge: '核心', desc: '让男人舒展、让女人沦陷的底层吸引力系统' },
+        { type: 'route', name: '02-5. 强者心态锻造', to: '/mindset', articleId: 'ch37', badge: '心态', desc: '从弱者思维到强者内核的完整蜕变系统' },
+        { type: 'route', name: '02-6. 财富建设', to: '/wealth', articleId: 'ch45', badge: '搞钱', desc: '普通人从小做起当老板，年收入30-100万实操路径' },
+        { type: 'route', name: '02-7. 她世界解码', to: '/women', articleId: 'ch46', badge: '懂她', desc: '懂女人的底层逻辑，做一个有深度谈资的男人' },
+        { type: 'route', name: '02-8. 生活妙招', to: '/lifehacks', articleId: 'ch47', badge: '妙招', desc: '形象、生活、饮食、社交、健康、财务、修养与实用技能的人生小窍门' },
+        { type: 'route', name: '02-9. 人设叙事', to: '/persona', articleId: 'ch48', badge: '叙事', desc: '有过大起大落的男人，如何真实而有魅力地讲述自己的身份和经历' },
         { type: 'article', name: '03. 魅力磁场', id: 'ch3', desc: '社交雷达、渠道地图与30天行动挑战' },
         { type: 'article', name: '04. 高情商聊天', id: 'ch4', desc: '接话、延续、幽默与邀约' },
         { type: 'article', name: '05. 读懂女人', id: 'ch5', desc: '理解不同类型与信号' },
@@ -98,8 +106,8 @@ window.WIKI = {
       items: [
         { type: 'article', name: '33. 亲密关系中的边界与尊重', id: 'ch33', desc: '清晰同意、边界信号、拒绝回应与亲密修复' },
         { type: 'article', name: '34. 男性沟通表达能力', id: 'ch34', desc: '需求表达、边界拒绝、道歉修复与冲突降级' },
-        { type: 'article', name: '35. 男性生活方式建设', id: 'ch35', desc: '秩序、兴趣、审美与生活质感' },
-        { type: 'article', name: '36. 经济与现实婚恋认知', id: 'ch36', desc: '消费、礼物、相亲条件与长期规划' },
+        { type: 'route', name: '35. 男性生活方式建设', to: '/lifestyle', articleId: 'ch35', badge: '生活', desc: '打破两点一线、低成本有趣生活方案与30天激活计划' },
+        { type: 'route', name: '36. 经济与现实婚恋认知', to: '/attraction', articleId: 'ch36', badge: '核心', desc: '让男人舒展、让女人沦陷的底层吸引力系统' },
         { type: 'article', name: '37. 分手、失恋与重建', id: 'ch37', desc: '72小时急救、挽回判断与30天重建' },
         { type: 'article', name: '38. 反荡妇羞辱与主动表达', id: 'ch38', desc: '去羞耻、尊重边界，让主动更安全' },
         { type: 'article', name: '39. 双向投入与关系互惠', id: 'ch39', desc: '情感、时间、行动、资源与长期支持的双向投入' },
@@ -153,6 +161,14 @@ window.WIKI = {
     { name: '复杂关系边界', to: '/married-woman' },
     { name: '万能话术', to: '/universal-scripts' },
     { name: '微表情管理', to: '/expression' },
+    { name: '故事与幽默', to: '/storytelling' },
+    { name: '生活方式', to: '/lifestyle' },
+    { name: '主导力', to: '/attraction' },
+    { name: '强者心态', to: '/mindset' },
+    { name: '财富建设', to: '/wealth' },
+    { name: '她世界', to: '/women' },
+    { name: '生活妙招', to: '/lifehacks' },
+    { name: '人设叙事', to: '/persona' },
     { name: '信念改写', to: '/a/ch44' },
     { name: '边界声明', to: '/principles' }
   ],
@@ -166,7 +182,8 @@ window.WIKI = {
     'ch23','ch24','ch25','ch26','ch27','ch28','ch29','ch30',
     'ch31','ch32','ch33','ch34','ch35','ch36','ch37','ch38','ch39','ch40','ch41',
     'ch42','ch43',
-    'ch44','ch44-1','ch44-2','ch44-3','ch44-4','ch44-5','ch44-6','ch44-7','ch44-8','ch44-9','ch44-10','ch44-11','ch44-12'
+    'ch44','ch44-1','ch44-2','ch44-3','ch44-4','ch44-5','ch44-6','ch44-7','ch44-8','ch44-9','ch44-10','ch44-11','ch44-12',
+    'ch45','ch46'
   ],
 
   titles: {
@@ -208,8 +225,8 @@ window.WIKI = {
     'ch29': '线上社交与相亲软件', 'ch30': '约会场景库', 'ch31': '聊天素材与话题库',
     'ch32': '案例拆解：错误示范 vs 正确示范', 'ch33': '亲密关系中的边界与尊重',
     'ch34': '男性沟通表达能力', 'ch35': '男性生活方式建设', 'ch36': '经济与现实婚恋认知',
-    'ch37': '分手、失恋与重建', 'ch38': '反荡妇羞辱与主动表达', 'ch39': '双向投入与关系互惠',
-    'ch40': '低资源男性的高价值吸引力', 'ch41': '哈佛积极心理学实战课',
+    'ch37': '分手、失恋与重建', 'ch38': '反荡妇羞辱与主动表达', 'ch39': '双向投入与关系互惠', 'ch45': '财富建设', 'ch46': '她世界解码',
+    'ch40': '低资源男性的高价值吸引力', 'ch41': '哈佛积极心理学实战课', 'ch47': '生活妙招', 'ch48': '人设叙事',
     'ch42': '复杂关系边界手册', 'ch43': '万能话术',
     'ch44': '自证预言改写信念',
     'ch44-1': '自证预言改写信念：金钱信念',
@@ -261,6 +278,12 @@ window.WIKI = {
     { name: '复杂关系边界手册', desc: '已婚身份、暧昧信号、情绪依赖和体面退出的高风险关系自查。', id: 'married-woman', to: '/married-woman', articleId: 'ch42', badge: '边界' },
     { name: '万能话术', desc: '开场、接话、邀约、修复、拒绝、退出的低压力表达框架库。', id: 'universal-scripts', to: '/universal-scripts', articleId: 'ch43', badge: '话术' },
     { name: '微表情与动作管理', desc: '从木讷到生动：笑容、眼神、手势、体态、声音与社交存在感的系统训练。', id: 'expression', to: '/expression', articleId: 'ch2', badge: '表情进化' },
+    { name: '故事叙述与幽默能力', desc: '六大故事模板、八大幽默技术、21天训练系统，从沉默到让人想多听两句。', id: 'storytelling', to: '/storytelling', articleId: 'ch4', badge: '表达进化' },
+    { name: '生活方式探索', desc: '打破两点一线、低成本生活方案、下班精力恢复、30天激活计划。', id: 'lifestyle', to: '/lifestyle', articleId: 'ch35', badge: '生活进化' },
+    { name: '主导力与松弛感', desc: '让男人舒展、让女人沦陷的底层吸引力系统：主导力、推拉、投资。', id: 'attraction', to: '/attraction', articleId: 'ch36', badge: '核心进化' },
+    { name: '强者心态锻造', desc: '弱者vs强者7大维度对比、心态自测、7大支柱、场景实战、21天计划。', id: 'mindset', to: '/mindset', articleId: 'ch37', badge: '心态进化' },
+    { name: '生活妙招', desc: '形象品味、生活美学、饮食智慧、社交礼仪、健康管理、财务智慧、精神修养与实用技能的人生小窍门。', id: 'lifehacks', to: '/lifehacks', articleId: 'ch47', badge: '妙招' },
+    { name: '人设叙事', desc: '有过大起大落的男人，如何真实而有魅力地讲述自己的身份和经历，把零恋爱经验变成独特优势。', id: 'persona', to: '/persona', articleId: 'ch48', badge: '叙事' },
     { name: '自证预言改写信念', desc: '金钱、幸福、执行力、恋爱、健康、运气等底层信念改写训练。', id: 'ch44', badge: '信念改写' }
   ]
 };

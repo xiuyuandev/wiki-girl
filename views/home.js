@@ -190,6 +190,14 @@ window.HomeView = {
         { badge: 'Look', title: '外在蜕变', desc: '形象、穿搭、体态与第一印象升级。', to: '/appearance' },
         { badge: 'Script', title: '万能话术', desc: '开场、破冰、升温、修复与体面退出。', to: '/universal-scripts' },
         { badge: 'Expression', title: '微表情与动作管理', desc: '笑容、眼神、手势、体态、声音与社交存在感训练。', to: '/expression' },
+        { badge: 'Story', title: '故事叙述与幽默能力', desc: '六大故事模板、八大幽默技术、21天进阶训练系统。', to: '/storytelling' },
+        { badge: 'Life', title: '生活方式探索', desc: '打破两点一线、低成本生活方案、30天激活计划。', to: '/lifestyle' },
+        { badge: 'Core', title: '主导力与松弛感', desc: '让男人舒展、让女人沦陷的底层吸引力系统。', to: '/attraction' },
+        { badge: 'Mind', title: '强者心态锻造', desc: '从弱者思维到强者内核的完整蜕变系统。', to: '/mindset' },
+        { badge: 'Money', title: '财富建设', desc: '普通人从小做起当老板，年收入30-100万实操路径。', to: '/wealth' },
+        { badge: 'Her', title: '她世界解码', desc: '懂女人的底层逻辑，做一个有深度谈资的男人。', to: '/women' },
+        { badge: 'Tips', title: '生活妙招', desc: '形象、饮食、社交、健康、财务、修养的实用人生技巧。', to: '/lifehacks' },
+        { badge: 'ID', title: '人设叙事', desc: '有过大起大落的男人，如何真实有魅力地讲述自己。', to: '/persona' },
         { badge: 'Belief', title: '自证预言改写信念', desc: '金钱、幸福、执行力、恋爱、健康等底层信念训练。', to: '/a/ch44', featured: true }
       ],
       starterPath: [

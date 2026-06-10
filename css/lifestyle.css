@@ -1,0 +1,883 @@
+/* ════════════════════════════════════════════════════════════
+   生活方式探索 —— 专栏样式
+   ════════════════════════════════════════════════════════════ */
+
+/* ── 容器 ── */
+.wiki-lifestyle-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 22px 60px;
+  font-family: var(--font-body);
+  color: var(--text);
+}
+
+/* ── 英雄区 ── */
+.wiki-lifestyle-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 12% 20%, rgba(16,185,129,.18), transparent 40%),
+    radial-gradient(circle at 88% 10%, rgba(245,158,11,.22), transparent 38%),
+    linear-gradient(135deg, var(--bg-elevated), var(--bg));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  padding: 48px 40px 40px;
+  margin-bottom: 36px;
+}
+
+.wiki-lifestyle-hero__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.wiki-lifestyle-hero__glow--one {
+  top: -80px; right: -60px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(16,185,129,.18), transparent 70%);
+}
+
+.wiki-lifestyle-hero__glow--two {
+  bottom: -60px; left: -40px;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(245,158,11,.14), transparent 70%);
+}
+
+.wiki-lifestyle-hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.wiki-lifestyle-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: rgba(16,185,129,.15);
+  color: #34d399;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.wiki-lifestyle-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.wiki-lifestyle-hero__lead {
+  font-size: 17px;
+  line-height: 1.78;
+  color: var(--text-secondary);
+  max-width: 860px;
+  margin-bottom: 24px;
+}
+
+.wiki-lifestyle-hero__quote {
+  position: relative;
+  padding: 20px 24px 20px 48px;
+  margin-bottom: 28px;
+  background: rgba(255,255,255,.04);
+  border-radius: var(--radius);
+  border-left: 3px solid #10b981;
+}
+
+.wiki-lifestyle-hero__quote-mark {
+  position: absolute;
+  top: 8px; left: 14px;
+  font-size: 42px;
+  line-height: 1;
+  color: #10b981;
+  font-family: Georgia, serif;
+}
+
+.wiki-lifestyle-hero__quote p {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.wiki-lifestyle-hero__quote-source {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wiki-lifestyle-hero__quote-source strong {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.wiki-lifestyle-hero__quote-source span {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.wiki-lifestyle-stats {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.wiki-lifestyle-stats > div {
+  text-align: center;
+}
+
+.wiki-lifestyle-stats strong {
+  display: block;
+  font-size: 36px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #10b981, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.wiki-lifestyle-stats span {
+  display: block;
+  margin-top: 6px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* ── 通用区块 ── */
+.wiki-lifestyle-section {
+  margin-bottom: 40px;
+}
+
+.wiki-lifestyle-section__head {
+  margin-bottom: 28px;
+}
+
+.wiki-lifestyle-section__head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.wiki-lifestyle-section__head > p {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 720px;
+}
+
+.wiki-lifestyle-intro {
+  padding: 24px 28px;
+  background: linear-gradient(145deg, rgba(16,185,129,.08) 0%, rgba(245,158,11,.04) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 32px;
+}
+
+.wiki-lifestyle-intro p {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ── Tab 导航 ── */
+.wiki-lifestyle-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  padding: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.wiki-lifestyle-tab {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.wiki-lifestyle-tab:hover {
+  color: var(--text);
+  background: rgba(255,255,255,.05);
+}
+
+.wiki-lifestyle-tab.active {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+}
+
+/* ── 认知误区卡片 ── */
+.wiki-lifestyle-myths {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.wiki-lifestyle-myth-card {
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.wiki-lifestyle-myth-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #f87171;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wiki-lifestyle-myth-card h4::before {
+  content: '✕';
+  font-size: 12px;
+}
+
+.wiki-lifestyle-myth-reality {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.wiki-lifestyle-myth-action {
+  padding: 12px 16px;
+  background: rgba(16,185,129,.08);
+  border-left: 2px solid #10b981;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 13px;
+  color: #34d399;
+  line-height: 1.6;
+}
+
+/* ── 原则卡片 ── */
+.wiki-lifestyle-principles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.wiki-lifestyle-principle-card {
+  padding: 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.wiki-lifestyle-principle-card:hover {
+  border-color: rgba(16,185,129,.3);
+  transform: translateY(-2px);
+}
+
+.wiki-lifestyle-principle-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #10b981;
+  margin-bottom: 8px;
+}
+
+.wiki-lifestyle-principle-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0 0 10px;
+}
+
+.wiki-lifestyle-principle-example {
+  padding: 12px;
+  background: rgba(245,158,11,.06);
+  border-left: 2px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ── 活动分类 ── */
+.wiki-lifestyle-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.wiki-lifestyle-cat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.wiki-lifestyle-cat__head {
+  padding: 20px 24px;
+  background: rgba(255,255,255,.02);
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wiki-lifestyle-cat__head span:first-child {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.wiki-lifestyle-cat__head h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.wiki-lifestyle-cat__body {
+  padding: 20px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.wiki-lifestyle-activity-card {
+  padding: 18px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.wiki-lifestyle-activity-card:hover {
+  border-color: rgba(16,185,129,.3);
+}
+
+.wiki-lifestyle-activity-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.wiki-lifestyle-activity-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.wiki-lifestyle-activity-meta span {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.wiki-lifestyle-activity-meta span:first-child {
+  background: rgba(16,185,129,.15);
+  color: #34d399;
+}
+
+.wiki-lifestyle-activity-meta span:nth-child(2) {
+  background: rgba(59,130,246,.15);
+  color: #60a5fa;
+}
+
+.wiki-lifestyle-activity-card > p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+
+.wiki-lifestyle-activity-detail {
+  padding: 10px 12px;
+  background: rgba(16,185,129,.06);
+  border-left: 2px solid #10b981;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── 恢复对比 ── */
+.wiki-lifestyle-comparisons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.wiki-lifestyle-compare-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .wiki-lifestyle-compare-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wiki-lifestyle-compare-bad {
+  padding: 20px;
+  background: rgba(239,68,68,.06);
+  border-right: 1px solid var(--border-light);
+}
+
+.wiki-lifestyle-compare-good {
+  padding: 20px;
+  background: rgba(16,185,129,.06);
+}
+
+.wiki-lifestyle-compare-bad h4,
+.wiki-lifestyle-compare-good h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.wiki-lifestyle-compare-bad h4 {
+  color: #f87171;
+}
+
+.wiki-lifestyle-compare-good h4 {
+  color: #34d399;
+}
+
+.wiki-lifestyle-compare-bad p,
+.wiki-lifestyle-compare-good p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── 日常流程 ── */
+.wiki-lifestyle-routine {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.wiki-lifestyle-routine-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.wiki-lifestyle-routine-time {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  background: rgba(245,158,11,.12);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.wiki-lifestyle-routine-content h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 4px;
+}
+
+.wiki-lifestyle-routine-content p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── 快速缓解 ── */
+.wiki-lifestyle-quick-relief {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.wiki-lifestyle-relief-card {
+  padding: 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.wiki-lifestyle-relief-card h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.wiki-lifestyle-relief-card p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── 周计划 ── */
+.wiki-lifestyle-weeks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.wiki-lifestyle-week-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.wiki-lifestyle-week-card.active-week {
+  border-color: #10b981;
+}
+
+.wiki-lifestyle-week__head {
+  padding: 18px 24px;
+  background: rgba(255,255,255,.02);
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.wiki-lifestyle-week__head span:first-child {
+  font-size: 12px;
+  font-weight: 700;
+  color: #10b981;
+  padding: 4px 12px;
+  background: rgba(16,185,129,.12);
+  border-radius: 999px;
+}
+
+.wiki-lifestyle-week__head h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.wiki-lifestyle-week__head p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.wiki-lifestyle-week-focus {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.wiki-lifestyle-week__body {
+  padding: 20px 24px;
+}
+
+.wiki-lifestyle-days {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wiki-lifestyle-day {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 14px;
+  background: rgba(255,255,255,.02);
+  border-radius: var(--radius);
+}
+
+.wiki-lifestyle-day-num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #10b981, #059669);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.wiki-lifestyle-day-content p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 4px;
+}
+
+.wiki-lifestyle-day-tip {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.wiki-lifestyle-week-insight {
+  margin-top: 14px;
+  padding: 14px 18px;
+  background: rgba(245,158,11,.06);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.wiki-lifestyle-week-insight strong {
+  display: block;
+  font-size: 12px;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.wiki-lifestyle-week-insight p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ── 谈资系统 ── */
+.wiki-lifestyle-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.wiki-lifestyle-method-card {
+  padding: 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.wiki-lifestyle-method-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.wiki-lifestyle-method-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+.wiki-lifestyle-method-example {
+  padding: 12px;
+  background: rgba(255,255,255,.03);
+  border-radius: var(--radius);
+}
+
+.wiki-lifestyle-method-example p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.wiki-lifestyle-topic-bank {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.wiki-lifestyle-topic-card {
+  padding: 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.wiki-lifestyle-topic-card h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #10b981;
+  margin-bottom: 10px;
+}
+
+.wiki-lifestyle-topic-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wiki-lifestyle-topic-card li {
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border-light);
+  line-height: 1.5;
+}
+
+.wiki-lifestyle-topic-card li:last-child {
+  border-bottom: none;
+}
+
+/* ── FAQ ── */
+.wiki-lifestyle-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.wiki-lifestyle-faq-item {
+  padding: 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.wiki-lifestyle-faq-item h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wiki-lifestyle-faq-item h4::before {
+  content: 'Q';
+  font-size: 11px;
+  padding: 2px 6px;
+  background: rgba(245,158,11,.15);
+  border-radius: 4px;
+  color: var(--accent);
+}
+
+.wiki-lifestyle-faq-item p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── CTA ── */
+.wiki-lifestyle-cta {
+  text-align: center;
+  padding: 48px 24px;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(16,185,129,.12), transparent 60%),
+    var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.wiki-lifestyle-cta h2 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.wiki-lifestyle-cta p {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.wiki-lifestyle-cta-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── 响应式 ── */
+@media (max-width: 768px) {
+  .wiki-lifestyle-shell {
+    padding: 16px 12px 40px;
+  }
+
+  .wiki-lifestyle-hero {
+    padding: 32px 20px 28px;
+  }
+
+  .wiki-lifestyle-stats strong {
+    font-size: 28px;
+  }
+
+  .wiki-lifestyle-tabs {
+    border-radius: var(--radius);
+    width: 100%;
+  }
+
+  .wiki-lifestyle-tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .wiki-lifestyle-compare-card {
+    grid-template-columns: 1fr;
+  }
+
+  .wiki-lifestyle-compare-bad {
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .wiki-lifestyle-cat__body {
+    grid-template-columns: 1fr;
+  }
+
+  .wiki-lifestyle-week__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .wiki-lifestyle-week-focus {
+    margin-left: 0;
+  }
+}

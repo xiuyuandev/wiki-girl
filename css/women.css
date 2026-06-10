@@ -1,0 +1,709 @@
+/* ════════════════════════════════════════════════════════════
+   她世界解码 —— 专栏样式
+   ════════════════════════════════════════════════════════════ */
+
+.wiki-women-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 22px 60px;
+  font-family: var(--font-body);
+  color: var(--text);
+}
+
+/* ── 英雄区 ── */
+.wiki-women-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 12% 20%, rgba(236,72,153,.12), transparent 40%),
+    radial-gradient(circle at 88% 10%, rgba(168,85,247,.18), transparent 38%),
+    linear-gradient(135deg, var(--bg-elevated), var(--bg));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  padding: 48px 40px 40px;
+  margin-bottom: 36px;
+}
+
+.wiki-women-hero__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.wiki-women-hero__glow--one {
+  top: -80px; right: -60px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(236,72,153,.14), transparent 70%);
+}
+
+.wiki-women-hero__glow--two {
+  bottom: -60px; left: -40px;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(168,85,247,.12), transparent 70%);
+}
+
+.wiki-women-hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.wiki-women-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: rgba(236,72,153,.15);
+  color: #f9a8d4;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.wiki-women-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.wiki-women-hero__lead {
+  font-size: 17px;
+  line-height: 1.78;
+  color: var(--text-secondary);
+  max-width: 860px;
+  margin-bottom: 24px;
+  white-space: pre-line;
+}
+
+.wiki-women-hero__quote {
+  position: relative;
+  padding: 20px 24px 20px 48px;
+  margin-bottom: 28px;
+  background: rgba(255,255,255,.04);
+  border-radius: var(--radius);
+  border-left: 3px solid #ec4899;
+}
+
+.wiki-women-hero__quote-mark {
+  position: absolute;
+  top: 8px; left: 14px;
+  font-size: 42px;
+  line-height: 1;
+  color: #ec4899;
+  font-family: Georgia, serif;
+}
+
+.wiki-women-hero__quote p {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.wiki-women-stats {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.wiki-women-stats > div {
+  text-align: center;
+}
+
+.wiki-women-stats strong {
+  display: block;
+  font-size: 36px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ec4899, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.wiki-women-stats span {
+  display: block;
+  margin-top: 6px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* ── Tab 导航 ── */
+.wiki-women-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  padding: 4px;
+  background: var(--bg-elevated);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.wiki-women-tab {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+
+.wiki-women-tab:hover {
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+}
+
+.wiki-women-tab.active {
+  background: linear-gradient(135deg, #ec4899, #a855f7);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(236,72,153,.3);
+}
+
+/* ── 通用区块 ── */
+.wiki-women-section {
+  margin-bottom: 40px;
+}
+
+.wiki-women-section__head {
+  margin-bottom: 28px;
+}
+
+.wiki-women-section__head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.wiki-women-section__head p {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.wiki-women-intro {
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 28px;
+  font-size: 15px;
+  line-height: 1.74;
+  color: var(--text-secondary);
+}
+
+/* ── 思维对比表 ── */
+.wiki-women-compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+.wiki-women-compare-table th {
+  background: rgba(236,72,153,.12);
+  color: #f9a8d4;
+  font-weight: 700;
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.wiki-women-compare-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  line-height: 1.68;
+  vertical-align: top;
+}
+
+.wiki-women-compare-table tr:nth-child(even) {
+  background: rgba(255,255,255,.02);
+}
+
+.wiki-women-dimension {
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.wiki-women-male {
+  color: #60a5fa;
+  background: rgba(96,165,250,.06);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.wiki-women-female {
+  color: #f9a8d4;
+  background: rgba(236,72,153,.08);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.wiki-women-action {
+  color: #fbbf24;
+  background: rgba(251,191,36,.06);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* ── 子主题 ── */
+.wiki-women-topic {
+  margin-bottom: 32px;
+}
+
+.wiki-women-topic__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(236,72,153,.3);
+}
+
+.wiki-women-topic__desc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.74;
+  margin-bottom: 20px;
+}
+
+/* ── 心理学卡片 ── */
+.wiki-women-psych-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  margin-bottom: 16px;
+}
+
+.wiki-women-psych-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #f9a8d4;
+  margin: 0 0 12px;
+}
+
+.wiki-women-psych-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.68;
+  margin-bottom: 12px;
+}
+
+.wiki-women-psych-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.wiki-women-psych-card li {
+  font-size: 14px;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+/* ── 依恋类型 ── */
+.wiki-women-attach-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.wiki-women-attach-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #ec4899, #a855f7);
+}
+
+.wiki-women-attach-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 10px;
+}
+
+.wiki-women-attach-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.68;
+  margin-bottom: 8px;
+}
+
+/* ── 安全感支柱 ── */
+.wiki-women-pillar {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+
+.wiki-women-pillar h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fbbf24;
+  margin: 0 0 8px;
+}
+
+.wiki-women-pillar p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.68;
+  margin-bottom: 8px;
+}
+
+.wiki-women-wrong {
+  background: rgba(248,113,113,.08);
+  border-left: 3px solid #f87171;
+  padding: 8px 12px;
+  border-radius: 0 6px 6px 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.wiki-women-right {
+  background: rgba(16,185,129,.08);
+  border-left: 3px solid #10b981;
+  padding: 8px 12px;
+  border-radius: 0 6px 6px 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* ── 谈资领域 ── */
+.wiki-women-area {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  margin-bottom: 20px;
+}
+
+.wiki-women-area h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 6px;
+}
+
+.wiki-women-area-why {
+  font-size: 14px;
+  color: #f9a8d4;
+  margin-bottom: 14px;
+}
+
+.wiki-women-area ul {
+  margin: 0 0 16px;
+  padding-left: 20px;
+}
+
+.wiki-women-area li {
+  font-size: 14px;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.wiki-women-opener {
+  background: rgba(236,72,153,.08);
+  border-left: 3px solid #ec4899;
+  padding: 14px 18px;
+  border-radius: 0 8px 8px 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* ── 信号解码 ── */
+.wiki-women-signal {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+
+.wiki-women-signal h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fbbf24;
+  margin: 0 0 10px;
+}
+
+.wiki-women-signal p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.68;
+  margin-bottom: 8px;
+}
+
+/* ── 共情技术 ── */
+.wiki-women-emp-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  margin-bottom: 16px;
+}
+
+.wiki-women-emp-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 8px;
+}
+
+.wiki-women-emp-card > p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+
+.wiki-women-step {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,.04);
+}
+
+.wiki-women-step:last-child {
+  border-bottom: none;
+}
+
+.wiki-women-step h5 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #f9a8d4;
+  margin: 0 0 6px;
+}
+
+.wiki-women-step p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.68;
+  margin: 0;
+}
+
+.wiki-women-formula-step {
+  padding: 10px 14px;
+  background: rgba(255,255,255,.03);
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.wiki-women-formula-step h5 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fbbf24;
+  margin: 0 0 6px;
+}
+
+.wiki-women-formula-step p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.68;
+  margin: 0;
+}
+
+/* ── 场景对话 ── */
+.wiki-women-scene {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  margin-bottom: 20px;
+}
+
+.wiki-women-scene h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.wiki-women-scene-context {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.wiki-women-dialog {
+  margin-bottom: 8px;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+.wiki-women-dialog.male {
+  background: rgba(96,165,250,.06);
+  border-left: 3px solid #60a5fa;
+}
+
+.wiki-women-dialog.female {
+  background: rgba(236,72,153,.06);
+  border-left: 3px solid #ec4899;
+}
+
+.wiki-women-dialog strong {
+  font-size: 13px;
+  margin-right: 8px;
+}
+
+.wiki-women-dialog.male strong {
+  color: #60a5fa;
+}
+
+.wiki-women-dialog.female strong {
+  color: #f9a8d4;
+}
+
+.wiki-women-dialog span {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.68;
+}
+
+.wiki-women-scene-principle {
+  margin-top: 16px;
+  padding: 14px 18px;
+  background: rgba(251,191,36,.06);
+  border-left: 3px solid #f59e0b;
+  border-radius: 0 8px 8px 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.68;
+}
+
+.wiki-women-method-item {
+  padding: 10px 14px;
+  background: rgba(255,255,255,.03);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.68;
+}
+
+.wiki-women-test-item {
+  padding: 14px 16px;
+  background: rgba(255,255,255,.03);
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.wiki-women-test-item p:first-child {
+  font-weight: 700;
+  color: #fbbf24;
+  margin-bottom: 8px;
+}
+
+.wiki-women-test-item p:last-child {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.68;
+}
+
+/* ── 30天计划 ── */
+.wiki-women-week {
+  margin-bottom: 28px;
+}
+
+.wiki-women-week h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.wiki-women-day {
+  display: flex;
+  gap: 16px;
+  padding: 14px 18px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  transition: all .2s ease;
+}
+
+.wiki-women-day:hover {
+  border-color: rgba(236,72,153,.3);
+  background: rgba(236,72,153,.04);
+}
+
+.wiki-women-day-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ec4899;
+  white-space: nowrap;
+  min-width: 50px;
+}
+
+.wiki-women-day-task {
+  font-size: 14px;
+  line-height: 1.68;
+  color: var(--text-secondary);
+}
+
+/* ── 响应式 ── */
+@media (max-width: 768px) {
+  .wiki-women-shell {
+    padding: 16px 12px 40px;
+  }
+
+  .wiki-women-hero {
+    padding: 32px 20px 28px;
+  }
+
+  .wiki-women-stats {
+    gap: 20px;
+  }
+
+  .wiki-women-stats strong {
+    font-size: 28px;
+  }
+
+  .wiki-women-tabs {
+    gap: 6px;
+  }
+
+  .wiki-women-tab {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .wiki-women-compare-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .wiki-women-compare-table th,
+  .wiki-women-compare-table td {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .wiki-women-area,
+  .wiki-women-scene {
+    padding: 20px;
+  }
+}

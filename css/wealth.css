@@ -1,0 +1,1440 @@
+/* ════════════════════════════════════════════════════════════
+   财富建设 —— 专栏样式
+   ════════════════════════════════════════════════════════════ */
+
+.wiki-wealth-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 22px 60px;
+  font-family: var(--font-body);
+  color: var(--text);
+}
+
+/* ── 英雄区 ── */
+.wiki-wealth-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 12% 20%, rgba(16,185,129,.15), transparent 40%),
+    radial-gradient(circle at 88% 10%, rgba(245,158,11,.20), transparent 38%),
+    linear-gradient(135deg, var(--bg-elevated), var(--bg));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  padding: 48px 40px 40px;
+  margin-bottom: 36px;
+}
+
+.wiki-wealth-hero__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.wiki-wealth-hero__glow--one {
+  top: -80px; right: -60px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(16,185,129,.16), transparent 70%);
+}
+
+.wiki-wealth-hero__glow--two {
+  bottom: -60px; left: -40px;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(245,158,11,.13), transparent 70%);
+}
+
+.wiki-wealth-hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.wiki-wealth-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: rgba(16,185,129,.15);
+  color: #6ee7b7;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.wiki-wealth-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.wiki-wealth-hero__lead {
+  font-size: 17px;
+  line-height: 1.78;
+  color: var(--text-secondary);
+  max-width: 860px;
+  margin-bottom: 24px;
+}
+
+.wiki-wealth-hero__quote {
+  position: relative;
+  padding: 20px 24px 20px 48px;
+  margin-bottom: 28px;
+  background: rgba(255,255,255,.04);
+  border-radius: var(--radius);
+  border-left: 3px solid #10b981;
+}
+
+.wiki-wealth-hero__quote-mark {
+  position: absolute;
+  top: 8px; left: 14px;
+  font-size: 42px;
+  line-height: 1;
+  color: #10b981;
+  font-family: Georgia, serif;
+}
+
+.wiki-wealth-hero__quote p {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.wiki-wealth-stats {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.wiki-wealth-stats > div {
+  text-align: center;
+}
+
+.wiki-wealth-stats strong {
+  display: block;
+  font-size: 36px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #10b981, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.wiki-wealth-stats span {
+  display: block;
+  margin-top: 6px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* ── Tab 导航 ── */
+.wiki-wealth-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  padding: 4px;
+  background: var(--bg-elevated);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.wiki-wealth-tab {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+
+.wiki-wealth-tab:hover {
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+}
+
+.wiki-wealth-tab.active {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(16,185,129,.3);
+}
+
+/* ── 通用区块 ── */
+.wiki-wealth-section {
+  margin-bottom: 40px;
+}
+
+.wiki-wealth-section__head {
+  margin-bottom: 28px;
+}
+
+.wiki-wealth-section__head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.wiki-wealth-section__head p {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.wiki-wealth-intro {
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 28px;
+  font-size: 15px;
+  line-height: 1.74;
+  color: var(--text-secondary);
+}
+
+/* ── 认知重塑 ── */
+.wiki-wealth-compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+.wiki-wealth-compare-table th {
+  background: rgba(16,185,129,.12);
+  color: #6ee7b7;
+  font-weight: 700;
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.wiki-wealth-compare-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  line-height: 1.68;
+  vertical-align: top;
+}
+
+.wiki-wealth-compare-table tr:nth-child(even) {
+  background: rgba(255,255,255,.02);
+}
+
+.wiki-wealth-compare-table tr:hover {
+  background: rgba(255,255,255,.04);
+}
+
+.wiki-wealth-dimension {
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.wiki-wealth-employee {
+  color: #f87171;
+  background: rgba(248,113,113,.06);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.wiki-wealth-boss {
+  color: #6ee7b7;
+  background: rgba(16,185,129,.08);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.wiki-wealth-action {
+  color: #fbbf24;
+  background: rgba(251,191,36,.06);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* ── 商业模式 ── */
+.wiki-wealth-model-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 28px 24px;
+  margin-bottom: 20px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.wiki-wealth-model-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.wiki-wealth-model-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.wiki-wealth-model-header h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.wiki-wealth-model-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: rgba(16,185,129,.15);
+  color: #6ee7b7;
+  white-space: nowrap;
+}
+
+.wiki-wealth-model-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.wiki-wealth-model-meta span {
+  font-size: 13px;
+  color: var(--text-secondary);
+  background: rgba(255,255,255,.04);
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+
+.wiki-wealth-model-desc {
+  font-size: 15px;
+  line-height: 1.74;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+}
+
+.wiki-wealth-model-steps h5 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.wiki-wealth-model-steps ol {
+  margin: 0 0 18px;
+  padding-left: 24px;
+}
+
+.wiki-wealth-model-steps li {
+  font-size: 14px;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.wiki-wealth-model-pitfalls {
+  margin: 18px 0;
+  padding: 14px 18px;
+  background: rgba(248,113,113,.06);
+  border: 1px solid rgba(248,113,113,.15);
+  border-radius: 8px;
+}
+
+.wiki-wealth-model-pitfalls h5 {
+  color: #f87171;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.wiki-wealth-model-pitfalls ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.wiki-wealth-model-pitfalls li {
+  font-size: 14px;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+
+.wiki-wealth-model-case {
+  background: rgba(16,185,129,.06);
+  border-left: 3px solid #10b981;
+  padding: 14px 18px;
+  border-radius: 0 8px 8px 0;
+  font-size: 14px;
+  line-height: 1.68;
+  color: var(--text-secondary);
+}
+
+.wiki-wealth-model-case strong {
+  color: #6ee7b7;
+}
+
+/* ── 启动指南 ── */
+.wiki-wealth-launch-step {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.wiki-wealth-launch-step::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #10b981, #059669);
+}
+
+.wiki-wealth-launch-step h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 4px;
+}
+
+.wiki-wealth-launch-step .num {
+  font-size: 32px;
+  font-weight: 800;
+  color: rgba(16,185,129,.25);
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+
+.wiki-wealth-launch-step p {
+  font-size: 15px;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+
+.wiki-wealth-launch-step ul {
+  margin: 0 0 14px;
+  padding-left: 20px;
+}
+
+.wiki-wealth-launch-step li {
+  font-size: 14px;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+
+.wiki-wealth-checkpoint {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: rgba(245,158,11,.10);
+  border: 1px solid rgba(245,158,11,.25);
+  color: #fbbf24;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ── 增长模型 ── */
+.wiki-wealth-phase-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  margin-bottom: 20px;
+}
+
+.wiki-wealth-phase-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.wiki-wealth-phase-header h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.wiki-wealth-phase-tag {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.wiki-wealth-phase-tag--生存期 {
+  background: rgba(248,113,113,.15);
+  color: #f87171;
+}
+
+.wiki-wealth-phase-tag--稳定期 {
+  background: rgba(251,191,36,.15);
+  color: #fbbf24;
+}
+
+.wiki-wealth-phase-tag--放大期 {
+  background: rgba(16,185,129,.15);
+  color: #6ee7b7;
+}
+
+.wiki-wealth-phase-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.wiki-wealth-phase-info span {
+  color: var(--text-secondary);
+}
+
+.wiki-wealth-phase-info strong {
+  color: var(--text);
+}
+
+.wiki-wealth-phase-mindset {
+  font-size: 15px;
+  color: #6ee7b7;
+  background: rgba(16,185,129,.08);
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+.wiki-wealth-phase-do,
+wiki-wealth-phase-dont {
+  margin-bottom: 16px;
+}
+
+.wiki-wealth-phase-do h5 {
+  color: #6ee7b7;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.wiki-wealth-phase-dont h5 {
+  color: #f87171;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.wiki-wealth-phase-do ul,
+.wiki-wealth-phase-dont ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.wiki-wealth-phase-do li,
+.wiki-wealth-phase-dont li {
+  font-size: 14px;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.wiki-wealth-phase-metric {
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--border);
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+
+.wiki-wealth-phase-milestone {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: rgba(16,185,129,.12);
+  color: #6ee7b7;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ── KPI 表格 ── */
+.wiki-wealth-kpi {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.wiki-wealth-kpi h5 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.wiki-wealth-kpi-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.wiki-wealth-kpi-table th {
+  background: rgba(16,185,129,.10);
+  color: #6ee7b7;
+  font-weight: 700;
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.wiki-wealth-kpi-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.wiki-wealth-kpi-table tr:nth-child(even) {
+  background: rgba(255,255,255,.02);
+}
+
+/* ── 案例 ── */
+.wiki-wealth-case-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.wiki-wealth-case-card:hover {
+  border-color: rgba(16,185,129,.3);
+}
+
+.wiki-wealth-case__head h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 8px;
+}
+
+.wiki-wealth-case__head p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0 0 4px;
+}
+
+.wiki-wealth-case__body {
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  margin-top: 16px;
+}
+
+.wiki-wealth-case-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.wiki-wealth-case-meta span {
+  font-size: 13px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  background: rgba(255,255,255,.04);
+  color: var(--text-secondary);
+}
+
+.wiki-wealth-case-trigger {
+  font-size: 15px;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  background: rgba(245,158,11,.06);
+  border-left: 3px solid #f59e0b;
+  border-radius: 0 8px 8px 0;
+}
+
+.wiki-wealth-case-actions h5 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.wiki-wealth-case-actions ol {
+  margin: 0 0 16px;
+  padding-left: 24px;
+}
+
+.wiki-wealth-case-actions li {
+  font-size: 14px;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+
+.wiki-wealth-case-result {
+  font-size: 15px;
+  color: #6ee7b7;
+  background: rgba(16,185,129,.08);
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.wiki-wealth-case-lesson {
+  font-size: 14px;
+  color: #fbbf24;
+  background: rgba(251,191,36,.06);
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-left: 3px solid #f59e0b;
+}
+
+/* ── 30天计划 ── */
+.wiki-wealth-week {
+  margin-bottom: 28px;
+}
+
+.wiki-wealth-week h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.wiki-wealth-day {
+  display: flex;
+  gap: 16px;
+  padding: 14px 18px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  transition: all .2s ease;
+}
+
+.wiki-wealth-day:hover {
+  border-color: rgba(16,185,129,.3);
+  background: rgba(16,185,129,.04);
+}
+
+.wiki-wealth-day-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #10b981;
+  white-space: nowrap;
+  min-width: 50px;
+}
+
+.wiki-wealth-day-task {
+  font-size: 14px;
+  line-height: 1.68;
+  color: var(--text-secondary);
+}
+
+/* ════════════════════════════════════════════════════════════
+   子专栏通用样式
+   ════════════════════════════════════════════════════════════ */
+
+.wiki-wealth-sub-topic {
+  margin-bottom: 32px;
+}
+
+.wiki-wealth-sub-topic__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(16,185,129,.3);
+}
+
+.wiki-wealth-sub-topic__desc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.74;
+  margin-bottom: 20px;
+}
+
+/* ── 话术卡片 ── */
+.wiki-wealth-script-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+
+.wiki-wealth-script-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 12px;
+}
+
+.wiki-wealth-script-bad {
+  background: rgba(248,113,113,.08);
+  border-left: 3px solid #f87171;
+  padding: 10px 14px;
+  border-radius: 0 6px 6px 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  line-height: 1.68;
+}
+
+.wiki-wealth-script-good {
+  background: rgba(16,185,129,.08);
+  border-left: 3px solid #10b981;
+  padding: 10px 14px;
+  border-radius: 0 6px 6px 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  line-height: 1.68;
+}
+
+.wiki-wealth-script-key {
+  background: rgba(251,191,36,.08);
+  border-left: 3px solid #f59e0b;
+  padding: 10px 14px;
+  border-radius: 0 6px 6px 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.68;
+}
+
+.wiki-wealth-script-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.wiki-wealth-script-header h4 {
+  margin: 0;
+}
+
+.wiki-wealth-script-scene {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(16,185,129,.12);
+  color: #6ee7b7;
+  font-weight: 600;
+}
+
+/* ── 内容规则 ── */
+.wiki-wealth-content-rules {
+  margin-bottom: 20px;
+}
+
+.wiki-wealth-content-rule {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-bottom: 12px;
+}
+
+.wiki-wealth-content-rule h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #6ee7b7;
+  margin: 0 0 8px;
+}
+
+.wiki-wealth-content-rule > p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.wiki-wealth-example {
+  font-size: 13px;
+  color: var(--text-muted);
+  background: rgba(255,255,255,.03);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+/* ── 发圈时间表 ── */
+.wiki-wealth-schedule {
+  margin-bottom: 20px;
+}
+
+.wiki-wealth-schedule-item {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.68;
+}
+
+.wiki-wealth-schedule-item strong {
+  color: #fbbf24;
+  margin-right: 8px;
+}
+
+/* ── 文案模板 ── */
+.wiki-wealth-templates {
+  margin-bottom: 20px;
+}
+
+.wiki-wealth-template-item {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin-bottom: 10px;
+}
+
+.wiki-wealth-template-type {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(16,185,129,.12);
+  color: #6ee7b7;
+  margin-bottom: 8px;
+}
+
+.wiki-wealth-template-item > p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.68;
+  margin: 0;
+}
+
+/* ── 策略/动作 ── */
+.wiki-wealth-strategy {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+
+.wiki-wealth-strategy h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 10px;
+}
+
+.wiki-wealth-strategy > p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.wiki-wealth-action-item {
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 8px 12px;
+  background: rgba(255,255,255,.03);
+  border-radius: 6px;
+  margin-bottom: 6px;
+  line-height: 1.68;
+}
+
+/* ── 定价示例 ── */
+.wiki-wealth-pricing-examples {
+  margin-bottom: 20px;
+}
+
+.wiki-wealth-pricing-ex {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-bottom: 12px;
+}
+
+.wiki-wealth-pricing-old {
+  text-decoration: line-through;
+  color: #f87171;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.wiki-wealth-pricing-new {
+  font-size: 15px;
+  color: #6ee7b7;
+  margin-bottom: 8px;
+}
+
+/* ── 疗程卡/会员 ── */
+.wiki-wealth-cards {
+  margin-bottom: 20px;
+}
+
+.wiki-wealth-card-item {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-bottom: 12px;
+}
+
+.wiki-wealth-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.wiki-wealth-card-header h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.wiki-wealth-card-header strong {
+  color: #fbbf24;
+  font-size: 15px;
+}
+
+.wiki-wealth-card-header span {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.wiki-wealth-card-item > p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+/* ── 办证证件卡片 ── */
+.wiki-wealth-cert-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+
+.wiki-wealth-cert-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #6ee7b7;
+  margin: 0 0 12px;
+}
+
+.wiki-wealth-cert-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.wiki-wealth-cert-meta span {
+  font-size: 13px;
+  color: var(--text-secondary);
+  background: rgba(255,255,255,.04);
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+
+.wiki-wealth-cert-materials {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  line-height: 1.68;
+}
+
+/* ── 法律红线 ── */
+.wiki-wealth-legal-line {
+  background: rgba(248,113,113,.05);
+  border: 1px solid rgba(248,113,113,.15);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-bottom: 12px;
+}
+
+.wiki-wealth-legal-line h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #f87171;
+  margin: 0 0 10px;
+}
+
+/* ── 锻炼/保养卡片 ── */
+.wiki-wealth-exercise-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+
+.wiki-wealth-exercise-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 12px;
+}
+
+/* ── 职业生涯阶段 ── */
+.wiki-wealth-career-stage {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.wiki-wealth-career-stage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #10b981, #059669);
+}
+
+.wiki-wealth-career-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.wiki-wealth-career-header strong {
+  font-size: 16px;
+  color: #6ee7b7;
+}
+
+.wiki-wealth-career-header span {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.wiki-wealth-career-stage > p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.68;
+  margin-bottom: 10px;
+}
+
+/* ════════════════════════════════════════════════════════════
+   新手开店90天全流程 子专栏样式
+   ════════════════════════════════════════════════════════════ */
+
+/* 数据速览 */
+.wiki-wealth-summary {
+  background: rgba(16,185,129,.08);
+  border: 1px solid rgba(16,185,129,.2);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  margin-bottom: 32px;
+}
+
+.wiki-wealth-summary h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #6ee7b7;
+  margin-bottom: 16px;
+}
+
+.wiki-wealth-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.wiki-wealth-summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  background: rgba(255,255,255,.04);
+  border-radius: 8px;
+}
+
+.wiki-wealth-summary-item strong {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.wiki-wealth-summary-item span {
+  font-size: 15px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* 阶段区块 */
+.wiki-wealth-phase-block {
+  margin-bottom: 36px;
+}
+
+.wiki-wealth-phase-block__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(16,185,129,.3);
+}
+
+.wiki-wealth-phase-block__desc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.74;
+  margin-bottom: 20px;
+}
+
+/* 清单 */
+.wiki-wealth-checklist {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  margin-bottom: 16px;
+}
+
+.wiki-wealth-checklist h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fbbf24;
+  margin: 0 0 14px;
+}
+
+.wiki-wealth-checklist-item {
+  display: flex;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.68;
+  border-bottom: 1px solid rgba(255,255,255,.04);
+}
+
+.wiki-wealth-checklist-item:last-child {
+  border-bottom: none;
+}
+
+.wiki-wealth-check {
+  color: #10b981;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* 每日卡片 */
+.wiki-wealth-day-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.wiki-wealth-day-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #f59e0b, #d97706);
+}
+
+.wiki-wealth-day-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 12px;
+}
+
+/* 时间线 */
+.wiki-wealth-timeline {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.wiki-wealth-timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(16,185,129,.3);
+}
+
+.wiki-wealth-timeline-item {
+  position: relative;
+  padding: 12px 0 12px 20px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.wiki-wealth-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -16px;
+  top: 16px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #10b981;
+  border: 2px solid var(--bg);
+}
+
+.wiki-wealth-timeline-time {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fbbf24;
+  white-space: nowrap;
+  min-width: 80px;
+}
+
+.wiki-wealth-timeline-action {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.68;
+}
+
+/* 每周目标 */
+.wiki-wealth-weekly {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 12px;
+}
+
+.wiki-wealth-weekly-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.wiki-wealth-weekly-header h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.wiki-wealth-weekly-focus {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(16,185,129,.12);
+  color: #6ee7b7;
+  font-weight: 600;
+}
+
+.wiki-wealth-weekly-target {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* 策略卡片 */
+.wiki-wealth-strategy-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 12px;
+}
+
+.wiki-wealth-strategy-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #6ee7b7;
+  margin: 0 0 12px;
+}
+
+/* ── 响应式 ── */
+@media (max-width: 768px) {
+  .wiki-wealth-shell {
+    padding: 16px 12px 40px;
+  }
+
+  .wiki-wealth-hero {
+    padding: 32px 20px 28px;
+  }
+
+  .wiki-wealth-stats {
+    gap: 20px;
+  }
+
+  .wiki-wealth-stats strong {
+    font-size: 28px;
+  }
+
+  .wiki-wealth-tabs {
+    gap: 6px;
+  }
+
+  .wiki-wealth-tab {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .wiki-wealth-compare-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .wiki-wealth-compare-table th,
+  .wiki-wealth-compare-table td {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .wiki-wealth-model-card,
+  .wiki-wealth-phase-card,
+  .wiki-wealth-case-card {
+    padding: 20px;
+  }
+
+  .wiki-wealth-launch-step {
+    padding: 20px;
+  }
+
+  .wiki-wealth-launch-step .num {
+    font-size: 24px;
+  }
+}

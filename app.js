@@ -8,7 +8,7 @@
       const article = window.ARTICLES && window.ARTICLES.articles[id];
       return (article && article.title) || (window.WIKI && window.WIKI.titles[id]) || '文章';
     }
-    const map = { home: '超级首页专栏门户', appearance: '外在蜕变形象方案', relationship: '关系推进急救包', 'female-types': '女性类型图鉴', cases: '真实案例库', emergency: '场景应急手册', principles: '价值观与边界声明', 'positive-psychology': '幸福的科学', 'married-woman': '搞定人妻专栏', 'universal-scripts': '万能话术', search: '站内搜索' };
+    const map = { home: '超级首页专栏门户', appearance: '外在蜕变形象方案', relationship: '关系推进急救包', 'female-types': '女性类型图鉴', cases: '真实案例库', emergency: '场景应急手册', principles: '价值观与边界声明', 'positive-psychology': '幸福的科学', 'married-woman': '搞定人妻专栏', 'universal-scripts': '万能话术', storytelling: '故事叙述与幽默能力', lifestyle: '生活方式探索', attraction: '主导力与松弛感', mindset: '强者心态锻造', wealth: '财富建设', women: '她世界解码', lifehacks: '生活妙招', persona: '人设叙事', expression: '微表情与动作管理', 'belief-training': '信念改写训练', search: '站内搜索' };
     return map[to.name] || '成长知识库';
   }
 
@@ -46,7 +46,7 @@
             <router-view v-slot="{ Component }"><component :is="Component" /></router-view>
             <footer class="wiki-footer">
               <div class="wiki-footer__links">
-                <router-link to="/">回到超级首页</router-link><router-link to="/appearance">外在蜕变</router-link><router-link to="/relationship">关系急救</router-link><router-link to="/cases">案例库</router-link><router-link to="/emergency">应急手册</router-link><router-link to="/female-types">女性图鉴</router-link><router-link to="/principles">边界声明</router-link><router-link to="/positive-psychology">幸福的科学</router-link><router-link to="/married-woman">搞定人妻</router-link><router-link to="/universal-scripts">万能话术</router-link>
+                <router-link to="/">回到超级首页</router-link><router-link to="/appearance">外在蜕变</router-link><router-link to="/relationship">关系急救</router-link><router-link to="/cases">案例库</router-link><router-link to="/emergency">应急手册</router-link><router-link to="/female-types">女性图鉴</router-link><router-link to="/storytelling">故事与幽默</router-link><router-link to="/lifestyle">生活方式</router-link><router-link to="/attraction">主导力</router-link><router-link to="/mindset">强者心态</router-link><router-link to="/wealth">财富建设</router-link><router-link to="/women">她世界</router-link><router-link to="/lifehacks">生活妙招</router-link><router-link to="/persona">人设叙事</router-link><router-link to="/principles">边界声明</router-link><router-link to="/positive-psychology">幸福的科学</router-link><router-link to="/married-woman">搞定人妻</router-link><router-link to="/universal-scripts">万能话术</router-link>
               </div>
               <div>© 2026 直男蜕变指南 · 普通男性的魅力成长知识库</div>
             </footer>
@@ -74,7 +74,7 @@
             <router-view v-slot="{ Component }"><component :is="Component" /></router-view>
             <footer class="wiki-footer">
               <div class="wiki-footer__links">
-                <router-link to="/">超级首页</router-link><router-link to="/appearance">外在蜕变</router-link><router-link to="/relationship">关系急救</router-link><router-link to="/cases">案例库</router-link><router-link to="/emergency">应急手册</router-link><router-link to="/female-types">女性图鉴</router-link><router-link to="/principles">边界声明</router-link><router-link to="/positive-psychology">幸福的科学</router-link><router-link to="/married-woman">搞定人妻</router-link><router-link to="/universal-scripts">万能话术</router-link>
+                <router-link to="/">超级首页</router-link><router-link to="/appearance">外在蜕变</router-link><router-link to="/relationship">关系急救</router-link><router-link to="/cases">案例库</router-link><router-link to="/emergency">应急手册</router-link><router-link to="/female-types">女性图鉴</router-link><router-link to="/principles">边界声明</router-link><router-link to="/positive-psychology">幸福的科学</router-link><router-link to="/married-woman">搞定人妻</router-link><router-link to="/universal-scripts">万能话术</router-link><router-link to="/lifehacks">生活妙招</router-link><router-link to="/persona">人设叙事</router-link>
               </div>
               <div>© 2026 直男蜕变指南</div>
             </footer>

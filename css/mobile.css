@@ -1,0 +1,638 @@
+/* ════════════════════════════════════════════════════════════
+   移动端专属体验 · Mobile-First Overrides
+   只在 ≤768px 生效，完全不破坏 PC 端
+   ════════════════════════════════════════════════════════════ */
+
+/* ── 基础优化 ── */
+@media (max-width: 768px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+    font-size: 15px;
+  }
+
+  body {
+    font-size: 15px;
+    line-height: 1.7;
+    padding-bottom: 64px; /* 为底部导航留空间 */
+  }
+
+  /* 隐藏桌面端滚动条，使用更窄的 */
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+
+  /* ── 顶部导航 ── */
+  .topnav {
+    height: 52px;
+    padding: 0 12px;
+  }
+
+  .nav-brand {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  /* 桌面端导航链接隐藏 */
+  .topnav .nav-links {
+    display: none !important;
+  }
+
+  .nav-cta {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  /* ── Hero 区 ── */
+  .hero {
+    min-height: auto;
+    padding: 80px 16px 48px;
+  }
+
+  .hero h1 {
+    font-size: clamp(28px, 8vw, 40px);
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+    padding: 0 8px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 14px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-stats {
+    gap: 24px;
+    margin-top: 40px;
+    padding-top: 24px;
+  }
+
+  .hero-stat .num {
+    font-size: 24px;
+  }
+
+  .hero-stat .label {
+    font-size: 11px;
+  }
+
+  /* ── Section 通用 ── */
+  .section {
+    padding: 48px 16px;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section-title {
+    font-size: clamp(22px, 6vw, 28px);
+  }
+
+  .section-desc {
+    font-size: 14px;
+  }
+
+  /* ── 卡片系统 ── */
+  .card-grid,
+  .card-grid-2,
+  .card-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: var(--radius);
+  }
+
+  /* ── 底部移动端导航 ── */
+  .wiki-mobile-tabs {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 56px;
+    background: rgba(13, 15, 18, 0.92);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-top: 1px solid var(--border);
+    padding: 0 4px;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .wiki-mobile-tabs a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 4px 6px;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-radius: 8px;
+    min-width: 44px;
+    min-height: 44px;
+    transition: all 0.2s;
+    flex: 1;
+  }
+
+  .wiki-mobile-tabs a span {
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 1px;
+  }
+
+  .wiki-mobile-tabs a b {
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+  }
+
+  .wiki-mobile-tabs a.router-link-active {
+    color: var(--accent);
+    background: rgba(245, 158, 11, 0.08);
+  }
+
+  /* ── 侧边栏 ── */
+  .wiki-layout-sidebar {
+    display: none !important;
+  }
+
+  /* 当侧边栏需要展开时（通过JS控制） */
+  .wiki-layout-sidebar.mobile-open {
+    display: block !important;
+    position: fixed;
+    top: 52px;
+    left: 0;
+    right: 0;
+    bottom: 56px;
+    z-index: 99;
+    background: var(--bg);
+    overflow-y: auto;
+    padding: 16px;
+  }
+
+  /* ── 主内容区 ── */
+  .wiki-layout-main {
+    padding: 0 12px 80px;
+    max-width: 100%;
+  }
+
+  /* ── 文章阅读 ── */
+  .article-container,
+  .wiki-article-inner {
+    padding: 16px 12px 80px;
+    max-width: 100%;
+  }
+
+  .article-body {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .article-body h2 {
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+
+  .article-body h3 {
+    font-size: 18px;
+    margin-top: 28px;
+    margin-bottom: 12px;
+  }
+
+  .article-body p {
+    margin-bottom: 16px;
+  }
+
+  .article-body blockquote {
+    padding: 12px 16px;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+
+  .article-body ul,
+  .article-body ol {
+    padding-left: 20px;
+    margin-bottom: 16px;
+  }
+
+  .article-body li {
+    margin-bottom: 6px;
+  }
+
+  .article-body pre {
+    padding: 14px;
+    font-size: 13px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* ── 搜索框 ── */
+  .wiki-search-bar {
+    padding: 0 12px;
+  }
+
+  .wiki-search-bar input {
+    font-size: 16px; /* 防止 iOS 自动放大 */
+    padding: 10px 16px;
+  }
+
+  /* ── 按钮组 ── */
+  .wiki-btn-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .wiki-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+    min-height: 44px; /* 触摸友好 */
+  }
+
+  /* ── 标签页 ── */
+  .wiki-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 4px;
+    padding: 4px;
+  }
+
+  .wiki-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .wiki-tab {
+    padding: 8px 14px;
+    font-size: 13px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════
+   专栏页面移动端适配
+   对 storytelling / lifestyle / attraction 等专栏的统一处理
+   ════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  /* ── 通用专栏外壳 ── */
+  .wiki-story-shell,
+  .wiki-lifestyle-shell,
+  .wiki-attraction-shell {
+    padding: 12px 12px 80px;
+  }
+
+  /* ── 英雄区 ── */
+  .wiki-story-hero,
+  .wiki-lifestyle-hero,
+  .wiki-attraction-hero {
+    padding: 28px 16px 24px;
+    margin-bottom: 20px;
+    border-radius: var(--radius);
+  }
+
+  .wiki-story-hero h1,
+  .wiki-lifestyle-hero h1,
+  .wiki-attraction-hero h1 {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .wiki-story-hero__lead,
+  .wiki-lifestyle-hero__lead,
+  .wiki-attraction-hero__lead {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 16px;
+  }
+
+  .wiki-story-hero__quote,
+  .wiki-lifestyle-hero__quote,
+  .wiki-attraction-hero__quote {
+    padding: 14px 16px 14px 36px;
+    margin-bottom: 20px;
+  }
+
+  .wiki-story-hero__quote-mark,
+  .wiki-lifestyle-hero__quote-mark,
+  .wiki-attraction-hero__quote-mark {
+    font-size: 32px;
+    left: 10px;
+  }
+
+  .wiki-story-hero__quote p,
+  .wiki-lifestyle-hero__quote p,
+  .wiki-attraction-hero__quote p {
+    font-size: 14px;
+  }
+
+  /* 统计 */
+  .wiki-story-stats,
+  .wiki-lifestyle-stats,
+  .wiki-attraction-stats {
+    gap: 16px;
+  }
+
+  .wiki-story-stats strong,
+  .wiki-lifestyle-stats strong,
+  .wiki-attraction-stats strong {
+    font-size: 28px;
+  }
+
+  /* ── Tab 导航 ── */
+  .wiki-story-tabs,
+  .wiki-lifestyle-tabs,
+  .wiki-attraction-tabs {
+    width: 100%;
+    border-radius: var(--radius);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 4px;
+    padding: 4px;
+    margin-bottom: 20px;
+  }
+
+  .wiki-story-tabs::-webkit-scrollbar,
+  .wiki-lifestyle-tabs::-webkit-scrollbar,
+  .wiki-attraction-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .wiki-story-tab,
+  .wiki-lifestyle-tab,
+  .wiki-attraction-tab {
+    padding: 8px 14px;
+    font-size: 13px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* ── 区块标题 ── */
+  .wiki-story-section__head h2,
+  .wiki-lifestyle-section__head h2,
+  .wiki-attraction-section__head h2 {
+    font-size: 22px;
+  }
+
+  .wiki-story-section__head > p,
+  .wiki-lifestyle-section__head > p,
+  .wiki-attraction-section__head > p {
+    font-size: 14px;
+  }
+
+  /* ── Intro ── */
+  .wiki-story-intro,
+  .wiki-lifestyle-intro,
+  .wiki-attraction-intro {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  /* ── 卡片网格统一为单列 ── */
+  .wiki-story-principles,
+  .wiki-story-templates,
+  .wiki-humor-techniques,
+  .wiki-story-scenes,
+  .wiki-humor-scenes,
+  .wiki-story-drills,
+  .wiki-story-openers,
+  .wiki-story-checkpoints,
+  .wiki-story-quick-cards,
+  .wiki-lifestyle-principles,
+  .wiki-lifestyle-cat__body,
+  .wiki-lifestyle-quick-relief,
+  .wiki-lifestyle-topic-bank,
+  .wiki-attraction-behaviors,
+  .wiki-attraction-pushes,
+  .wiki-attraction-investment-grid,
+  .wiki-attraction-quick-cards,
+  .wiki-telling-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+  }
+
+  /* ── 通用卡片内边距缩小 ── */
+  .wiki-story-principle-card,
+  .wiki-story-template-card,
+  .wiki-humor-card,
+  .wiki-story-scene-card,
+  .wiki-humor-scene-card,
+  .wiki-story-drill-card,
+  .wiki-story-opener-card,
+  .wiki-story-checkpoint-card,
+  .wiki-story-quick-card,
+  .wiki-story-case-card,
+  .wiki-story-mistake-card,
+  .wiki-lifestyle-principle-card,
+  .wiki-lifestyle-cat-card,
+  .wiki-lifestyle-activity-card,
+  .wiki-lifestyle-relief-card,
+  .wiki-lifestyle-topic-card,
+  .wiki-lifestyle-faq-item,
+  .wiki-lifestyle-method-card,
+  .wiki-attraction-truth-card,
+  .wiki-attraction-shift-card,
+  .wiki-attraction-behavior-card,
+  .wiki-attraction-push-card,
+  .wiki-attraction-invest-card,
+  .wiki-attraction-stage-card,
+  .wiki-attraction-taboo-card,
+  .wiki-attraction-case-card,
+  .wiki-attraction-week-card,
+  .wiki-telling-card {
+    padding: 16px;
+    border-radius: var(--radius);
+  }
+
+  /* ── 周计划 ── */
+  .wiki-story-week__head,
+  .wiki-lifestyle-week__head,
+  .wiki-attraction-week__head {
+    padding: 14px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .wiki-story-week__body,
+  .wiki-lifestyle-week__body,
+  .wiki-attraction-week__body {
+    padding: 14px 16px;
+  }
+
+  .wiki-story-day,
+  .wiki-lifestyle-day,
+  .wiki-attraction-day {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .wiki-story-day-num,
+  .wiki-lifestyle-day-num,
+  .wiki-attraction-day-num {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+
+  /* ── 案例对比 ── */
+  .wiki-story-case-comparison,
+  .wiki-attraction-case-compare {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  /* ── 恢复对比 ── */
+  .wiki-lifestyle-compare-card {
+    grid-template-columns: 1fr;
+  }
+
+  .wiki-lifestyle-compare-bad {
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  /* ── CTA ── */
+  .wiki-story-cta,
+  .wiki-lifestyle-cta,
+  .wiki-attraction-cta {
+    padding: 32px 16px;
+  }
+
+  .wiki-story-cta h2,
+  .wiki-lifestyle-cta h2,
+  .wiki-attraction-cta h2 {
+    font-size: 22px;
+  }
+
+  .wiki-story-cta-buttons,
+  .wiki-lifestyle-cta-buttons,
+  .wiki-attraction-cta-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .wiki-story-cta .wiki-btn,
+  .wiki-lifestyle-cta .wiki-btn,
+  .wiki-attraction-cta .wiki-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ── 字体微调 ── */
+  .wiki-story-principle-card p,
+  .wiki-humor__body > p,
+  .wiki-story-example p,
+  .wiki-humor-example p,
+  .wiki-story-scene-tips li,
+  .wiki-story-scene-example p,
+  .wiki-humor-scene-examples li,
+  .wiki-story-drill-card p,
+  .wiki-story-opener-lines li,
+  .wiki-story-checkpoint-card li,
+  .wiki-story-quick-card li,
+  .wiki-story-mistake-cause,
+  .wiki-story-mistake-fix,
+  .wiki-lifestyle-principle-card p,
+  .wiki-lifestyle-activity-card > p,
+  .wiki-lifestyle-relief-card p,
+  .wiki-lifestyle-topic-card li,
+  .wiki-lifestyle-faq-item p,
+  .wiki-lifestyle-method-card p,
+  .wiki-attraction-truth-card > p,
+  .wiki-attraction-shift-card > p,
+  .wiki-attraction-behavior-card > p,
+  .wiki-attraction-push-step p,
+  .wiki-attraction-invest-card li,
+  .wiki-attraction-stage-do li,
+  .wiki-attraction-stage-dont li,
+  .wiki-attraction-taboo-card > p,
+  .wiki-attraction-case-analysis p,
+  .wiki-attraction-day-content p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════
+   超小屏幕优化 (< 400px)
+   ════════════════════════════════════════════════════════════ */
+
+@media (max-width: 400px) {
+  .wiki-mobile-tabs a b {
+    font-size: 9px;
+  }
+
+  .wiki-mobile-tabs a span {
+    font-size: 16px;
+  }
+
+  .wiki-story-hero h1,
+  .wiki-lifestyle-hero h1,
+  .wiki-attraction-hero h1 {
+    font-size: 22px;
+  }
+
+  .wiki-story-stats strong,
+  .wiki-lifestyle-stats strong,
+  .wiki-attraction-stats strong {
+    font-size: 24px;
+  }
+
+  .wiki-story-tab,
+  .wiki-lifestyle-tab,
+  .wiki-attraction-tab {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════
+   平板端优化 (769px - 1024px)
+   介于手机和PC之间的中间态
+   ════════════════════════════════════════════════════════════ */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .wiki-story-shell,
+  .wiki-lifestyle-shell,
+  .wiki-attraction-shell {
+    padding: 20px 20px 60px;
+  }
+
+  .wiki-story-templates,
+  .wiki-humor-techniques,
+  .wiki-attraction-behaviors,
+  .wiki-attraction-pushes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

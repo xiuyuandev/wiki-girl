@@ -1,0 +1,1020 @@
+/* ════════════════════════════════════════════════════════════
+   主导力与松弛感 —— 专栏样式
+   ════════════════════════════════════════════════════════════ */
+
+.wiki-attraction-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 22px 60px;
+  font-family: var(--font-body);
+  color: var(--text);
+}
+
+/* ── 英雄区 ── */
+.wiki-attraction-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 12% 20%, rgba(139,92,246,.18), transparent 40%),
+    radial-gradient(circle at 88% 10%, rgba(245,158,11,.22), transparent 38%),
+    linear-gradient(135deg, var(--bg-elevated), var(--bg));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  padding: 48px 40px 40px;
+  margin-bottom: 36px;
+}
+
+.wiki-attraction-hero__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.wiki-attraction-hero__glow--one {
+  top: -80px; right: -60px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(139,92,246,.18), transparent 70%);
+}
+
+.wiki-attraction-hero__glow--two {
+  bottom: -60px; left: -40px;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(245,158,11,.14), transparent 70%);
+}
+
+.wiki-attraction-hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.wiki-attraction-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: rgba(139,92,246,.15);
+  color: #c4b5fd;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.wiki-attraction-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.wiki-attraction-hero__lead {
+  font-size: 17px;
+  line-height: 1.78;
+  color: var(--text-secondary);
+  max-width: 860px;
+  margin-bottom: 24px;
+}
+
+.wiki-attraction-hero__quote {
+  position: relative;
+  padding: 20px 24px 20px 48px;
+  margin-bottom: 28px;
+  background: rgba(255,255,255,.04);
+  border-radius: var(--radius);
+  border-left: 3px solid #8b5cf6;
+}
+
+.wiki-attraction-hero__quote-mark {
+  position: absolute;
+  top: 8px; left: 14px;
+  font-size: 42px;
+  line-height: 1;
+  color: #8b5cf6;
+  font-family: Georgia, serif;
+}
+
+.wiki-attraction-hero__quote p {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.wiki-attraction-stats {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.wiki-attraction-stats > div {
+  text-align: center;
+}
+
+.wiki-attraction-stats strong {
+  display: block;
+  font-size: 36px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #8b5cf6, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.wiki-attraction-stats span {
+  display: block;
+  margin-top: 6px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* ── 通用区块 ── */
+.wiki-attraction-section {
+  margin-bottom: 40px;
+}
+
+.wiki-attraction-section__head {
+  margin-bottom: 28px;
+}
+
+.wiki-attraction-section__head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.wiki-attraction-section__head > p {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 720px;
+}
+
+.wiki-attraction-intro {
+  padding: 24px 28px;
+  background: linear-gradient(145deg, rgba(139,92,246,.08) 0%, rgba(245,158,11,.04) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 32px;
+}
+
+.wiki-attraction-intro p {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ── Tab 导航 ── */
+.wiki-attraction-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  padding: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.wiki-attraction-tab {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.wiki-attraction-tab:hover {
+  color: var(--text);
+  background: rgba(255,255,255,.05);
+}
+
+.wiki-attraction-tab.active {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  color: #fff;
+}
+
+/* ── 真相卡片 ── */
+.wiki-attraction-truths {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.wiki-attraction-truth-card {
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.wiki-attraction-truth-card h4 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #c4b5fd;
+  margin-bottom: 10px;
+}
+
+.wiki-attraction-truth-card > p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+
+.wiki-attraction-truth-action {
+  padding: 12px 16px;
+  background: rgba(245,158,11,.08);
+  border-left: 2px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 13px;
+  color: var(--accent);
+  line-height: 1.6;
+}
+
+/* ── 心态转变 ── */
+.wiki-attraction-shift-card {
+  padding: 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 16px;
+}
+
+.wiki-attraction-shift-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.wiki-attraction-shift-from {
+  padding: 4px 12px;
+  background: rgba(239,68,68,.12);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: #f87171;
+  font-weight: 600;
+}
+
+.wiki-attraction-shift-arrow {
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+.wiki-attraction-shift-to {
+  padding: 4px 12px;
+  background: rgba(139,92,246,.12);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: #c4b5fd;
+  font-weight: 600;
+}
+
+.wiki-attraction-shift-card > p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+
+.wiki-attraction-shift-exercise {
+  padding: 10px 12px;
+  background: rgba(16,185,129,.08);
+  border-left: 2px solid #10b981;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 12px;
+  color: #34d399;
+  line-height: 1.5;
+}
+
+/* ── 行为卡片 ── */
+.wiki-attraction-behaviors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.wiki-attraction-behavior-card {
+  padding: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+}
+
+.wiki-attraction-behavior-card:hover {
+  border-color: rgba(139,92,246,.3);
+}
+
+.wiki-attraction-behavior-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #c4b5fd;
+  margin-bottom: 8px;
+}
+
+.wiki-attraction-behavior-card > p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+
+.wiki-attraction-behavior-compare {
+  margin-bottom: 10px;
+}
+
+.wiki-attraction-behavior-compare > div {
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.wiki-attraction-behavior-bad {
+  background: rgba(239,68,68,.06);
+  color: #f87171;
+}
+
+.wiki-attraction-behavior-good {
+  background: rgba(16,185,129,.06);
+  color: #34d399;
+}
+
+.wiki-attraction-behavior-practice {
+  padding: 8px 10px;
+  background: rgba(245,158,11,.06);
+  border-left: 2px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 12px;
+  color: var(--accent);
+  line-height: 1.5;
+}
+
+/* ── 推拉卡片 ── */
+.wiki-attraction-pushes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.wiki-attraction-push-card {
+  padding: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.wiki-attraction-push-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #c4b5fd;
+  margin-bottom: 8px;
+}
+
+.wiki-attraction-push-card > p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+
+.wiki-attraction-push-step {
+  padding: 10px;
+  background: rgba(255,255,255,.03);
+  border-radius: var(--radius);
+  margin-bottom: 6px;
+}
+
+.wiki-attraction-push-step strong {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.wiki-attraction-push-push strong {
+  background: rgba(59,130,246,.15);
+  color: #60a5fa;
+}
+
+.wiki-attraction-push-pull strong {
+  background: rgba(245,158,11,.15);
+  color: var(--accent);
+}
+
+.wiki-attraction-push-step p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.wiki-attraction-push-effect {
+  padding: 8px 10px;
+  background: rgba(16,185,129,.08);
+  border-left: 2px solid #10b981;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 12px;
+  color: #34d399;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+/* ── 投资维度 ── */
+.wiki-attraction-investment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.wiki-attraction-invest-card {
+  padding: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.wiki-attraction-invest-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #c4b5fd;
+  margin-bottom: 8px;
+}
+
+.wiki-attraction-invest-card > p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+
+.wiki-attraction-invest-card ul {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.wiki-attraction-invest-card li {
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 4px 0;
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.wiki-attraction-invest-card li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #c4b5fd;
+}
+
+.wiki-attraction-invest-warning {
+  padding: 8px 10px;
+  background: rgba(239,68,68,.08);
+  border-left: 2px solid #f87171;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 11px;
+  color: #f87171;
+  line-height: 1.5;
+}
+
+/* ── 阶段策略 ── */
+.wiki-attraction-stage-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.wiki-attraction-stage__head {
+  padding: 20px 24px;
+  background: rgba(255,255,255,.02);
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+}
+
+.wiki-attraction-stage__head span:first-child {
+  display: inline-block;
+  padding: 3px 10px;
+  background: rgba(139,92,246,.15);
+  color: #c4b5fd;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.wiki-attraction-stage__head h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 6px;
+}
+
+.wiki-attraction-stage__head p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.wiki-attraction-stage__body {
+  padding: 20px 24px;
+}
+
+.wiki-attraction-stage-do,
+.wiki-attraction-stage-dont {
+  margin-bottom: 16px;
+}
+
+.wiki-attraction-stage-do h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #34d399;
+  margin-bottom: 10px;
+}
+
+.wiki-attraction-stage-dont h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #f87171;
+  margin-bottom: 10px;
+}
+
+.wiki-attraction-stage-do ul,
+.wiki-attraction-stage-dont ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wiki-attraction-stage-do li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 5px 0;
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.6;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.wiki-attraction-stage-do li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #34d399;
+  font-size: 11px;
+}
+
+.wiki-attraction-stage-dont li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 5px 0;
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.6;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.wiki-attraction-stage-dont li::before {
+  content: '✕';
+  position: absolute;
+  left: 0;
+  color: #f87171;
+  font-size: 11px;
+}
+
+.wiki-attraction-stage-example {
+  padding: 14px;
+  background: rgba(255,255,255,.03);
+  border-radius: var(--radius);
+}
+
+.wiki-attraction-stage-example > div {
+  margin-bottom: 8px;
+}
+
+.wiki-attraction-stage-example > div:last-child {
+  margin-bottom: 0;
+}
+
+.wiki-attraction-stage-example strong {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+/* ── 禁忌卡片 ── */
+.wiki-attraction-taboos {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.wiki-attraction-taboo-card {
+  padding: 22px;
+  background: var(--bg-card);
+  border: 1px solid rgba(239,68,68,.2);
+  border-radius: var(--radius-lg);
+}
+
+.wiki-attraction-taboo-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #f87171;
+  margin-bottom: 8px;
+}
+
+.wiki-attraction-taboo-card > p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+
+.wiki-attraction-taboo-fix {
+  padding: 10px 12px;
+  background: rgba(16,185,129,.08);
+  border-left: 2px solid #10b981;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 12px;
+  color: #34d399;
+  line-height: 1.5;
+}
+
+/* ── 案例卡片 ── */
+.wiki-attraction-cases {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.wiki-attraction-case-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.wiki-attraction-case__head {
+  padding: 20px 24px;
+  background: rgba(255,255,255,.02);
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+}
+
+.wiki-attraction-case__head h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 6px;
+}
+
+.wiki-attraction-case__head p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.wiki-attraction-case__body {
+  padding: 20px 24px;
+}
+
+.wiki-attraction-case-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 640px) {
+  .wiki-attraction-case-compare {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wiki-attraction-case-before,
+.wiki-attraction-case-after {
+  padding: 12px;
+  border-radius: var(--radius);
+}
+
+.wiki-attraction-case-before {
+  background: rgba(239,68,68,.06);
+  border-left: 2px solid #f87171;
+}
+
+.wiki-attraction-case-after {
+  background: rgba(16,185,129,.06);
+  border-left: 2px solid #10b981;
+}
+
+.wiki-attraction-case-before strong,
+.wiki-attraction-case-after strong {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 6px;
+}
+
+.wiki-attraction-case-before strong {
+  color: #f87171;
+}
+
+.wiki-attraction-case-after strong {
+  color: #34d399;
+}
+
+.wiki-attraction-case-before p,
+.wiki-attraction-case-after p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.wiki-attraction-case-analysis {
+  padding-top: 12px;
+  border-top: 1px solid var(--border-light);
+}
+
+.wiki-attraction-case-analysis p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 8px;
+}
+
+.wiki-attraction-case-key {
+  padding: 10px 12px;
+  background: rgba(245,158,11,.08);
+  border-left: 2px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 13px;
+  color: var(--accent);
+  line-height: 1.5;
+}
+
+/* ── 周计划 ── */
+.wiki-attraction-weeks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.wiki-attraction-week-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.wiki-attraction-week-card.active-week {
+  border-color: #8b5cf6;
+}
+
+.wiki-attraction-week__head {
+  padding: 18px 24px;
+  background: rgba(255,255,255,.02);
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.wiki-attraction-week__head span:first-child {
+  font-size: 12px;
+  font-weight: 700;
+  color: #c4b5fd;
+  padding: 4px 12px;
+  background: rgba(139,92,246,.12);
+  border-radius: 999px;
+}
+
+.wiki-attraction-week__head h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.wiki-attraction-week__head p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.wiki-attraction-week-focus {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.wiki-attraction-week__body {
+  padding: 20px 24px;
+}
+
+.wiki-attraction-days {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wiki-attraction-day {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 14px;
+  background: rgba(255,255,255,.02);
+  border-radius: var(--radius);
+}
+
+.wiki-attraction-day-num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.wiki-attraction-day-content p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 4px;
+}
+
+.wiki-attraction-day-tip {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.wiki-attraction-week-insight {
+  margin-top: 14px;
+  padding: 14px 18px;
+  background: rgba(245,158,11,.06);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.wiki-attraction-week-insight strong {
+  display: block;
+  font-size: 12px;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.wiki-attraction-week-insight p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ── 快速参考 ── */
+.wiki-attraction-quick-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.wiki-attraction-quick-card {
+  padding: 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.wiki-attraction-quick-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #c4b5fd;
+  margin-bottom: 14px;
+}
+
+.wiki-attraction-quick-card ol,
+.wiki-attraction-quick-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.wiki-attraction-quick-card li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 6px 0;
+  line-height: 1.6;
+}
+
+/* ── CTA ── */
+.wiki-attraction-cta {
+  text-align: center;
+  padding: 48px 24px;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(139,92,246,.12), transparent 60%),
+    var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.wiki-attraction-cta h2 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.wiki-attraction-cta p {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.wiki-attraction-cta-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── 响应式 ── */
+@media (max-width: 768px) {
+  .wiki-attraction-shell {
+    padding: 16px 12px 40px;
+  }
+
+  .wiki-attraction-hero {
+    padding: 32px 20px 28px;
+  }
+
+  .wiki-attraction-stats strong {
+    font-size: 28px;
+  }
+
+  .wiki-attraction-tabs {
+    border-radius: var(--radius);
+    width: 100%;
+  }
+
+  .wiki-attraction-tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .wiki-attraction-case-compare {
+    grid-template-columns: 1fr;
+  }
+
+  .wiki-attraction-stage__head {
+    cursor: default;
+  }
+
+  .wiki-attraction-week__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .wiki-attraction-week-focus {
+    margin-left: 0;
+  }
+}
